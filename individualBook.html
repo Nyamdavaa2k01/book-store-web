@@ -1,0 +1,231 @@
+<html>
+
+<head>
+    <style>
+        :root {
+            font-size: 16px;
+            /* colors */
+            --main-bg-color:#F24C1A ;
+            --main-tmp-color:gray ; 
+            --sub-text-color:5F5E5E ; 
+            --main-text-color:585656 ; 
+            --main-text-size:2vmax; 
+            /* --sub-layer-color:E2E0E0;  */ 
+            --sub-layer-color:gray; 
+            /*using the above color temporarily*/
+            /* fonts  */
+            --main-font-family :font-family:  Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           --text-header-size:3.13vmax ; 
+           --text-definition-size:1.95vmax; 
+           --text-highlight-size : 2.34vmax; 
+           --text-subDefinition-size: 1.41vmax; 
+         }
+        header {
+            background-color: var(--main-tmp-color);
+            width: 100vw;
+            height: 146px;
+            left: 0px;
+            top: 0px;
+        }
+        span.inline-block {
+            display: inline-block;
+        }
+        .block{
+            display:block ; 
+        }
+            nav {
+                background-color: var(--main-tmp-color);
+                margin: 3vw 5vw 3vw 5vw;
+                width: 90vw;
+                height: 48px;
+                left: 30px;
+                top: 195px;
+            }
+
+            .bookPhoto {
+                position: relative;
+                left: 5vw;
+                float: left;
+                width: 35vw;
+                height: auto;
+            
+            }
+
+            .bookExp {
+                position: relative;
+                right: 5vw;
+                float: right;
+                /* background-color: var(--main-tmp-color); */
+                /* margin : 3vw, 3vw, 3vw, 1vw;  */
+                width: 51vw;
+                font-size: 2vmax;
+            }
+                ul {
+                list-style-type: none;
+                color:var(--sub-text-color) ; 
+                margin:-2vmax;
+                }
+
+                .bookInfo {
+                    float: left;
+                }
+                
+                .details {
+                    position: relative;
+                    float: right;
+                    left:25vw;
+                    /* but it is only temporary, it will cause some issue when we add more texts */
+                }
+
+        .pathWay {
+            position: relative;
+            left: 5vw;
+            width: 90vw;
+            font-size: 2vh;
+            margin: -1vh;
+        }
+
+       
+        
+        .priceTag{
+            position:relative; 
+            font-size: 2.4vmax;
+        }
+        .price{
+            color: orange;
+        }
+  
+        .count {
+            
+            background-color: var(--sub-text-color);
+            color: var(--main-text-color) ; 
+            position: relative;
+            float:left; 
+            left : 5vw; 
+            width: 8.6vmax;
+            height: 48px;
+        }
+        .order{
+            position: relative ; 
+            float:left; 
+            background-color: var(--main-bg-color);
+            width: 23.4vmax;
+            height: 3.75vmax;
+            left:11.25vmax;
+            border-radius: 25px;
+            text-align: center;
+            color:white; 
+            font-size: 2.3vmax;
+        }
+        
+       .aboutBook{
+           clear:both;
+           background-color: var(--sub-layer-color);
+           width: 100vw;
+            height: 13.3vmax;
+            position:relative; 
+            top:5vw ; 
+       }
+       .bookSummary{
+        float :left ; 
+        position: inherit;
+        background-color: white;
+        border-radius: 25px;
+        width: 388px;
+        height: 94px;
+        left: 6.64vw ;
+        top :3.6vw;
+       }
+       .summaryText {
+           
+           color:black ;
+           font-family: var(--main-font-family);
+       }
+       .verticalLine {
+           float:left ;
+           position: relative;
+            left : 41.6vw ; 
+           background-color: black;;
+           height : 100%; 
+           width:2px;
+       }
+       .userRating {
+           float :right ;
+       }
+       .comment {
+           position: relative;
+           top: 0px; 
+           /* left: 44vw ; */
+           right:2.7vw ;
+           top : 3.6vw ; 
+            width: 684px;
+            height: 71px;
+           background-color:white;
+           border-radius: 25px;
+       }
+       .type {
+           position: relative;
+           top:0.5vmax; 
+           left : 2vmax ; 
+       }
+       .rating {
+            position: relative;
+           font-size: 1vw;
+           color:var(--main-bg-color) ;
+           top:3vmax; 
+       }
+    </style>
+</head>
+
+<body>
+    <header>Here I will insert header later on</header>
+    <nav>Navigation desu</nav>
+    <main>
+        <div class="pathway">
+            <p class="pathWay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut excepturi quas modi quod
+            voluptatem maxime et hic suscipit a alias?</p>
+        </div>
+        <br/>
+    
+    <div class="bookView">
+        <img class="bookPhoto" src="book-cover.jpg">
+        <div class="bookExp">
+            <h1 class="bookName">Lorem ipsum dolor sit amet.</h1>
+            <span class="inline-block">
+                <ul class="bookInfo">
+                    <li>Item1</li><li>Item2</li><li>Item3</li><li>Item4</li><li>Item5</li><li>Item6</li><li>Item7</li><li>Item8</li><li>Item9</li><li>Item10</li>
+                </ul>
+            </span>
+            <span class="inline-block">
+                <ul class="details">
+                    <li>detail1</li><li>detail2</li><li>detail3</li><li>detail4</li><li>detail5</li><li>detail6</li><li>detail7</li><li>detail8</li><li>detail9</li><li>detail10</li>
+                </ul>
+            </span>
+            <p class ="priceTag"> 
+                Үндсэн үнэ: 30000₮ <br/>
+                Хямдарсан үнэ: 5000₮
+            </p>
+            <span class ="count inline-block"> </span>
+            <span class = "order inline-block">Сагсанд хийх</span>
+        </div>
+        
+    </div>
+    <div class ="aboutBook">
+       
+        <div class="bookSummary inline-block" ></div>
+        <!-- <div class ="verticalLine inline-block"></div> -->
+        <div class="userRating inline-block">
+            <div class="comment">
+               <p class="type">..........</p>  
+            </div>
+            <p class="rating">
+                Үнэлгээ өгөх
+            </p>
+        </div>
+    </div>
+
+    </main>
+    
+</body>
+
+</html>

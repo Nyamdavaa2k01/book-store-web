@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="description" content="online book store" />
+		<meta name="keywords" content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <style>
+            :root {
+            font-size: 16px;
+            /* colors */
+            --main-bg-color:#F24C1A ;
+            --main-tmp-color:gray ; 
+            --sub-text-color:5F5E5E ; 
+            --main-text-color:585656 ; 
+            --main-text-size:2vmax; 
+            --main-list-highlight : #C4C4C4 ; 
+            /* --sub-layer-color:E2E0E0;  */ 
+            --sub-layer-color:gray; 
+            /*using the above color temporarily*/
+            /* fonts  */
+            --main-font-family :font-family:  Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           --text-header-size:3.13vmax ; 
+           --text-definition-size:1.95vmax; 
+           --text-highlight-size : 2.34vmax; 
+           --text-subDefinition-size: 1.41vmax; 
+         }
+        header {
+            background-color: var(--main-tmp-color);
+            width: 100vw;
+            height: 146px;
+            left: 0px;
+            top: 0px;
+        }
+        nav {
+                background-color: var(--main-tmp-color);
+                margin: 3vw 5vw 3vw 5vw;
+                width: 90vw;
+                height: 48px;
+                left: 30px;
+                top: 195px;
+            }
+        table, td, th {
+            border: solid var(--main-tmp-color) 0.5px ;
+        }
+        table {
+            position: relative ;
+            left : 1.8vmax ; 
+            top: 4.3vmax; 
+            border-collapse: collapse;
+            width:62.6vmax ;  
+            text-align: center;
+        }
+        .book-list-index{
+            width:1.875vw; 
+        }
+        .book-list-photo{
+            width:15.47vw; 
+        }
+        .book-list-name {
+            width : 16.8vw; 
+        }
+        .book-list-count{
+            width:5.55vw; 
+        }
+        .book-list-price{
+            width:7.81vw 
+        }
+        .book-list-total {
+            width:auto ; 
+        }
+        .book-photo-onList {
+            width:12.43vw ; 
+            height : 17.6vmax ; 
+        }
+        .book-list-topRow {
+            background-color: var(--main-list-highlight);
+        }
+        .book-list-row {
+            height : 21vmax ; 
+        }
+        .bordered {
+            text-align: center;
+            position: relative;
+            left:5% ; 
+            width:90% ; 
+            height :2.73vmax ; 
+            border-radius: 25px;
+            background-color: var(--main-list-highlight);
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+
+        </header>
+        <nav>
+            
+        </nav>
+        <main >
+            <table>
+                <tr class="book-list-topRow">
+                    <th class="book-list-index">№</th>
+                    <th class ="book-list-photo">Зураг</th>
+                    <th class ="book-list-name">Номын нэр</th>
+                    <th class ="book-list-count">Тоо</th>
+                    <th class ="book-list-price">Нэгж үнэ</th>
+                    <th class="book-list-total">Нийт үнэ</th>
+                </tr>
+                <tr class="book-list-row">
+                    <td class>1</td>
+                    <td> <img class = "book-photo-onList" src= "book-cover.jpg"></td>
+                    <td><p class="bordered">Book name</p></td>
+                    <td><p class="bordered">10</p></td>
+                    <td><p class="bordered">12345</p></td>
+                    <td><p class= "bordered">123450</p></td>
+                </tr>
+                <tr class="book-list-row">
+                    <td>2</td>
+                    <td><img class = "book-photo-onList" src= "book-cover.jpg"></td>
+                    <td><p class="bordered">Book name</p></td>
+                    <td><p class="bordered">10</p></td>
+                    <td><p class="bordered">12345</p></td>
+                    <td><p class= "bordered">123450</p></td>
+                </tr>
+                <tr class="book-list-row">
+                    <td>3</td>
+                    <td><img class = "book-photo-onList" src= "book-cover.jpg"></td>
+                    <td><p class="bordered">Book name</p></td>
+                    <td><p class="bordered">10</p></td>
+                    <td><p class="bordered">12345</p></td>
+                    <td><p class= "bordered">123450</p></td>
+                </tr>
+            </table>
+
+        </main>
+    </body>
+</html>

@@ -37,27 +37,27 @@
              }
             
         
-             header {
+             /* header {
                 background-color: var(--main-tmp-color);
                 width: 100vw;
                 height: 146px;
                 left: 0px;
                 top: 0px;
-            }
+            } */
             span.inline-block {
                 display: inline-block;
             }
             .block{
                 display:block ; 
             }
-                nav {
+                /* nav {
                     background-color: var(--main-tmp-color);
                     margin: 3vw 5vw 3vw 5vw;
                     width: 90vw;
                     height: 48px;
                     left: 30px;
                     top: 195px;
-                }
+                } */
                 .bookPhoto {
                     position: relative;
                     left: 5vw;

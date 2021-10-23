@@ -1,19 +1,202 @@
-
-
+<!DOCTYPE html>
 <html>
+	<head>
+		
+		<meta charset="utf-8">
+		<meta name="description" content="online book store" />
+		<meta name="keywords" content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		<script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+	
+        <link rel="stylesheet" href="individualBook.css">
+        <style>
+              
+header {
+    height: 30vh;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    position: relative;
+}
+.header-1{
+    height: 5vh;
+    background-color: black;
+    color: white;
+    font-size: 3vh;
+    display: flex;  
+    position: relative;
+}
+.h-a-1{
+    margin-right: 60vw;
+}
+.h-a-2{
+    margin-right: 5vw;
+}
 
-    <head>
-        <meta charset="utf-8">
-            <meta name="description" content="online book store" />
-            <meta name="keywords" content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
-            <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-            <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-            <link rel="stylesheet" href="individualBook.css">
-          
-    </head>
+.h-logo{
+
+    height: 7vh;
+    position: absolute;
+    top: 32%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+
+}
+
+.header-2{
+    height: 25vh;
+    width: 100%;
+    position: relative;
+}
+
+  
+.search {
+    width: 100%;
+    position: absolute;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    height: 7vh;    
+    outline: none;
+    color: #9DBFAF;
+    font-size: 3vh;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+  
+.searchButton {
+    width: 5vw;
+    height: 7vh;
+
+    background: #F24C1A;
+    text-align: center;
+    color: #fff;
+    border-radius: 0px 25px 25px 0px;
+    cursor: pointer;
+    font-size: 7vh;
+    border: 0px;
+}
+  
+
+.wrap{
+    width: 30vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     
-    <body>
-        <!-- <header>
+}
+.navbar{
+    width: 85vw;
+    height: 8vh;
+    background-color: #E2E0E0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+.navbar ul{
+    position: absolute;
+    top: -5%;
+}
+
+.navbar ul li{
+    display: inline;
+    font-size: 4vh;
+    margin-right: 6vw;  
+}
+.navbar ul img{
+    width: 5vh;
+    position: absolute;
+    
+}
+
+.footer{
+    position: relative;
+    top:10vmax; 
+    height: 50vh;
+    background-color: black;
+    margin-bottom: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    color: white;
+}
+.logo-footer{
+    widows: 10hw;
+    height: 7vh;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    
+}
+.footer p{
+    width: 25vw;
+    position: absolute;
+    left: 14.6%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    
+}
+.footer ul{
+    list-style-type:none;
+    display: inline;
+    position: absolute;
+    width: 18vw;
+}
+footer ul li{
+    margin: 2vh;
+}
+.footer-left{
+    position: relative;
+    height: 45vh;
+    width: 40vw;
+    top: 7%;
+    left: 3%;
+}
+.footer-right{
+    position: relative;
+    background: #F24C1A;
+    height: 45vh;
+    width: 35vw;
+    left: 50%;
+    bottom: 86%;
+    margin: 0px;
+}
+
+.li-1{
+    top: 40%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.li-2{
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+.wrap-footer{
+    width: 30vw;
+    position: absolute;
+    top: 60%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+}
+main {
+    position: relative ;
+    top:5vmax ; 
+}
+
+        </style>
+	</head>
+	<body>
+		<header>
 			<div class="header-1">
 				<a class="h-a-1">Бие даасан номын дэлгүүр</a>
 				<a class="h-a-2">Бүртгүүлэх</a>
@@ -44,9 +227,13 @@
 				</div> 
 			</div>
 			
-		</header> -->
-        <header>Here I will insert header later on</header>
-    <nav>Navigation desu</nav>
+		</header>
+	
+			
+
+
+
+
         <main>
             <div class="pathway">
                 <p class="pathWay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut excepturi quas modi quod
@@ -140,7 +327,20 @@
 
     
         </main>
-        <!-- <footer class="footer">
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<footer class="footer">
 
 			<img src="jpg/logo.png" class="logo-footer">
 
@@ -181,7 +381,6 @@
 				<li>Үйлчилгээний нөхцөл</li>
 			</ul>
 		
-		</footer> -->
-    </body>
-    
-    </html>
+		</footer>
+	</body>
+</html>

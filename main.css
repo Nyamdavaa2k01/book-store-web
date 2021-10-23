@@ -57,7 +57,6 @@ header {
 }
 
 .header-2{
-    background-color: azure;
     height: 25vh;
     width: 100%;
     position: relative;
@@ -76,6 +75,7 @@ header {
     outline: none;
     color: #9DBFAF;
     font-size: 3vh;
+    border-radius: 25px 0px 0px 25px;
 }
 
 .searchTerm:focus{
@@ -86,39 +86,49 @@ header {
     width: 5vw;
     height: 7vh;
 
-    background: #00B4CC;
+    background: #F24C1A;
     text-align: center;
     color: #fff;
-
+    border-radius: 0px 25px 25px 0px;
     cursor: pointer;
     font-size: 7vh;
+    border: 0px;
 }
   
-  /*Resize the wrap to see the search bar change!*/
+
 .wrap{
     width: 30vw;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+    
 }
 .navbar{
     width: 85vw;
     height: 8vh;
-    background-color: greenyellow;
+    background-color: #E2E0E0;
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+.navbar ul{
+    position: absolute;
+    top: -5%;
 }
 
 .navbar ul li{
     display: inline;
     font-size: 4vh;
+    margin-right: 6vw;  
 }
- 
- 
- 
+.navbar ul img{
+    width: 5vh;
+    position: absolute;
+    
+}
 
 .main{
     margin-left: -8px;
@@ -152,12 +162,12 @@ header {
 }
 .book-list{
     top: 65%;
-    left: 60%;
+    left: 55%;
     transform: translate(-50%, -50%);
     list-style-type:none;
     position: absolute;
     height: 45vh;
-    width:90vw;
+    width: 80vw;
     margin: 0px;
     padding: 0;
     border: 0px;
@@ -165,9 +175,25 @@ header {
 .book{
     width: 12vw;
     height: 15vw;
-    background-color: rebeccapurple;
+    
     display: inline-block;
     margin: 2vh;
+}
+
+.book-cover{
+    height: 13vw;
+    width: 12vw;
+    border: 0px;
+    border-radius: 25px 25px 0px 0px ;
+}
+
+.book-button{
+    background-color: #E2E0E0;
+    width: 12vw;
+    height: 3vw;
+    border: 0px;
+    margin-top: -1vw;
+    border-radius: 0px 0px 25px 25px;
 }
 
 .footer{
@@ -184,14 +210,14 @@ header {
     height: 7vh;
     position: absolute;
     top: 10%;
-    left: 21.5%;
+    left: 10%;
     transform: translate(-50%, -50%);
     
 }
 .footer p{
     width: 25vw;
     position: absolute;
-    left: 35%;
+    left: 14.6%;
     top: 30%;
     transform: translate(-50%, -50%);
     
@@ -200,7 +226,7 @@ header {
     list-style-type:none;
     display: inline;
     position: absolute;
-    width: 20vw;
+    width: 18vw;
 }
 footer ul li{
     margin: 2vh;
@@ -214,16 +240,17 @@ footer ul li{
 }
 .footer-right{
     position: relative;
-
+    background: #F24C1A;
     height: 45vh;
-    width: 40vw;
+    width: 35vw;
     left: 50%;
-    bottom: 86%
+    bottom: 86%;
+    margin: 0px;
 }
 
 .li-1{
     top: 40%;
-    left: 50%;
+    left: 65%;
     transform: translate(-50%, -50%);
 }
 
@@ -236,7 +263,7 @@ footer ul li{
     width: 30vw;
     position: absolute;
     top: 60%;
-    left: 41%;
+    left: 17%;
     transform: translate(-50%, -50%);
 }
 

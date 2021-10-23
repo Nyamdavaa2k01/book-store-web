@@ -45,12 +45,14 @@
             border: solid var(--main-tmp-color) 0.5px ;
         }
         table {
+            float : left ;
             position: relative ;
             left : 1.8vmax ; 
             top: 4.3vmax; 
             border-collapse: collapse;
             width:62.6vmax ;  
             text-align: center;
+
         }
         .book-list-index{
             width:1.875vw; 
@@ -89,6 +91,16 @@
             border-radius: 25px;
             background-color: var(--main-list-highlight);
         }
+        .payment {
+            float:right;
+            width : 25.78vw ;
+            height:27vw; 
+            border:solid 1px; 
+            position: relative;
+            top: 4.3vmax;
+            right:3vw; 
+        }
+       
         </style>
     </head>
     <body>
@@ -99,7 +111,7 @@
             
         </nav>
         <main >
-            <table>
+            <table class ="cart-list">
                 <tr class="book-list-topRow">
                     <th class="book-list-index">№</th>
                     <th class ="book-list-photo">Зураг</th>
@@ -110,7 +122,7 @@
                 </tr>
                 <tr class="book-list-row">
                     <td class>1</td>
-                    <td> <img class = "book-photo-onList" src= "book-cover.jpg"></td>
+                    <td> <img class = "book-photo-onList" src= "JPG/book-cover.jpg"></td>
                     <td><p class="bordered">Book name</p></td>
                     <td><p class="bordered">10</p></td>
                     <td><p class="bordered">12345</p></td>
@@ -133,7 +145,7 @@
                     <td><p class= "bordered">123450</p></td>
                 </tr>
             </table>
-
+            <div class="payment"></div>
         </main>
     </body>
 </html>

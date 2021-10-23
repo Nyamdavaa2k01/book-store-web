@@ -25,7 +25,7 @@ h1 {font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, 
 
   
 header {
-    height: 15vh;
+    height: 30vh;
     margin-top: -8px;
     margin-left: -8px;
     margin-right: -8px;
@@ -37,43 +37,207 @@ header {
     color: white;
     font-size: 3vh;
     display: flex;  
+    position: relative;
+}
+.h-a-1{
+    margin-right: 60vw;
+}
+.h-a-2{
+    margin-right: 5vw;
 }
 
+.h-logo{
+
+    height: 7vh;
+    position: absolute;
+    top: 32%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+
+}
 
 .header-2{
     background-color: azure;
-    height: 10vh;
+    height: 25vh;
     width: 100%;
-    
+    position: relative;
 }
+
+  
+.search {
+    width: 100%;
+    position: absolute;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    height: 7vh;    
+    outline: none;
+    color: #9DBFAF;
+    font-size: 3vh;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+  
+.searchButton {
+    width: 5vw;
+    height: 7vh;
+
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+
+    cursor: pointer;
+    font-size: 7vh;
+}
+  
+  /*Resize the wrap to see the search bar change!*/
+.wrap{
+    width: 30vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.navbar{
+    width: 85vw;
+    height: 8vh;
+    background-color: greenyellow;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navbar ul li{
+    display: inline;
+    font-size: 4vh;
+}
+ 
+ 
+ 
 
 .main{
     margin-left: -8px;
     margin-right: -8px;
     height: 70vh;
+    position: relative;
 }
 
 .main img{
     width: 100%;
     height: 70vh;
+    position: relative;
 }
 .book-row-1{
-    height: 25vh;
+    height: 50vh;
     width:90vw;
-    background-color: aquamarine;
+    background-color: blueviolet;
+    position: relative;
+
+    left: 4%;
+
 }
 .book-row-2{
-    height: 25vh;
+    height: 50vh;
     width:90vw;
     background-color: skyblue;
+    position: relative;
+
+    left: 4%;
+
+}
+.book-list{
+    top: 65%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    list-style-type:none;
+    position: absolute;
+    height: 45vh;
+    width:90vw;
+    margin: 0px;
+    padding: 0;
+    border: 0px;
+}
+.book{
+    width: 12vw;
+    height: 15vw;
+    background-color: rebeccapurple;
+    display: inline-block;
+    margin: 2vh;
 }
 
 .footer{
-
+    position: relative;
     height: 50vh;
     background-color: black;
     margin-bottom: -8px;
     margin-left: -8px;
     margin-right: -8px;
+    color: white;
 }
+.logo-footer{
+    widows: 10hw;
+    height: 7vh;
+    position: absolute;
+    top: 10%;
+    left: 21.5%;
+    transform: translate(-50%, -50%);
+    
+}
+.footer p{
+    width: 25vw;
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    
+}
+.footer ul{
+    list-style-type:none;
+    display: inline;
+    position: absolute;
+    width: 20vw;
+}
+footer ul li{
+    margin: 2vh;
+}
+.footer-left{
+    position: relative;
+    height: 45vh;
+    width: 40vw;
+    top: 7%;
+    left: 3%;
+}
+.footer-right{
+    position: relative;
+
+    height: 45vh;
+    width: 40vw;
+    left: 50%;
+    bottom: 86%
+}
+
+.li-1{
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.li-2{
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+.wrap-footer{
+    width: 30vw;
+    position: absolute;
+    top: 60%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+}
+
 

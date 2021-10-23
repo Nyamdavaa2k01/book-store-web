@@ -1,6 +1,22 @@
 :root {
-
-}
+    font-size: 16px;
+    /* colors */
+    --main-bg-color:#F24C1A ;
+    --main-tmp-color:gray ; 
+    --sub-text-color:5F5E5E ; 
+    --main-text-color:585656 ; 
+    --main-text-size:2vmax; 
+    --main-list-highlight : #C4C4C4 ; 
+    /* --sub-layer-color:E2E0E0;  */ 
+    --sub-layer-color:gray; 
+    /*using the above color temporarily*/
+    /* fonts  */
+    --main-font-family :font-family:  Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   --text-header-size:3.13vmax ; 
+   --text-definition-size:1.95vmax; 
+   --text-highlight-size : 2.34vmax; 
+   --text-subDefinition-size: 1.41vmax; 
+ }
 h1 {font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 
 * {
@@ -9,82 +25,52 @@ h1 {font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, 
 
   
 header {
-    height: 50px;
+    height: 15vh;
     margin-top: -8px;
     margin-left: -8px;
     margin-right: -8px;
     position: relative;
 }
 .header-1{
-    height: 33%;
+    height: 5vh;
     background-color: black;
     color: white;
+    font-size: 3vh;
+    display: flex;  
 }
 
-.header-1 p{
-    display: table-cell; 
-    vertical-align: middle; 
-    text-align: center;
-    font-size: 8px;
-}
-.h-p{
-    float: left;
-    padding-right: 10px;
-    padding-left: 10px;
-
-}
-.h-p-r{
-    float: right;
-    padding-right: 10px;
-    padding-left: 10px;
-
-}
 
 .header-2{
     background-color: azure;
-    height: 66%;
+    height: 10vh;
     width: 100%;
     
 }
 
-
-.topnav {
-    background-color: gray;
-    width: 30em;
-    height: 5px;
-    margin-left: -8px;
-    margin-right: -8px;
-}
-.topnav a{
-    font-size: 8px;
-}
-  
-
-
 .main{
     margin-left: -8px;
     margin-right: -8px;
-    height: 150px;;
+    height: 70vh;
 }
 
 .main img{
     width: 100%;
-    height: 150px;
+    height: 70vh;
 }
 .book-row-1{
-    height: 50px;
-    width:1200px;
+    height: 25vh;
+    width:90vw;
     background-color: aquamarine;
 }
 .book-row-2{
-    height: 50px;
-    width:1200px;
+    height: 25vh;
+    width:90vw;
     background-color: skyblue;
 }
 
 .footer{
-    width: 120%;
-    height: 100px;
+
+    height: 50vh;
     background-color: black;
     margin-bottom: -8px;
     margin-left: -8px;

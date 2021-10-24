@@ -16,6 +16,14 @@
    --text-definition-size:1.95vmax; 
    --text-highlight-size : 2.34vmax; 
    --text-subDefinition-size: 1.41vmax; 
+     /* sizes */
+     --book-small-width:16.1vw ; 
+     --book-small-height:17.97vw; 
+      --book-small-height-withName: 22.4vw; 
+      --book-small-border-radius : 1.95vw ; 
+      --book-small-height-name:4.43vw ; 
+      --book-small-border-radius :2vw; 
+      --book-photo-half-border:2vw 2vw 0px 0px ; 
  }
 h1 {font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 
@@ -35,10 +43,15 @@ header {
     height: 5vh;
     background-color: black;
     color: white;
-    font-size: 3vh;
+    font-size: 2.5vh;
     display: flex;  
     position: relative;
 }
+
+.header-1 img{
+
+}
+
 .h-a-1{
     margin-right: 60vw;
 }
@@ -121,7 +134,7 @@ header {
 
 .navbar ul li{
     display: inline;
-    font-size: 4vh;
+    font-size: 3.5vh;
     margin-right: 6vw;  
 }
 .navbar ul img{
@@ -143,54 +156,49 @@ header {
     position: relative;
 }
 .book-row-1{
-    height: 50vh;
-    width:90vw;
-    background-color: blueviolet;
+    height: 60vh ;
+    width: 80vw;
     position: relative;
-
-    left: 4%;
+    left: 3%;
 
 }
 .book-row-2{
-    height: 50vh;
-    width:90vw;
-    background-color: skyblue;
+    height: 60vh;
+    width:80vw;
     position: relative;
-
-    left: 4%;
+    left: 3%;
 
 }
 .book-list{
-    top: 65%;
-    left: 55%;
-    transform: translate(-50%, -50%);
+  
     list-style-type:none;
-    position: absolute;
-    height: 45vh;
-    width: 80vw;
+    position: inherit;
+    height:var(--book-small-height-withName) ;
+    width: 93vw;
     margin: 0px;
     padding: 0;
     border: 0px;
 }
 .book{
-    width: 12vw;
-    height: 15vw;
-    
+    width:var(--book-small-width) ; 
+    height:var(--book-small-height-withName) ;
     display: inline-block;
-    margin: 2vh;
+    margin: 1vw;
 }
 
 .book-cover{
-    height: 13vw;
-    width: 12vw;
-    border: 0px;
-    border-radius: 25px 25px 0px 0px ;
+    border-radius: var(--book-photo-half-border);
+    height: var(--book-small-height) ; 
+    width: var(--book-small-width) ; 
+    position: inherit;
 }
 
 .book-button{
     background-color: #E2E0E0;
-    width: 12vw;
-    height: 3vw;
+    position: inherit;
+    text-align: center;
+    height: var(--book-small-height-name); 
+    width:var(--book-small-width) ;
     border: 0px;
     margin-top: -1vw;
     border-radius: 0px 0px 25px 25px;
@@ -199,7 +207,7 @@ header {
 .footer{
     position: relative;
     height: 50vh;
-    background-color: black;
+    background-color: #2A2828;
     margin-bottom: -8px;
     margin-left: -8px;
     margin-right: -8px;
@@ -226,7 +234,7 @@ header {
     list-style-type:none;
     display: inline;
     position: absolute;
-    width: 18vw;
+    width: 18   vw;
 }
 footer ul li{
     margin: 2vh;

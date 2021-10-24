@@ -26,21 +26,120 @@
            --text-highlight-size : 2.34vmax; 
            --text-subDefinition-size: 1.41vmax; 
          }
-        header {
-            background-color: var(--main-tmp-color);
-            width: 100vw;
-            height: 146px;
-            left: 0px;
-            top: 0px;
-        }
-        nav {
-                background-color: var(--main-tmp-color);
-                margin: 3vw 5vw 3vw 5vw;
-                width: 90vw;
-                height: 48px;
-                left: 30px;
-                top: 195px;
-            }
+         h1 {font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+
+* {
+    box-sizing: border-box;
+  }
+
+  
+header {
+    height: 30vh;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    position: relative;
+}
+.header-1{
+    height: 5vh;
+    background-color: black;
+    color: white;
+    font-size: 2.5vh;
+    display: flex;  
+    position: relative;
+}
+
+
+.h-a-1{
+    margin-right: 60vw;
+}
+.h-a-2{
+    margin-right: 5vw;
+}
+
+.h-logo{
+
+    height: 7vh;
+    position: absolute;
+    top: 32%;
+    left: 14%;
+    transform: translate(-50%, -50%);
+
+}
+
+.header-2{
+    height: 25vh;
+    width: 100%;
+    position: relative;
+}
+
+  
+.search {
+    width: 100%;
+    position: absolute;
+    display: flex;
+}
+
+.searchTerm {
+    width: 100%;
+    height: 7vh;    
+    outline: none;
+    color: #9DBFAF;
+    font-size: 3vh;
+    border-radius: 25px 0px 0px 25px;
+}
+
+.searchTerm:focus{
+    color: #00B4CC;
+}
+  
+.searchButton {
+    width: 5vw;
+    height: 7vh;
+
+    background: #F24C1A;
+    text-align: center;
+    color: #fff;
+    border-radius: 0px 25px 25px 0px;
+    cursor: pointer;
+    font-size: 7vh;
+    border: 0px;
+}
+  
+
+.wrap{
+    width: 30vw;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.navbar{
+    width: 85vw;
+    height: 8vh;
+    background-color: #E2E0E0;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+}
+.navbar ul{
+    position: absolute;
+    top: -5%;
+}
+
+.navbar ul li{
+    display: inline;
+    font-size: 3.5vh;
+    margin-right: 6vw;  
+}
+.navbar ul img{
+    width: 5vh;
+    position: absolute;
+    
+}
         table, td, th {
             border: solid var(--main-tmp-color) 0.5px ;
         }
@@ -100,16 +199,116 @@
             top: 4.3vmax;
             right:3vw; 
         }
-       
+        .footer{
+            clear: both;
+    position: relative;
+    top:8vw;
+    height: 50vh;
+    background-color: #2A2828;
+    margin-bottom: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+    color: white;
+}
+.logo-footer{
+    widows: 10hw;
+    height: 7vh;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    
+}
+.footer p{
+    width: 25vw;
+    position: absolute;
+    left: 14.6%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    
+}
+.footer ul{
+    list-style-type:none;
+    display: inline;
+    position: absolute;
+    width: 18   vw;
+}
+footer ul li{
+    margin: 2vh;
+}
+.footer-left{
+    position: relative;
+    height: 45vh;
+    width: 40vw;
+    top: 7%;
+    left: 3%;
+}
+.footer-right{
+    position: relative;
+    background: #F24C1A;
+    height: 45vh;
+    width: 35vw;
+    left: 50%;
+    bottom: 86%;
+    margin: 0px;
+}
+
+.li-1{
+    top: 40%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+}
+
+.li-2{
+    top: 40%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+.wrap-footer{
+    width: 30vw;
+    position: absolute;
+    top: 60%;
+    left: 17%;
+    transform: translate(-50%, -50%);
+}
+
         </style>
     </head>
     <body>
         <header>
+			<div class="header-1">
+				<a class="h-a-1">Бие даасан номын дэлгүүр</a>
+				<img src="jpg/Placeholder.jpg">
+				<a class="h-a-2">Бүртгүүлэх</a>
+				<img src="jpg/Placeholder.jpg">
+				<a class="h-a-2">Нэвтрэх</a>
+			</div>
 
-        </header>
-        <nav>
-            
-        </nav>
+			<div class="header-2">
+				<img src="JPG/logo.png" class="h-logo">
+
+				<div class="wrap">
+					<div class="search">
+						<input type="text" class="searchTerm" placeholder="Хайх...">
+						<button type="submit" class="searchButton">
+							<i class="fa fa-search"></i>
+						</button>
+					</div>
+				</div>
+
+				<div class="navbar"> 
+					<ul>
+						<li><img src="jpg/Placeholder.jpg"></li>
+						<li><a>Ном</a></li>
+						<li><a>Хүүхдийн ном</a></li>
+						<li><a>Гадаад ном</a></li>
+						<li><a>Бичиг хэрэг</a></li>
+						<li><a>Бэлэг дурсгал</a></li>
+					</ul>
+				</div> 
+			</div>
+			
+		</header>
         <main >
             <table class ="cart-list">
                 <tr class="book-list-topRow">
@@ -138,7 +337,7 @@
                 </tr>
                 <tr class="book-list-row">
                     <td>3</td>
-                    <td><img class = "book-photo-onList" src= "book-cover.jpg"></td>
+                    <td><img class = "book-photo-onList" src= "JPG/book-cover.jpg"></td>
                     <td><p class="bordered">Book name</p></td>
                     <td><p class="bordered">10</p></td>
                     <td><p class="bordered">12345</p></td>
@@ -147,5 +346,47 @@
             </table>
             <div class="payment"></div>
         </main>
+        <footer class="footer">
+
+			<img src="jpg/footerLogo.png" class="logo-footer">
+
+			<p>
+				Шинэ, бэстселлер ном, хямдрал, 
+				урамшууллын талаарх мэдээллийг цаг 
+				алдалгүй авахыг хүсвэл манай жагсаалтад бүртгүүлээрэй!
+			</p>
+			
+			<div class="wrap-footer">
+				<div class="search">
+					<input type="text" class="searchTerm" placeholder="И-майл хаяг.">
+					<button type="submit" class="searchButton">
+						<i class="fa fa-search"></i>
+					</button>
+				</div>
+			</div>
+
+
+
+			<ul class="li-1">
+				<li>ИНТЕРНОМ</li>
+				<li>Бидний тухай</li>
+				<li>Холбоо барих</li>
+				<li>Манай дэлгүүрүүд</li>
+				<li>Бэстселлер</li>
+				<li>Шинэ</li>
+				<li>Арга хэмжээ</li>
+			</ul>
+			
+			<ul class="li-2">
+				<li>ТУСЛАМЖ</li>
+				<li>Захиалга хийх</li>
+				<li>Төлбөрийн хэрэгслүүд</li>
+				<li>Захиалга батлах, цуцлах</li>
+				<li>Хүргэлт, буцаалт</li>
+				<li>Бараа сонгох</li>
+				<li>Үйлчилгээний нөхцөл</li>
+			</ul>
+		
+		</footer>
     </body>
 </html>

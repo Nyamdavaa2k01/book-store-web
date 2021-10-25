@@ -104,8 +104,9 @@ header {
     color: #fff;
     border-radius: 0px 25px 25px 0px;
     cursor: pointer;
-    font-size: 7vh;
+
     border: 0px;
+    font-size: 0; 
 }
   
 

@@ -284,6 +284,21 @@ html {
     padding:10px
 }
 
+.list{
+    position: absolute;
+    background: #E2E0E0;
+    border-radius: 25px;
+    padding: auto;
+    min-width: 300px;
+    display: flexbox; 
+    left: 7%;
+}
+
+.list .list-body{
+    padding: 10px 20px 10px 10px;
+    margin: -20px 20px 20px 20px;
+}
+
 .filter {
     padding: 20px 0px;
 }

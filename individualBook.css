@@ -7,10 +7,7 @@
                 --sub-text-color:5F5E5E ; 
                 --main-text-color:585656 ; 
                 --main-text-size:2vmax; 
-                /* --sub-layer-color:E2E0E0;  */ 
-                --sub-layer-color:gray; 
-                /*using the above color temporarily*/
-                /* fonts  */
+               
                 --main-font-family :font-family:  Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                --text-header-size:3.13vmax ; 
                --text-definition-size:1.95vmax; 
@@ -22,7 +19,7 @@
                --book-small-width:16.1vw ; 
                --book-small-height:17.97vw; 
                 --book-small-height-withName: 22.4vw; 
-                --book-small-border-radius : 1.95vw ; 
+              
                 --book-small-height-name:4.43vw ; 
                 --book-small-border-radius :2vw; 
                 --book-photo-half-border:2vw 2vw 0px 0px ; 
@@ -229,6 +226,7 @@
                 position: inherit;
                 border-radius: var(--book-photo-half-border);
                 height: var(--book-small-height) ; 
+                height:auto ; 
                 width: var(--book-small-width) ; 
             }
             .bookTitle{

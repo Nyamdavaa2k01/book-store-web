@@ -133,7 +133,8 @@
             
            .aboutBook{
                clear:both;
-               background-color: var(--sub-layer-color);
+               /* background-color: var(--sub-layer-color); */
+               background-color: gray;
                width: 100vw;
                 height: 13.3vmax;
                 position:relative; 
@@ -227,7 +228,7 @@
             .bookPhoto_small {
                 position: inherit;
                 border-radius: var(--book-photo-half-border);
-                /* height: var(--book-small-height) ;  */
+                height: var(--book-small-height) ; 
                 
                  width: var(--book-small-width) ;
                  height:auto ;  

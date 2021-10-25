@@ -84,7 +84,7 @@ header {
   
 .searchButton {
     width: 5vw;
-    height: 7vh;
+    height: 8vh;
 
     background: #F24C1A;
     text-align: center;
@@ -297,6 +297,47 @@ html {
 .list .list-body{
     padding: 10px 20px 10px 10px;
     margin: -20px 20px 20px 20px;
+}
+
+.cat-title{
+    position: relative ;
+    background-color: #F24C1A;
+    width: 30vw;
+    height: 8vh;
+    left: 45%;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 2vh;
+    border-radius: 25px;
+}
+.cat-title p{
+    color: white;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+.cat-title p{
+    margin: 0px;
+
+}
+.cat-title-sub{
+    position: relative;
+    background-color: #C4C4C4 ;
+    width: 30vw;
+    height: 6vh;
+    left: 45%;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 25px;
+
+}
+.cat-title-sub p{
+    color: #F24C1A;
+    left: 50%;
+    top: 10%;
+    position: absolute;
+    transform: translate(-50%, -50%);
 }
 
 .filter {

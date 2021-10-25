@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="description" content="online book store" />
+        <meta name="keywords" content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes">
         <title>Document</title>
         <link rel="stylesheet" href="category.css" />
         <link rel="stylesheet" href="main.css" />
@@ -19,25 +20,25 @@
 			</div>
 
 			<div class="header-2">
-				<img src="JPG/logo.png" class="h-logo">
+				<img src="JPG/logo.png" class="h-logo" alt="logo">
 
 				<div class="wrap">
 					<div class="search">
 						<input type="text" class="searchTerm" placeholder="Хайх...">
-						<button type="submit" class="searchButton">
-							<i class="fa fa-search"></i>
-						</button>
+						<button type="submit" class="searchButton" aria-label="searchButton">
+                                <i class="fa fa-search">searchButton</i>
+                            </button>
 					</div>
 				</div>
 
 				<div class="navbar"> 
 					<ul>
-						<li><img src="jpg/Placeholder.jpg"></li>
-						<li><a>Ном</a></li>
-						<li><a>Хүүхдийн ном</a></li>
-						<li><a>Гадаад ном</a></li>
-						<li><a>Бичиг хэрэг</a></li>
-						<li><a>Бэлэг дурсгал</a></li>
+                        <li><img src="JPG/Placeholder.jpg" alt ="navigation"></li>
+                        <li><a href ="bookCategory.html">Ном</a></li>
+                        <li><a href ="bookCategory.html">Хүүхдийн ном</a></li>
+                        <li><a href = "bookCategory.html">Гадаад ном</a></li>
+                        <li><a href = "bookCategory.html">Бичиг хэрэг</a></li>
+                        <li><a href="bookCategory.html">Бэлэг дурсгал</a></li>
 					</ul>
 				</div> 
 			</div>
@@ -45,7 +46,7 @@
 		</header>
         
         <div style="position: relative; width: 100%; height: 10vh;">
-            <div class="cat-title" >
+            <div class="cat-title">
                 <p>
                     THE ART 
                 </p>
@@ -68,8 +69,11 @@
 
                         <div class="filter-sub-title">Сонгогдсон</div>
                         <div class="form-group">
-                            <input type="text" class="filter-control pa-8"
+                            <label>
+                                
+                                <input type="text" class="filter-control pa-8"
                                 value="Төрөл">
+                            </label>
                         </div>
 
 
@@ -121,13 +125,13 @@
                             </div>
                             <div class="form-group">
                                 <div class="filter-control pa-4">
-                                    <input type="checkbox" id="price2" />
+                                    <input type="checkbox" id="price3" />
                                     <label class="filter-label" for="price2">5000-10000₮</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="filter-control pa-4">
-                                    <input type="checkbox" id="price2" />
+                                    <input type="checkbox" id="price4" />
                                     <label class="filter-label" for="price2">5000-10000₮</label>
                                 </div>
                             </div>
@@ -150,13 +154,13 @@
                             </div>
                             <div class="form-group">
                                 <div class="filter-control pa-4">
-                                    <input type="checkbox" id="age2" />
+                                    <input type="checkbox" id="age3" />
                                     <label class="filter-label" for="age2">3-5</label>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="filter-control pa-4">
-                                    <input type="checkbox" id="age2" />
+                                    <input type="checkbox" id="age4" />
                                     <label class="filter-label" for="age2">3-5</label>
                                 </div>
                             </div>
@@ -172,70 +176,82 @@
         <section class="book-row-3">
             <ul class="book-list-cat">
                 <li class="book">
-                    <img src="jpg/Placeholder.jpg" class="book-cover">
-                    <button class="book-button"></button>
+                    <a href = "individualBook.html">
+                    <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                    <button class="book-button">Book name</button>
                 </li>
                 <li class="book">
-                    <img src="jpg/Placeholder.jpg" class="book-cover">
-                    <button class="book-button"></button>
+                    <a href = "individualBook.html">
+                        <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                    <button class="book-button">Book name</button>
                 </li>
                 <li class="book">
-                    <img src="jpg/Placeholder.jpg" class="book-cover">
-                    <button class="book-button"></button>
+                    <a href = "individualBook.html">
+                        <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                    <button class="book-button">Book name</button>
                 </li>
                 <li class="book">
-                    <img src="jpg/Placeholder.jpg" class="book-cover">
-                    <button class="book-button"></button>
+                    <a href = "individualBook.html">
+                        <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                    <button class="book-button">Book name</button>
                 </li>
             </ul>
+    </section>
+
+        <section class="book-row-3">
+                <ul class="book-list-cat">
+                    <li class="book">
+                        <a href = "individualBook.html">
+                        <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                        <button class="book-button">Book name</button>
+                    </li>
+                    <li class="book">
+                        <a href = "individualBook.html">
+                            <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                        <button class="book-button">Book name</button>
+                    </li>
+                    <li class="book">
+                        <a href = "individualBook.html">
+                            <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                        <button class="book-button">Book name</button>
+                    </li>
+                    <li class="book">
+                        <a href = "individualBook.html">
+                            <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                        <button class="book-button">Book name</button>
+                    </li>
+                </ul>
         </section>
 
         <section class="book-row-3">
             <ul class="book-list-cat">
                 <li class="book">
-                    <img src="jpg/Placeholder.jpg" class="book-cover">
-                    <button class="book-button"></button>
+                    <a href = "individualBook.html">
+                    <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                    <button class="book-button">Book name</button>
                 </li>
                 <li class="book">
-                    <img src="jpg/Placeholder.jpg" class="book-cover">
-                    <button class="book-button"></button>
+                    <a href = "individualBook.html">
+                        <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                    <button class="book-button">Book name</button>
                 </li>
                 <li class="book">
-                    <img src="jpg/Placeholder.jpg" class="book-cover">
-                    <button class="book-button"></button>
+                    <a href = "individualBook.html">
+                        <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                    <button class="book-button">Book name</button>
                 </li>
                 <li class="book">
-                    <img src="jpg/Placeholder.jpg" class="book-cover">
-                    <button class="book-button"></button>
+                    <a href = "individualBook.html">
+                        <img src="JPG/book-cover.jpg" class="book-cover" alt="Book cover"></a>
+                    <button class="book-button">Book name</button>
                 </li>
             </ul>
-        </section>
-
-            <section class="book-row-3">
-                <ul class="book-list-cat">
-                    <li class="book">
-                        <img src="jpg/Placeholder.jpg" class="book-cover">
-                        <button class="book-button"></button>
-                    </li>
-                    <li class="book">
-                        <img src="jpg/Placeholder.jpg" class="book-cover">
-                        <button class="book-button"></button>
-                    </li>
-                    <li class="book">
-                        <img src="jpg/Placeholder.jpg" class="book-cover">
-                        <button class="book-button"></button>
-                    </li>
-                    <li class="book">
-                        <img src="jpg/Placeholder.jpg" class="book-cover">
-                        <button class="book-button"></button>
-                    </li>
-                </ul>
-            </section>
+    </section>
         
        
         <footer class="footer">
 
-			<img src="jpg/footerLogo.png" class="logo-footer">
+			<img src="jpg/footerLogo.png" class="logo-footer" alt="logo">
 
 			<p>
 				Шинэ, бэстселлер ном, хямдрал, 
@@ -245,10 +261,13 @@
 			
 			<div class="wrap-footer">
 				<div class="search">
-					<input type="text" class="searchTerm" placeholder="И-майл хаяг.">
-					<button type="submit" class="searchButton" >
-						<i class="fa fa-search"></i>
-					</button>
+                    <label>
+
+                        <input type="text" class="searchTerm" placeholder="И-майл хаяг.">
+                    </label>
+					<button type="submit" class="searchButton" aria-label="searchButton">
+                        <i class="fa fa-search">searchButton</i>
+                    </button>
 				</div>
 			</div>
 

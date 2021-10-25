@@ -49,7 +49,8 @@ header {
 }
 
 .header-1 img{
-
+    width: 2vw;
+    height: 2vw;
 }
 
 .h-a-1{
@@ -187,11 +188,13 @@ header {
     margin: 1vw;
 }
 
+
 .book-cover{
     border-radius: var(--book-photo-half-border);
     height: var(--book-small-height) ; 
     width: var(--book-small-width) ; 
     position: inherit;
+    display: block
 }
 
 .book-button{

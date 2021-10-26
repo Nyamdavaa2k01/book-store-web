@@ -6,7 +6,10 @@
     --main-bg-color:black ;
     --sub-bg-color:#E2E0E0 ; 
     --book-row-title-size:2.4vmax;
-    --book-title-size:1.4vmax;
+    /* --book-title-size:1.4vmax; *
+        responsive media query ashiglahdaa desktopd zoriulsn bdlar oruulna
+    */
+    --book-title-size:16px;
 }
  .book-small{
     

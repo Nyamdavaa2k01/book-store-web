@@ -1,7 +1,9 @@
 :root{
     font-size: 16px;
     --book-photo-half-border:2vw 2vw 0px 0px ; 
-    --main-bg-color:#F24C1A ;
+    /* --main-bg-color:#F24C1A ; */ 
+    /*ulbar shar ungu ni anh tuluvlugdsun ungu ba contrastiin asuudlaas bolon tur hugatsand har bolgow*/
+    --main-bg-color:black ;
     --sub-bg-color:E2E0E0 ; 
     --book-row-title-size:2.4vmax;
     --book-title-size:1.4vmax;

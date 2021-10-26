@@ -13,7 +13,7 @@
         
         
         <link rel = "stylesheet" href = "book-list.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
         
     </head>
     <body>
@@ -31,11 +31,12 @@
             <button class ="aux">БЕСТСЕЛЛЕР</button>
             <button class ="view-all">
                 <p>Бүгд</p> 
-                <i class="material-icons">arrow_forward</i>
+                <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All">
             </button>
         </div>
         <div class = "book-row-container">
-            <button type ="move"><i class ="material-icons">chevron_left</i></button>
+            <!-- <button type ="move"><i class ="material-icons">chevron_left</i></button> -->
+            <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button>
             <div class="book-small">
                 <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
                 <p class = "book-title">Book Name</p>
@@ -56,10 +57,12 @@
                 <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
                 <p class = "book-title">Book Name</p>
             </div>
-            <button type ="move"><i class ="material-icons">chevron_right</i></button>
+            <!-- <button type ="move"><i class ="material-icons">chevron_right</i></button> -->
+            <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button>
         </div>
         <div class ="book-row-scroll">
             <div class="book-row-scroll-progress"></div>
         </div>
+       
     </body>
 </html>

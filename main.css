@@ -25,12 +25,11 @@
       --book-small-border-radius :2vw; 
       --book-photo-half-border:2vw 2vw 0px 0px ; 
  }
-h1 {font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
 
-* {
-    box-sizing: border-box;
-  }
+ @media only screen and (min-width: 768px) {
+    /* For desktop: */
 
+}
   
 header {
     height: 30vh;
@@ -43,7 +42,7 @@ header {
     height: 5vh;
     background-color: black;
     color: white;
-    font-size: 2.5vh;
+    font-size: 2vw;
     display: flex;  
     position: relative;
 }
@@ -54,10 +53,16 @@ header {
 }
 
 .h-a-1{
-    margin-right: 60vw;
+    position: absolute;
+    left: 5%;
 }
 .h-a-2{
-    margin-right: 5vw;
+    position: absolute;
+    right: 15%;
+}
+.h-a-3{
+    position: absolute;
+    right: 5%;
 }
 
 .h-logo{
@@ -137,7 +142,7 @@ header {
 .navbar ul li{
     display: inline;
     font-size: 3.5vh;
-    margin-right: 6vw;  
+    margin-right: 5vw;  
 }
 .navbar ul img{
     width: 5vh;
@@ -158,15 +163,15 @@ header {
     position: relative;
 }
 .book-row-1{
-    height: 60vh ;
-    width: 80vw;
+    height: 80vh ;
+    width: 93vw;
     position: relative;
     left: 3%;
 
 }
 .book-row-2{
-    height: 60vh;
-    width:80vw;
+    height: 80vh;
+    width:93vw;
     position: relative;
     left: 3%;
 
@@ -238,7 +243,7 @@ header {
     list-style-type:none;
     display: inline;
     position: absolute;
-    width: 18   vw;
+    width: 18vw;
 }
 footer ul li{
     margin: 2vh;

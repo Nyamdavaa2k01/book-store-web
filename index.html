@@ -9,6 +9,8 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes">
 		<link rel="stylesheet" href="main.css">
 		<link rel="stylesheet" href="book-list.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	</head>
 	<body>
 		<header>
@@ -73,158 +75,214 @@
 					</button>
 				</div>
 
-				<ul class="book-list">
-					<li class="book">
-						<a href= "individualBook.html" class="book-cover" >
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo">
-						</a>
-						<button class="book-button">My book Name</button>
-					</li>
-					<li class="book">
-						<a href= "individualBook.html"  class="book-cover">
-						<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-						<button class="book-button">My book Name</button>
-					</li>
-					<li class="book">
-						<a href= "individualBook.html" class="book-cover" >
-						<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-						<button class="book-button">My book Name</button>
-					</li>
-					<li class="book">
-						<a href= "individualBook.html" class="book-cover" >
-						<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-						<button class="book-button">My book Name</button>
-					</li>
-					<li class="book">
-						<a href= "individualBook.html" class="book-cover" >
-						<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-						<button class="book-button">My book Name</button>
-					</li>
+				<div class = "book-row-container">
+       
+					<!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+					<button type ="move"><i class ="material-icons">chevron_left</i></button>
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
 
-				</ul>
-			</section>
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+					<button type = "move"><i class = "material-icons"> chevron_right</i></button>
+					
+					<!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+				</div>
+	
+			
 
 
-			<section class="book-row-2">
-			<div class ="book-row-title">
-				<hr/>
-					<p class = "category-title">
-						<p class ="highlight">ШИНЭ </p> 
-						<p>болон </p> 
-						<p class = "highlight">БЭСТСЕЛЛЕР</p>
-					</p>
-				<hr/> 
-			</div>
+			
+			
+				<div class ="book-row-title">
+					<hr/>
+						<p class = "category-title">
+							<p class ="highlight">ШИНЭ </p> 
+							<p>болон </p> 
+							<p class = "highlight">БЭСТСЕЛЛЕР</p>
+						</p>
+					<hr/> 
+				</div>
 
-			<div class ="book-row-options">
-				<button class ="chosen">ШИНЭ</button>
-				<button class ="aux">БЕСТСЕЛЛЕР</button>
-				<button class ="view-all">
-					<p>Бүгд</p> 
-					<!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
-					<i class ="material-icons">arrow_forward</i>
-				</button>
-			</div>
-			<ul class="book-list">
-					<li class="book">
-						<a href= "individualBook.html" class="book-cover" >
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo">
-						</a>
-						<button class="book-button">My book Name</button>
-					</li>
-					<li class="book">
-						<a href= "individualBook.html"  class="book-cover">
-						<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-						<button class="book-button">My book Name</button>
-					</li>
-					<li class="book">
-						<a href= "individualBook.html" class="book-cover" >
-						<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-						<button class="book-button">My book Name</button>
-					</li>
-					<li class="book">
-						<a href= "individualBook.html" class="book-cover" >
-						<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-						<button class="book-button">My book Name</button>
-					</li>
-					<li class="book">
-						<a href= "individualBook.html" class="book-cover" >
-						<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-						<button class="book-button">My book Name</button>
-					</li>
+				<div class ="book-row-options">
+					<button class ="chosen">ШИНЭ</button>
+					<button class ="aux">БЕСТСЕЛЛЕР</button>
+					<button class ="view-all">
+						<p>Бүгд</p> 
+						<!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
+						<i class ="material-icons">arrow_forward</i>
+					</button>
+				</div>
+		
+				<div class = "book-row-container">
+		
+					<!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+					<button type ="move"><i class ="material-icons">chevron_left</i></button>
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
 
-				</ul>
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+					<button type = "move"><i class = "material-icons"> chevron_right</i></button>
+					
+					<!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+				</div>
+			
 			</section>
 
 			<section class="main">
 				<a href="individualBook.html"><img src="JPG/big-cover2.jpg" class="" alt="book cover"></a>
 			</section>
+
 			<section class="book-row-1">
-				<ul class="book-list">
-						<li class="book">
-							<a href= "individualBook.html" class="book-cover" >
-								<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo">
-							</a>
-							<button class="book-button">My book Name</button>
-						</li>
-						<li class="book">
-							<a href= "individualBook.html"  class="book-cover">
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-							<button class="book-button">My book Name</button>
-						</li>
-						<li class="book">
-							<a href= "individualBook.html" class="book-cover" >
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-							<button class="book-button">My book Name</button>
-						</li>
-						<li class="book">
-							<a href= "individualBook.html" class="book-cover" >
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-							<button class="book-button">My book Name</button>
-						</li>
-						<li class="book">
-							<a href= "individualBook.html" class="book-cover" >
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-							<button class="book-button">My book Name</button>
-						</li>
-	
-					</ul>
-			</section>
+				
+				<div class ="book-row-title">
+					<hr/>
+						<p class = "category-title">
+							<p class ="highlight">ШИНЭ </p> 
+							<p>болон </p> 
+							<p class = "highlight">БЭСТСЕЛЛЕР</p>
+						</p>
+					<hr/> 
+				</div>
 
+				<div class ="book-row-options">
+					<button class ="chosen">ШИНЭ</button>
+					<button class ="aux">БЕСТСЕЛЛЕР</button>
+					<button class ="view-all">
+						<p>Бүгд</p> 
+						<!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
+						<i class ="material-icons">arrow_forward</i>
+					</button>
+				</div>
 	
+					<div class = "book-row-container">
+		   
+						<!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+						<button type ="move"><i class ="material-icons">chevron_left</i></button>
+						<div class="book-small">
+							<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+							<p class = "book-title">Book Name</p>
+						</div>
 	
-			<section class="book-row-2">
-				<ul class="book-list">
-						<li class="book">
-							<a href= "individualBook.html" class="book-cover" >
-								<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo">
-							</a>
-							<button class="book-button">My book Name</button>
-						</li>
-						<li class="book">
-							<a href= "individualBook.html"  class="book-cover">
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-							<button class="book-button">My book Name</button>
-						</li>
-						<li class="book">
-							<a href= "individualBook.html" class="book-cover" >
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-							<button class="book-button">My book Name</button>
-						</li>
-						<li class="book">
-							<a href= "individualBook.html" class="book-cover" >
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-							<button class="book-button">My book Name</button>
-						</li>
-						<li class="book">
-							<a href= "individualBook.html" class="book-cover" >
-							<img src="JPG/book-cover.jpg" class="book-cover" alt="book-photo"></a>
-							<button class="book-button">My book Name</button>
-						</li>
+						<div class="book-small">
+							<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+							<p class = "book-title">Book Name</p>
+						</div>
 	
-					</ul>
-			</section>
+						<div class="book-small">
+							<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+							<p class = "book-title">Book Name</p>
+						</div>
+	
+						<div class="book-small">
+							<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+							<p class = "book-title">Book Name</p>
+						</div>
+	
+						<div class="book-small">
+							<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+							<p class = "book-title">Book Name</p>
+						</div>
+						<button type = "move"><i class = "material-icons"> chevron_right</i></button>
+						
+						<!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+					</div>
+				</div>
+	
+				
+				<div class ="book-row-title">
+					<hr/>
+						<p class = "category-title">
+							<p class ="highlight">ШИНЭ </p> 
+							<p>болон </p> 
+							<p class = "highlight">БЭСТСЕЛЛЕР</p>
+						</p>
+					<hr/> 
+				</div>
 
+				<div class ="book-row-options">
+					<button class ="chosen">ШИНЭ</button>
+					<button class ="aux">БЕСТСЕЛЛЕР</button>
+					<button class ="view-all">
+						<p>Бүгд</p> 
+						<!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
+						<i class ="material-icons">arrow_forward</i>
+					</button>
+				</div>
+
+				<div class = "book-row-container">
+       
+					<!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+					<button type ="move"><i class ="material-icons">chevron_left</i></button>
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+
+					<div class="book-small">
+						<img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+						<p class = "book-title">Book Name</p>
+					</div>
+					<button type = "move"><i class = "material-icons"> chevron_right</i></button>
+					
+					<!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+				</div>
+			</div>
+		</section>	
 
 		<footer class="footer">
 

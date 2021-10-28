@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+		<meta name="description" content="online book store" />
+		<meta name="keywords" content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=6">
+		
+        <title>
+            Internom
+        </title>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <style>
+            :root{
+                font-size: 16px;
+                font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                --book-photo-half-border:2vw 2vw 0px 0px ; 
+                /* --main-bg-color:#F24C1A ; */ 
+                /*ulbar shar ungu ni anh tuluvlugdsun ungu ba contrastiin asuudlaas bolon tur hugatsand har bolgow*/
+                --main-bg-color:#F24C1A ;
+                /* --main-special-color:#F24C1A ;  */
+                --sub-bg-color:#E2E0E0 ; 
+                --book-row-title-size:2.4vmax;
+                /* --book-title-size:1.4vmax; *
+                    responsive media query ashiglahdaa desktopd zoriulsn bdlar oruulna
+                */
+                --book-title-size:16px;
+            }
+            i {
+                font-size:3vmax; 
+            }
+            .header-top{
+
+                display:flex;
+                justify-content: space-between;  
+                align-items: center;
+                width:100% ; 
+                height :3.75vmax ; 
+                background-color: black ;
+                color : white ; 
+             
+            }
+            .header-top .material-icons {
+                font-size: 3vmax;
+                color:white ;
+                background-color: var(--main-bg-color);
+                border-radius: 20%;
+            }
+            header .header-right{
+                display: flex;
+                align-items: center;
+                width : 32.3vw ; 
+            }
+            header .header-right p {
+                margin-left: 0.7vw;
+                margin-right: 7vw;
+            }
+            header p {
+                font-size: 1.5vmax;
+                margin-left: 2vw ;
+            }
+            
+            .header-bottom {
+                display : flex ; 
+                justify-content: space-between;
+                align-items: center;
+            }
+            .logo-photo {
+                width : 16vw ; 
+                height : auto ; 
+                margin : 4.375vw; 
+            }
+            .search-field {
+                width : 43vw ; 
+                height:4vw ; 
+                background-color: var(--sub-bg-color);
+                margin : 4.375vw ;
+                border-radius: 1.2vw;
+            }
+            .icon-cart {
+                font-size: 3vmax ;
+                margin:4.375vw ;
+                margin-left: 10vw;
+            }
+            .search-button {
+                float : right ; 
+                background-color: var(--main-bg-color);
+                width : 7.34vw ; 
+                height : 100% ; 
+                border-radius: 100% 1.2vw 1.2vw 100%;
+                border: none;
+            }
+            .icon-search {
+                font-size:3vmax;  
+                color : white ; 
+            }
+         </style>
+    </head>
+    <body>
+       <header>
+           <div class = "header-top"> 
+                <p>Бие даасан номын дэлгүүр</p>
+                
+                <div class ="header-right">
+                    <i class ="material-icons">account_circle</i>
+                    <p>Бүртгүүлэх</p>
+                    <i class ="material-icons">login</i>
+                    <p>Нэвтрэх</p>
+                </div>
+            </div>
+
+            <div class ="header-bottom">
+                <img src = "JPG/logo.png" alt = "book store logo" class = "logo-photo">
+                <div class = "search-field" > 
+                    <button type ="search" class ="search-button">
+                        <i class ="material-icons icon-search">search</i>
+                    </button>
+                </div>
+                <i class = "material-icons icon-cart" >shopping_cart</i>
+            </div>
+       </header>
+
+    </body>
+</html>

@@ -25,7 +25,7 @@
     border-radius: var(--book-photo-half-border);
 }
 .book-title {
-    font-size: var(--book-title-size);
+    font-size: 2vw;
     text-align: center;
 }
 .book-row-container{
@@ -42,11 +42,14 @@
 
 .book-row-container .material-icons {
     clear:both;
-    font-size: 40px;
+    font-size: 4vw;
+
 }
 .book-row-container button {
-    width : 50px ; 
-    height : 50px ;
+    width : 5vw ; 
+    height : 8vh ;
+    border-radius: 20px;
+    border: 0px;
 }
 button {
     background-color: var(--sub-bg-color);

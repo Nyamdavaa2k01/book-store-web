@@ -9,8 +9,7 @@
         <title>
             Internom
         </title>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             :root{
                 font-size: 16px;
@@ -27,11 +26,14 @@
                 */
                 --book-title-size:16px;
             }
+            *{
+                padding: 0;
+                margin: 0;
+            }
             i {
                 font-size:3vmax; 
             }
             .header-top{
-
                 display:flex;
                 justify-content: space-between;  
                 align-items: center;
@@ -39,7 +41,6 @@
                 height :3.75vmax ; 
                 background-color: black ;
                 color : white ; 
-             
             }
             .header-top .material-icons {
                 font-size: 3vmax;
@@ -95,6 +96,241 @@
                 font-size:3vmax;  
                 color : white ; 
             }
+            :root{
+    font-size: 16px;
+    --book-photo-half-border:2vw 2vw 0px 0px ; 
+    /* --main-bg-color:#F24C1A ; */ 
+    /*ulbar shar ungu ni anh tuluvlugdsun ungu ba contrastiin asuudlaas bolon tur hugatsand har bolgow*/
+    --main-bg-color:black ;
+    --sub-bg-color:#E2E0E0 ; 
+    --book-row-title-size:2.4vmax;
+    /* --book-title-size:1.4vmax; *
+        responsive media query ashiglahdaa desktopd zoriulsn bdlar oruulna
+    */
+    --book-title-size:16px;
+}
+ .book-small{
+    
+    background-color: var(--sub-bg-color);
+    width:14.5vw; 
+    height: 26.4vmax ; 
+    border-radius: 2vw;
+
+}
+.book-small-photo{
+    width:100%; 
+    height:auto ; 
+    border-radius: var(--book-photo-half-border);
+}
+.book-title {
+    font-size: var(--book-title-size);
+    text-align: center;
+}
+.book-row-container{
+    display: flex;
+    justify-content: space-between;
+    width:90vw ; 
+    /* position: relative; 
+    left:5vw ; 
+    top:5vw ;  */
+    margin : 2vw 5vw 2vw 5vw; 
+
+    align-items: center;
+}
+
+.book-row-container .material-icons {
+    clear:both;
+    font-size: 40px;
+}
+.book-row-container button {
+    width : 50px ; 
+    height : 50px ;
+}
+button {
+    background-color: var(--sub-bg-color);
+}
+.book-row-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+hr {
+    width : 23vmax; 
+    height: 1.5px;
+
+    background-color: black;
+}
+.book-row-title p {
+    font-size: var(--book-row-title-size);
+    word-spacing:var(--book-row-title-size) ; 
+    margin:0.8vw ;
+}
+.highlight {  /*e.g., book row title*/
+    color : var(--main-bg-color) ; 
+}
+
+.book-row-options {
+    
+    margin-left:12vw ; 
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+
+    align-items: center;
+}
+button.chosen{
+    background-color: var(--main-bg-color);
+    color:white; 
+}
+.book-row-options button {
+    width : 13vw ; 
+    height : 3.7vw ; 
+    border-radius: 1vmax;
+    border:none;
+}
+button.view-all {
+    height:3vw ;
+    width : 10vw ; 
+    float : right ;
+    display: flex;
+    justify-content:space-evenly;
+    margin-right: 10vw;
+    align-items: center;
+}
+.book-row-scroll {
+    width : 76vw ; 
+    height:1vw ;
+    margin : 2vw 12vw 2vw 12vw ; 
+    /* background-color: var(--sub-bg-color); */
+    background-color: #FABD88;
+    border-radius: 0.8vw ; 
+}
+.book-row-scroll-progress {
+    width : 30vw ; 
+    height:1vw ; 
+    background-color: var(--main-bg-color);
+    border-radius: 0.8vw;
+}
+.icon{ 
+    height:40px; 
+    width :40px ; 
+}
+            @media screen and (min-width:480px) {
+                .mobile-search-field{
+                    display: none;
+                }
+                .header-bottom .menu-icon {
+                    display: none;
+                }
+                .mobile-search-button{
+                    display: none;
+                }
+                .mobile-main-book{
+                    display: none;
+                }
+                .desktop-main-book{
+                    width:90vw ; 
+                    border-radius: 4vw;
+                    height:auto ; 
+                    margin:5vw;
+                }
+                .mobile-main-book-explanation{
+                    display: none;
+                }
+            }
+            @media screen and (max-width:480px){
+                *{z-index:100}
+                .header-top{
+                    height:13vw ; 
+                }
+                .header-top p{
+                    display: none;
+                }
+                .header-right {
+                    float : left ; 
+                    margin:2vw ;
+                    justify-content: start;
+                }
+                /* .header-right i {
+                    font-size: 4vw;
+                    margin : 1vw ; 
+                    background-color: black;
+                    color:white;
+                } */
+                .logo-photo {
+                    width : 50vw ; 
+                    height : auto ; 
+                }
+                .search-field{
+                    display: none;
+                }
+                
+                .mobile-search-field {
+                    width:90vw ; 
+                    margin : 5vw ; 
+                    height : 10vw ; 
+                    background-color: var(--sub-bg-color);
+                    border-radius: 2vw;
+                }
+                .mobile-search-button{
+                    float : right ;
+                    width:20vw;
+      
+                    background-color: var(--main-bg-color);
+                  
+                    height : 100% ; 
+                    border-radius: 100% 1.2vw 1.2vw 100%;
+                    border: none;
+                }
+                .material-icons{
+                    font-size: 10vw;
+                }
+                .header-top .header-right .material-icons {
+                    background-color: black;
+                    margin-left: 1.3vmax;
+                    font-size: 10vw;
+                }
+                .mobile-main-book{
+                    position: relative;
+                    margin-top:5vw;
+                    width:100vw; 
+                    height:auto ;
+                    border-radius: 4vw;
+                    z-index: 5;
+                }
+                .desktop-main-book{
+                    display: none;
+                }
+                .mobile-main-book-explanation{
+                    position: relative;
+                    width:60vw ;
+                    height:40vw; 
+                    margin-left: 10vw;
+                    margin-top: -10vw;
+                    padding: 10vw;
+                    background-color: var(--sub-bg-color);
+                    border-radius: 4vw;
+                    z-index: 10;
+                }
+                .book4, .book5{ 
+                    display: none;
+                }
+               
+                .book-row-container button {
+                    display: none;
+                }
+                .book-small{
+                    width :25vw;
+                    height:48vw;
+                }
+                .book-row-title{
+                    margin-top: 8vw;
+                }
+                .book-row-options button {
+                    width:fit-content ;
+                    height:10vw;
+                    padding: 2vw;
+                }
+            }
          </style>
     </head>
     <body>
@@ -111,6 +347,7 @@
             </div>
 
             <div class ="header-bottom">
+                <i class="material-icons" class ="menu-icon">menu</i>
                 <img src = "JPG/logo.png" alt = "book store logo" class = "logo-photo">
                 <div class = "search-field" > 
                     <button type ="search" class ="search-button">
@@ -119,7 +356,224 @@
                 </div>
                 <i class = "material-icons icon-cart" >shopping_cart</i>
             </div>
-       </header>
+            <div class ="mobile-search-field">
+                <button type ="search" class ="mobile-search-button">
+                    <i class ="material-icons icon-search">search</i>
+                </button>
+            </div>
+            </header>
+            <main>
+                
+                <!-- mobile  -->
+                <img src = "JPG/mobile-book-cover.jpg" alt = "Book photo" class ="mobile-main-book" >
+                <div class ="mobile-main-book-explanation">
+                    <p>Хичээгээрэй, striking, stunning!</p>
+                </div>
+                <img src = "JPG/big-cover-5.jpg" alt = "Book photo" class = "desktop-main-book">
+                <div class ="book-row-title">
+                    <hr/>
+                        <p class = "category-title">
+                            <p class ="highlight">ШИНЭ </p> 
+                            <p>болон </p> 
+                            <p class = "highlight">БЭСТСЕЛЛЕР</p>
+                        </p>
+                    <hr/> 
+                </div>
+                <div class ="book-row-options">
+                    <button class ="chosen">ШИНЭ</button>
+                    <button class ="aux">БЕСТСЕЛЛЕР</button>
+                    <button class ="view-all">
+                        <p>Бүгд</p> 
+                        <!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
+                        <i class ="material-icons">arrow_forward</i>
+                    </button>
+                </div>
+                <div class = "book-row-container">
+       
+                    <!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                    <button type ="move" class ="move"><i class ="material-icons">chevron_left</i></button>
+                    <div class="book-small book1">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book2 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book3 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book4 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book5 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button>
+                    <!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                </div>
+                <div class ="book-row-scroll">
+                    <div class="book-row-scroll-progress"></div>
+                </div>
 
+                <div class ="book-row-title">
+                    <hr/>
+                        <p class = "category-title">
+                            <p class ="highlight">ШИНЭ </p> 
+                            <p>болон </p> 
+                            <p class = "highlight">БЭСТСЕЛЛЕР</p>
+                        </p>
+                    <hr/> 
+                </div>
+                <div class ="book-row-options">
+                    <button class ="chosen">ШИНЭ</button>
+                    <button class ="aux">БЕСТСЕЛЛЕР</button>
+                    <button class ="view-all">
+                        <p>Бүгд</p> 
+                        <!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
+                        <i class ="material-icons">arrow_forward</i>
+                    </button>
+                </div>
+                <div class = "book-row-container">
+       
+                    <!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                    <button type ="move" class ="move"><i class ="material-icons">chevron_left</i></button>
+                    <div class="book-small book1">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book2 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book3 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book4 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book5 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button>
+                    <!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                </div>
+                <div class ="book-row-scroll">
+                    <div class="book-row-scroll-progress"></div>
+                </div>
+
+                <img src = "JPG/mobile-book-cover.jpg" alt = "Book photo" class ="mobile-main-book" >
+                <div class ="mobile-main-book-explanation">
+                    <p>Хичээгээрэй, striking, stunning!</p>
+                </div>
+
+
+                <div class ="book-row-title">
+                    <hr/>
+                        <p class = "category-title">
+                            <p class ="highlight">ШИНЭ </p> 
+                            <p>болон </p> 
+                            <p class = "highlight">БЭСТСЕЛЛЕР</p>
+                        </p>
+                    <hr/> 
+                </div>
+                <div class ="book-row-options">
+                    <button class ="chosen">ШИНЭ</button>
+                    <button class ="aux">БЕСТСЕЛЛЕР</button>
+                    <button class ="view-all">
+                        <p>Бүгд</p> 
+                        <!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
+                        <i class ="material-icons">arrow_forward</i>
+                    </button>
+                </div>
+                <div class = "book-row-container">
+       
+                    <!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                    <button type ="move" class ="move"><i class ="material-icons">chevron_left</i></button>
+                    <div class="book-small book1">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book2 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book3 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book4 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book5 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button>
+                    <!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                </div>
+                <div class ="book-row-scroll">
+                    <div class="book-row-scroll-progress"></div>
+                </div>
+
+
+
+                <div class ="book-row-title">
+                    <hr/>
+                        <p class = "category-title">
+                            <p class ="highlight">ШИНЭ </p> 
+                            <p>болон </p> 
+                            <p class = "highlight">БЭСТСЕЛЛЕР</p>
+                        </p>
+                    <hr/> 
+                </div>
+                <div class ="book-row-options">
+                    <button class ="chosen">ШИНЭ</button>
+                    <button class ="aux">БЕСТСЕЛЛЕР</button>
+                    <button class ="view-all">
+                        <p>Бүгд</p> 
+                        <!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
+                        <i class ="material-icons">arrow_forward</i>
+                    </button>
+                </div>
+                <div class = "book-row-container">
+       
+                    <!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                    <button type ="move" class ="move"><i class ="material-icons">chevron_left</i></button>
+                    <div class="book-small book1">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book2 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book3 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book4 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <div class="book-small book5 ">
+                        <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                        <p class = "book-title">Book Name</p>
+                    </div>
+                    <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button>
+                    <!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                </div>
+                <div class ="book-row-scroll">
+                    <div class="book-row-scroll-progress"></div>
+                </div>
+            </main>
+    
     </body>
 </html>

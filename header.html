@@ -219,6 +219,19 @@ button.view-all {
     height:40px; 
     width :40px ; 
 }
+nav {
+    display: flex; 
+    justify-content: space-between;
+    width:90vw; 
+    height: 5vw ; 
+    background-color: var(--sub-bg-color);
+    margin-left: 5vw;
+    align-items: center;
+    border-radius: 2.5vw;
+}
+.navbar a{
+    margin-left:5vw;
+}
 
             @media screen and (min-width:480px) {
                 .mobile-search-field{
@@ -337,6 +350,9 @@ button.view-all {
                     height:10vw;
                     padding: 2vw;
                 }
+                nav {
+                    display: none;
+                }
             }
          </style>
     </head>
@@ -346,7 +362,7 @@ button.view-all {
                 <a href = "index.html"><p>Бие даасан номын дэлгүүр</p></a>
                 
                 <div class ="header-right">
-                    <a href = "register.html"><i class ="material-icons">account_circle</i></a>
+                    <a href = "register.html" ><i class ="material-icons">account_circle</i></a>
                     <a href ="register.html"><p>Бүртгүүлэх</p></a>
                     <a href ="login.html"><i class ="material-icons">login</i></a>
                     <a href ="login.html"><p>Нэвтрэх</p></a>
@@ -369,6 +385,18 @@ button.view-all {
                 </button>
             </div>
             </header>
+            <nav class ="navbar">
+               
+					<i class="material-icons" style ="margin-left: 5vw;">book</i>
+				
+					<a href ="bookCategory.html">Ном</a>
+					<a href ="bookCategory.html">Хүүхдийн ном</a>
+					<a href = "bookCategory.html">Гадаад ном</a>
+					<a href = "bookCategory.html">Бичиг хэрэг</a>
+					<a href="bookCategory.html" style = "margin-right: 5vw;">Бэлэг дурсгал</a>
+				
+				
+            </nav>
             <main>
                 
                 <!-- mobile  -->

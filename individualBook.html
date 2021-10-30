@@ -148,6 +148,11 @@
                display: flex; 
             justify-content: space-between;
            }
+            @media screen and (min-width:480px) {
+                .book-photo-mid{
+                    content:url("WEBP/book-cover-mid-comp.webp");
+                }
+            }
              @media screen and (max-width:480px) {
                 .path-way p{
                     font-size:0.8vmax;
@@ -190,7 +195,10 @@
                     width:80%; 
                     margin-left :7vw; 
                 }
-                
+                .book-photo-mid{
+                  
+                    content:url(WEBP/book-photo-mid2.webp); 
+                }
             }
         </style>
 	</head>
@@ -206,7 +214,7 @@
                     HARRY POTTER AND THE ORDER OF THE PHOENIX
                 </h1>
                 <div class = "book-info">
-                    <img class = "book-photo-mid" src = "WEBP/book-photo-mid2.webp" alt = "Book Photo"> 
+                    <img class = "book-photo-mid" alt = "Book Photo"> 
                     <div class ="up-line"></div>
                     <div class= "book-details">
                         <ul>

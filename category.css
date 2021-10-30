@@ -1,3 +1,16 @@
+:root{
+    font-size: 16px;
+    --book-photo-half-border:2vw 2vw 0px 0px ; 
+    /* --main-bg-color:#F24C1A ; */ 
+    /*ulbar shar ungu ni anh tuluvlugdsun ungu ba contrastiin asuudlaas bolon tur hugatsand har bolgow*/
+    --main-bg-color:black ;
+    --sub-bg-color:#E2E0E0 ; 
+    --book-row-title-size:2.4vmax;
+    /* --book-title-size:1.4vmax; *
+        responsive media query ashiglahdaa desktopd zoriulsn bdlar oruulna
+    */
+    --book-title-size:16px;
+}
 .card {
     position: absolute;
     background: #E2E0E0;
@@ -104,7 +117,7 @@ html {
     height: 50vh;
     width: 60vw;
     position: relative;
-    left: 23%;
+    left: 20%;
 }
 .book-list-cat{
   
@@ -124,7 +137,7 @@ html {
     left: 45%;
     text-align: center;
     vertical-align: middle;
-    margin-bottom: 2vh;
+    margin: 4vh;
     border-radius: 25px;
 }
 .cat-title p{
@@ -155,4 +168,57 @@ html {
     top: 10%;
     position: absolute;
     transform: translate(-50%, -50%);
+}
+.book-small{
+    
+    background-color: var(--sub-bg-color);
+    width:14.5vw; 
+    height: 26.4vmax ; 
+    border-radius: 2vw;
+
+}
+.book-small-photo{
+    width:100%; 
+    height:auto ; 
+    border-radius: var(--book-photo-half-border);
+}
+.book-title {
+    font-size: 2vw;
+    text-align: center;
+}
+.book-row-container{
+    display: flex;
+    justify-content: space-between;
+    width:70vw ; 
+    /* position: relative; 
+    left:5vw ; 
+    top:5vw ;  */
+    margin : 2vw 5vw 2vw 5vw; 
+
+    align-items: center;
+}
+
+.book-row-container .material-icons {
+    clear:both;
+    font-size: 4vw;
+
+}
+.book-row-container button {
+    width : 5vw ; 
+    height : 8vh ;
+    border-radius: 20px;
+    border: 0px;
+}
+button {
+    background-color: var(--sub-bg-color);
+}
+.book-row-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.book-row-title p {
+    font-size: var(--book-row-title-size);
+    word-spacing:var(--book-row-title-size) ; 
+    margin:0.8vw ;
 }

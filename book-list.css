@@ -119,3 +119,9 @@ button.view-all {
     height:40px; 
     width :40px ; 
 }
+
+.book-row-title p {
+    font-size: var(--book-row-title-size);
+    word-spacing:var(--book-row-title-size) ; 
+    margin:0.8vw ;
+}

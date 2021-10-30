@@ -13,7 +13,10 @@
 
 
         <style>
-            
+            *{
+                padding: 0;
+                margin: 0;
+            }
             :root{
                 font-size: 1.5vmax;
                 font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -22,7 +25,7 @@
                 /*ulbar shar ungu ni anh tuluvlugdsun ungu ba contrastiin asuudlaas bolon tur hugatsand har bolgow*/
                 --main-bg-color:#F24C1A ;
                 /* --main-special-color:#F24C1A ;  */
-                --sub-bg-color:#E2E0E0 ; 
+                --sub-bg-color:gray ; 
                 --book-row-title-size:2.4vmax;
                 /* --book-title-size:1.4vmax; *
                     responsive media query ashiglahdaa desktopd zoriulsn bdlar oruulna
@@ -35,28 +38,30 @@
                 display : flex;   
             }
             hr {
-                margin-top : -1.7vw; 
+                margin-top : 0; 
                 width : 90vw; 
                 margin-left: 2vw;
             }
             h1 {
                 padding : 1vmax; 
+
                 font-size: 3vmax;
                 text-align:center;
             }
+            
             .book-info {
                 display: flex; 
-
-            }
-            .book-info {
-                
-                height:50vmax ; 
+                height:55vmax ; 
                 width: 100%;
+                /* background-color: aqua; */
             }
             .book-info img { 
                 margin-left : 4vw ;
-               height: 100%; 
-               width:auto;
+               /* height: 100%; 
+               width:auto; */
+
+               max-height: 50vmax;
+                
                 border-radius: 2vw;
             }
             .up-line {
@@ -65,29 +70,27 @@
                 background-color: black;
                 border:none;
                 margin-left: 2vw;
-                margin-right: 2vw;
+                margin-right: 0;
             }
-            .list-left{
-                float :left ; 
-                text-align:left;
+            h2 {
+                margin:2vw;
             }
-            .list-right {
-                float : right ;
-                text-align: right;
-            }
-            ul {
-                list-style :none ; 
-            }
+            
             h2 p{
-                clear:both;
+                
                 margin: 0.5vmax;
-                margin-left : 5vmax;
+                margin-left : 3vmax;
             }
             .book-details {
+                width : 60%;
                 margin-top:5vw ;
+                margin-right: 3vw ; 
+            
+                padding:0;
             }
             .count {
-                margin : 5vmax; 
+                margin : 3vmax; 
+                margin-top:5vmax;
                 background-color: gray;
                 border: 2px ; 
                 width : 10vmax;
@@ -108,6 +111,43 @@
             .flex {
                 display:flex ; 
             }
+            
+            ul {
+                list-style:none;
+                margin:2vw;
+                margin-bottom:5vmax;
+            }
+
+          
+            
+            .book-rating {
+                display:flex ; 
+                margin-top : 5vw ; 
+                width : 100% ; 
+                height : 22vw ; 
+                background-color: gray;
+            }
+            .book-summary {
+                margin : 3vw ; 
+                background-color: white;
+                width : 40%; 
+                height : 10vw;
+                border-radius: 3vw;
+                border: none;
+                padding:3vw;
+                text-align: start;
+            }
+            input {
+                align-items: top;
+            }
+          ul {
+              margin-left: 5vw;
+              margin-right: 5vw;
+          }
+           ul li {
+               display: flex; 
+            justify-content: space-between;
+           }
              @media screen and (max-width:480px) {
                 .path-way p{
                     font-size:0.8vmax;
@@ -120,19 +160,37 @@
                 }
                 .book-info{
                     display: block;
+                    height:fit-content;
                 }
                 .up-line {
                     display: none;
                 }
-                .book-info ul{
+                /* .book-info ul{
                     font-size:12px;
-                }
+                } */
+              
+                
                 .book-info .book-photo-mid {
-                    margin-left:12vw;
+                    margin: 5vw;
+                    margin-left:15vw;
+                    max-height: 100vw;
                 }
                 .book-details{
-                    margin-left: -5vw;
+                
+                    width :100% ; 
                 }
+                .book-rating {
+                  
+                    /* clear:both; */
+                    display:block ;
+                    height : fit-content;
+                    padding-top:3vmax;
+                }
+                .book-summary{
+                    width:80%; 
+                    margin-left :7vw; 
+                }
+                
             }
         </style>
 	</head>
@@ -151,36 +209,45 @@
                     <img class = "book-photo-mid" src = "WEBP/book-cover-mid.webp" alt = "Book Photo"> 
                     <div class ="up-line"></div>
                     <div class= "book-details">
-                        <div class = "list-left">
-                            <ul >
-                                <li>Зохиолч:</li>
-                                <li>Эрхлэн гаргасан: </li>
-                                <li>Ангилал: </li>
-                                <li>ISBN код:</li>
-                                <li>Хэл: </li>
-                                <li>Хуудасны тоо:</li>
-                                <li>Жин:</li>
-                                <li>Хэмжээ:</li>
-                                <li>Үлдэгдэл:</li>
-                            </ul>
-                        </div>
-                        <div class = "list-right">    
-                            <ul >
-                                <li>J.K Rowling</li>
-                                <li>Bloomsbury Publishing PLC</li>
-                                <li>CHILDREN’S, TEENAGE & EDUCATIONAL</li>
-                                <li>978-14088-55-69-0</li>
-                                <li>Англи</li>
-                                <li>816</li>
-                                <li>655 гр</li>
-                                <li>198 x 135 x 129 мм</li>
-                            
-                                <li>Байгаа</li>
-                            </ul>
-                        </div>
-                        <h2>
-                            <p>Үндсэн үнэ: 30000₮</p>
-                            <p> Хямдарсан үнэ: 0₮</p>
+                        <ul>
+                            <li> <p>Зохиолч</p> 
+                                <p> J. K. Rowling</p>
+                                
+                                
+                            </li>
+                            <li> <p>Эрхлэн гаргасан:</p> 
+                                <p> Bloomsbury Publishing PLC</p>
+                                
+                            </li>
+                            <li> <p>Ангилал:</p> 
+                                <p>CHILDREN’S, TEENAGE & EDUCATIONAL</p>
+                                
+                            </li>
+                            <li> <p>ISBN код</p> 
+                                <p>978-14088-55-69-0</p>
+                                
+                            </li>
+                            <li> <p>Хэл</p> 
+                                <p>Англи</p>
+                                
+                            </li>
+                            <li> <p>Хуудасны тоо</p> 
+                                <p>816</p>
+                                
+                            </li>
+                            <li> <p>Хэмжээ</p> 
+                                <p>198 x 135 x 129 мм</p>
+                                
+                            </li>
+                            <li> <p>Үлдэгдэл</p> 
+                                <p>Байгаа</p>
+                                
+                            </li>
+                        </ul>
+                      
+                        <h2 > 
+                            <p>Үндсэн үнэ: 60000₮</p>
+                            <p> Хямдралтай үнэ: 45000₮</p>
                         </h2>
                         <div class ="flex">
                             <div class="count"></div>
@@ -189,6 +256,14 @@
                     </div>
                 </div>
 
+            </section>
+
+            <section class = "book-rating">
+                <div class = "book-summary">Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар </div>
+                <div class ="up-line"></div>
+                <textarea name ="comment" rows ="5" cols="20" class = "book-summary" placeholder="Сэтгэгдэл үлдээх..." >
+                  
+                </textarea>
             </section>
         </main>
 	</body>

@@ -10,391 +10,261 @@
         <title>
             Internom
         </title>
-        <link rel="stylesheet" href="individualBook.css">
+
 
         <style>
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            :root{
+                font-size: 1.5vmax;
+                font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                --book-photo-half-border:2vw 2vw 0px 0px ; 
+                /* --main-bg-color:#F24C1A ; */ 
+                /*ulbar shar ungu ni anh tuluvlugdsun ungu ba contrastiin asuudlaas bolon tur hugatsand har bolgow*/
+                --main-bg-color:#F24C1A ;
+                /* --main-special-color:#F24C1A ;  */
+                --sub-bg-color:gray ; 
+                --book-row-title-size:2.4vmax;
+                /* --book-title-size:1.4vmax; *
+                    responsive media query ashiglahdaa desktopd zoriulsn bdlar oruulna
+                */
+                --book-title-size:16px;
+            }
+
+            .path-way{
+                margin-left: 5vw;
+                display : flex;   
+            }
+            hr {
+                margin-top : 0; 
+                width : 90vw; 
+                margin-left: 2vw;
+            }
+            h1 {
+                padding : 1vmax; 
+
+                font-size: 3vmax;
+                text-align:center;
+            }
+            
+            .book-info {
+                display: flex; 
+                height:55vmax ; 
+                width: 100%;
+                /* background-color: aqua; */
+            }
+            .book-info img { 
+                margin-left : 4vw ;
+               /* height: 100%; 
+               width:auto; */
+
+               max-height: 50vmax;
+                
+                border-radius: 2vw;
+            }
+            .up-line {
+                height: 100%; 
+                width : 0.3vw ; 
+                background-color: black;
+                border:none;
+                margin-left: 2vw;
+                margin-right: 0;
+            }
+            h2 {
+                margin:2vw;
+            }
+            
+            h2 p{
+                
+                margin: 0.5vmax;
+                margin-left : 3vmax;
+            }
+            .book-details {
+                width : 60%;
+                margin-top:5vw ;
+                margin-right: 3vw ; 
+            
+                padding:0;
+            }
+            .count {
+                margin : 3vmax; 
+                margin-top:5vmax;
+                background-color: gray;
+                border: 2px ; 
+                width : 10vmax;
+                height :4vmax;  
+            }
+            .order{
+           
+                margin : 5vmax; 
+                background-color: var(--main-bg-color);
+                width: 23.4vmax;
+                height: 3.75vmax;
+                left:11.25vmax;
+                border-radius: 25px;
+                text-align: center;
+                color:black ;
+                font-size: 2.3vmax;
+            }
+            .flex {
+                display:flex ; 
+            }
+            
+            ul {
+                list-style:none;
+                margin:2vw;
+                margin-bottom:5vmax;
+            }
+
+          
+            
+            .book-rating {
+                display:flex ; 
+                margin-top : 5vw ; 
+                width : 100% ; 
+                height : 22vw ; 
+                background-color: gray;
+            }
+            .book-summary {
+                margin : 3vw ; 
+                background-color: white;
+                width : 40%; 
+                height : 10vw;
+                border-radius: 3vw;
+                border: none;
+                padding:3vw;
+                text-align: start;
+            }
+            input {
+                align-items: top;
+            }
+          ul {
+              margin-left: 5vw;
+              margin-right: 5vw;
+          }
+           ul li {
+               display: flex; 
+            justify-content: space-between;
+           }
+             @media screen and (max-width:480px) {
+                .path-way p{
+                    font-size:0.8vmax;
+                }
+                hr {
+                    width:90%; 
+                }
+                h1 {
+                    font-size: 2vmax;
+                }
+                .book-info{
+                    display: block;
+                    height:fit-content;
+                }
+                .up-line {
+                    display: none;
+                }
+                /* .book-info ul{
+                    font-size:12px;
+                } */
               
-header {
-    height: 30vh;
-    margin-top: -8px;
-    margin-left: -8px;
-    margin-right: -8px;
-    position: relative;
-}
-.header-1{
-    height: 5vh;
-    background-color: black;
-    color: white;
-    font-size: 3vh;
-    display: flex;  
-    position: relative;
-}
-.h-a-1{
-    margin-right: 60vw;
-}
-.h-a-2{
-    margin-right: 5vw;
-}
-
-.h-logo{
-
-    height: 7vh;
-    position: absolute;
-    top: 32%;
-    left: 14%;
-    transform: translate(-50%, -50%);
-
-}
-
-.header-2{
-    height: 25vh;
-    width: 100%;
-    position: relative;
-}
-
-  
-.search {
-    width: 100%;
-    position: absolute;
-    display: flex;
-}
-
-.searchTerm {
-    width: 100%;
-    height: 7vh;    
-    outline: none;
-    color: #9DBFAF;
-    font-size: 3vh;
-    border-radius: 25px 0px 0px 25px;
-}
-
-.searchTerm:focus{
-    color: #00B4CC;
-}
-  
-.searchButton {
-    width: 5vw;
-    height: 7vh;
-
-    background: #F24C1A;
-    text-align: center;
-    color: #fff;
-    border-radius: 0px 25px 25px 0px;
-    cursor: pointer;
-    font-size: 7vh;
-    border: 0px;
-}
-  
-
-.wrap{
-    width: 30vw;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-.navbar{
-    width: 85vw;
-    height: 8vh;
-    background-color: #E2E0E0;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 25px;
-}
-.navbar ul{
-    position: absolute;
-    top: -5%;
-}
-
-.navbar ul li{
-    position: relative ;
-    top: 3vw; 
-    display: inline;
-    font-size: 4vh;
-    margin-right: 6vw;  
-}
-.navbar ul img{
-    width: 5vh;
-    position: absolute;
-    
-}
-
-.footer{
-    position: relative;
-    top:10vmax; 
-    height: 50vh;
-    background-color: black;
-    margin-bottom: -8px;
-    margin-left: -8px;
-    margin-right: -8px;
-    color: white;
-}
-.logo-footer{
-    widows: 10hw;
-    height: 7vh;
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    transform: translate(-50%, -50%);
-    
-}
-.footer p{
-    width: 25vw;
-    position: absolute;
-    left: 14.6%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    
-}
-.footer ul{
-    list-style-type:none;
-    display: inline;
-    position: absolute;
-    width: 18vw;
-}
-footer ul li{
-    margin: 2vh;
-}
-.footer-left{
-    position: relative;
-    height: 45vh;
-    width: 40vw;
-    top: 7%;
-    left: 3%;
-}
-.footer-right{
-    position: relative;
-    background: #F24C1A;
-    height: 45vh;
-    width: 35vw;
-    left: 50%;
-    bottom: 86%;
-    margin: 0px;
-}
-
-.li-1{
-    top: 40%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-}
-
-.li-2{
-    top: 40%;
-    left: 80%;
-    transform: translate(-50%, -50%);
-}
-.wrap-footer{
-    width: 30vw;
-    position: absolute;
-    top: 60%;
-    left: 17%;
-    transform: translate(-50%, -50%);
-}
-main {
-    position: relative ;
-    top:5vmax ;
-     
-}
-.wrap-footer{
-    width: 30vw;
-    position: absolute;
-    top: 60%;
-    left: 17%;
-    transform: translate(-50%, -50%);
-}
-
+                
+                .book-info .book-photo-mid {
+                    margin: 5vw;
+                    margin-left:15vw;
+                    max-height: 100vw;
+                }
+                .book-details{
+                
+                    width :100% ; 
+                }
+                .book-rating {
+                  
+                    /* clear:both; */
+                    display:block ;
+                    height : fit-content;
+                    padding-top:3vmax;
+                }
+                .book-summary{
+                    width:80%; 
+                    margin-left :7vw; 
+                }
+                
+            }
         </style>
 	</head>
 	<body>
-		<header>
-			<div class="header-1">
-				<a class="h-a-1">Бие даасан номын дэлгүүр</a>
-				<a class="h-a-2">Бүртгүүлэх</a>
-				<a class="h-a-2">Нэвтрэх</a>
-			</div>
-
-			<div class="header-2">
-				<img src="JPG/logo.png" class="h-logo">
-
-				<div class="wrap">
-					<div class="search">
-						<input type="text" class="searchTerm" placeholder="Хайх...">
-						<button type="submit" class="searchButton">
-							<i class="fa fa-search"></i>
-						</button>
-					</div>
-				</div>
-
-				<div class="navbar"> 
-					<ul>
-						<li><img src="jpg/Placeholder.jpg"></li>
-						<li><a>Ном</a></li>
-						<li><a>Хүүхдийн ном</a></li>
-						<li><a>Гадаад ном</a></li>
-						<li><a>Бичиг хэрэг</a></li>
-						<li><a>Бэлэг дурсгал</a></li>
-					</ul>
-				</div> 
-			</div>
-			
-		</header>
-	
-			
-
-
-
-
         <main>
-            <div class="pathway">
-                <p class="pathWay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut excepturi quas modi quod
-                voluptatem maxime et hic suscipit a alias?</p>
+            <div class = "path-way">
+                <p >Интерном/ CHILDREN’S, TEENAGE & EDUCATIONAL/</p>
+                <p > HARRY POTTER AND THE ORDER OF THE PHOENIX</p>
             </div>
-            <br/>
-        
-        <section class="bookView">
-            <img class="bookPhoto" src="JPG/book-cover.jpg" alt = "Book Photo">
-            <div class="bookExp">
-                <h1 class="bookName">Lorem ipsum dolor sit amet.</h1>
-                <span class="inline-block">
-                    <ul class="bookInfo">
-                        <li>Item1</li><li>Item2</li><li>Item3</li><li>Item4</li><li>Item5</li><li>Item6</li><li>Item7</li><li>Item8</li><li>Item9</li><li>Item10</li>
-                    </ul>
-                </span>
-                <span class="inline-block">
-                    <ul class="details">
-                        <li>detail1</li><li>detail2</li><li>detail3</li><li>detail4</li><li>detail5</li><li>detail6</li><li>detail7</li><li>detail8</li><li>detail9</li><li>detail10</li>
-                    </ul>
-                </span>
-                <p class ="priceTag"> 
-                    Үндсэн үнэ: 30000₮ <br/>
-                    Хямдарсан үнэ: 5000₮
-                </p>
-                <span class ="count inline-block"> </span>
-                <span class = "order inline-block">Сагсанд хийх</span>
-            </div>
-            
-        </section>
-        <section class ="aboutBook">
-            <div class="bookSummary inline-block" ></div>
-            <!-- <div class ="verticalLine inline-block"></div> -->
-            <div class="userRating inline-block">
-                <div class="comment">
-                   <p class="type">..........</p>  
+            <hr/>
+            <section class="about-book">
+                <h1>
+                    HARRY POTTER AND THE ORDER OF THE PHOENIX
+                </h1>
+                <div class = "book-info">
+                    <img class = "book-photo-mid" src = "WEBP/book-photo-mid2.webp" alt = "Book Photo"> 
+                    <div class ="up-line"></div>
+                    <div class= "book-details">
+                        <ul>
+                            <li> <p>Зохиолч</p> 
+                                <p> J. K. Rowling</p>
+                                
+                                
+                            </li>
+                            <li> <p>Эрхлэн гаргасан:</p> 
+                                <p> Bloomsbury Publishing PLC</p>
+                                
+                            </li>
+                            <li> <p>Ангилал:</p> 
+                                <p>CHILDREN’S, TEENAGE & EDUCATIONAL</p>
+                                
+                            </li>
+                            <li> <p>ISBN код</p> 
+                                <p>978-14088-55-69-0</p>
+                                
+                            </li>
+                            <li> <p>Хэл</p> 
+                                <p>Англи</p>
+                                
+                            </li>
+                            <li> <p>Хуудасны тоо</p> 
+                                <p>816</p>
+                                
+                            </li>
+                            <li> <p>Хэмжээ</p> 
+                                <p>198 x 135 x 129 мм</p>
+                                
+                            </li>
+                            <li> <p>Үлдэгдэл</p> 
+                                <p>Байгаа</p>
+                                
+                            </li>
+                        </ul>
+                      
+                        <h2 > 
+                            <p>Үндсэн үнэ: 60000₮</p>
+                            <p> Хямдралтай үнэ: 45000₮</p>
+                        </h2>
+                        <div class ="flex">
+                            <div class="count"></div>
+                            <div class="order">Захиалах</div>
+                        </div>
+                    </div>
                 </div>
-                <p class="rating">
-                    Үнэлгээ өгөх
-                </p>
-            </div>
-        </section>
 
-        <section class="suggestion">
-                <div class="book-row1">
-                    <div class ="bookSmall ">
-                        <img src="JPG/book-cover.jpg" alt = "Book Photo" class="bookPhoto_small ">
-                        <div class="bookTitle">
-                            <p>My book Name</p>
-                        </div>
-                    </div>
-                    <div class ="bookSmall">
-                        <img src="JPG/book-cover.jpg"  alt = "Book Photo" class="bookPhoto_small">
-                        <div class="bookTitle">
-                            <p>My book Name</p>
-                        </div>
-                    </div>
-                    <div class ="bookSmall">
-                        <img src="JPG/book-cover.jpg" alt = "Book Photo" class="bookPhoto_small">
-                        <div class="bookTitle">
-                            <p>My book Name</p>
-                        </div>
-                    </div>
-                    <div class="book-mid">
-                        <img src="JPG/book-cover.jpg" alt = "Book Photo" class="book-mid-photo">
-                        <div class="book-mid-title">My book Name</div>
-                    </div>
-                </div>
-                <div class="book-row2">
-                    <div class ="bookSmall ">
-                        <img src="JPG/book-cover.jpg" alt = "Book Photo" class="bookPhoto_small ">
-                        <div class="bookTitle">
-                            <p>My book Name</p>
-                        </div>
-                    </div>
-                    <div class ="bookSmall">
-                        <img src="JPG/book-cover.jpg"  alt = "Book Photo" class="bookPhoto_small">
-                        <div class="bookTitle">
-                            <p>My book Name</p>
-                        </div>
-                    </div>
-                    <div class ="bookSmall">
-                        <img src="JPG/book-cover.jpg" alt = "Book Photo" class="bookPhoto_small">
-                        <div class="bookTitle">
-                            <p>My book Name</p>
-                        </div>
-                    </div>
-                    
-                </div>
-               
-        </section>
+            </section>
 
-    
+            <section class = "book-rating">
+                <div class = "book-summary">Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар </div>
+                <div class ="up-line"></div>
+                <textarea name ="comment" rows ="5" cols="20" class = "book-summary" placeholder="Сэтгэгдэл үлдээх..." >
+                  
+                </textarea>
+            </section>
         </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-		<footer class="footer">
-
-			<img src="jpg/logo.png" class="logo-footer">
-
-			<p>
-				Шинэ, бэстселлер ном, хямдрал, 
-				урамшууллын талаарх мэдээллийг цаг 
-				алдалгүй авахыг хүсвэл манай жагсаалтад бүртгүүлээрэй!
-			</p>
-			
-			<div class="wrap-footer">
-				<div class="search">
-					<input type="text" class="searchTerm" placeholder="И-майл хаяг.">
-					<button type="submit" class="searchButton">
-						<i class="fa fa-search"></i>
-					</button>
-				</div>
-			</div>
-
-
-
-			<ul class="li-1">
-				<li>ИНТЕРНОМ</li>
-				<li>Бидний тухай</li>
-				<li>Холбоо барих</li>
-				<li>Манай дэлгүүрүүд</li>
-				<li>Бэстселлер</li>
-				<li>Шинэ</li>
-				<li>Арга хэмжээ</li>
-			</ul>
-			
-			<ul class="li-2">
-				<li>ТУСЛАМЖ</li>
-				<li>Захиалга хийх</li>
-				<li>Төлбөрийн хэрэгслүүд</li>
-				<li>Захиалга батлах, цуцлах</li>
-				<li>Хүргэлт, буцаалт</li>
-				<li>Бараа сонгох</li>
-				<li>Үйлчилгээний нөхцөл</li>
-			</ul>
-		
-		</footer>
 	</body>
 </html>

@@ -251,6 +251,92 @@ display: none;
         display: none;
     }
 }
+
+
+footer {
+    display:flex; 
+    margin-top: 5vw;
+    background-color: black;
+    color:white;
+    width:100% ; 
+    height:fit-content;
+   
+}
+.logo-photo-container{
+    padding:0;
+    width : 20vw;  
+    height :fit-content; 
+    /* background-color:white; */
+    
+}
+.logo-photo-container img{
+    width : 20vw; 
+    height : auto ;
+    margin-top: 5vw;
+     filter : saturate(1);
+    /* color-profile :white; */
+    filter:invert(2) ; 
+}
+.footer-left {
+    width : 40%; 
+    margin-left : 5vw ;
+    background-color: black;
+}
+.email-explanation {
+    margin:1vw; 
+}
+.email-register {
+    height :7vh; 
+    align-items: center;
+    
+}
+footer input {
+    background-color: white;
+   
+    padding-left: 2vw;
+    width:55%; 
+     height:100%; 
+    border-radius: 2vw;
+    border :none ; 
+    /* padding :1vw;  */
+}
+footer button {
+    width:35%; 
+    height :100% ;
+    background-color: #F24C1A ;
+    border-radius: 2vw ;
+    border: none;
+}
+footer i {
+    /* background-color: white;
+    color: black; */
+    color:white;
+    border:white;
+  
+}
+.inline {
+    margin : 2vw;
+    display: flex;
+}
+footer .phone {
+    color: #F24C1A ;
+}
+footer i{
+    margin-right:1vw;
+}
+.footer-right {
+    width : 50%; 
+    display:flex ;
+    justify-content: space-between;
+}
+.footer-right ul {
+    list-style: none;
+    margin : 5vw;
+}
+.footer-right ul li {
+    margin : 1vw;
+}
+
 @media screen and (max-width:480px){
     *{z-index:100}
     .header-top{
@@ -371,4 +457,24 @@ display: none;
         margin-top:1vw;
         color :white;
     } */
+    footer {
+        display:block;
+    }
+    .footer-left{
+        width:90%;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-left .email-register {
+        height : 5vh;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+    }
+    .logo-photo-container{
+        width:90%; 
+    }
+    .logo-photo-container img {
+        width : 90% 
+    }
+    
 }

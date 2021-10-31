@@ -44,6 +44,7 @@
     margin-top: 2vh;
     margin-bottom: 2vh;
     margin-left: 1.5vw;
+    border-radius: 20px;
 }
 .list-book-name{
     height: 25vh;

@@ -7,48 +7,58 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes">
         <title>Document</title>
         <link rel="stylesheet" href="category.css" />
-        <link rel="stylesheet" href="main.css" />
-
+        <link rel="stylesheet" href="main-style-2.css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body>
         <header>
-			<div class="header-1">
-				<a class="h-a-1" href="index.html">Бие даасан номын дэлгүүр</a>
-				<div class="h-a-2" >
-					<img src="JPG/Placeholder.jpg" alt="sign up">
-					<a href="register.html"> Бүртгүүлэх</a>
-				</div>
-				<div class="h-a-3">
-					<img src="JPG/Placeholder.jpg" alt = "sign in">
-					<a  href="login.html"> Нэвтрэх</a>
-				</div>
-			</div>
 
-			<div class="header-2">
-				<img src="JPG/logo.png" class="h-logo" alt="logo">
+            <div class = "header-top"> 
+                <a href = "index.html"><p>Бие даасан номын дэлгүүр</p></a>
+                
+                <div class ="header-right">
+                    <a href = "register.html"><i class ="material-icons register-icon" >account_circle</i></a>
+                    <a href ="register.html" name = "sign up via link"> <p>Бүртгүүлэх</p></a>
+                    <a href ="login.html"i class ="material-icons login-icon">login</i></a>
+            
+                    <p><a href = "login.html">Нэвтрэх</a></p>
+                </div>
+            </div>
+            <!-- <div  class = "header-top-right">
+                <i class ="material-icons">shopping_cart</i>
+            </div> -->
+            <div class ="header-bottom">
+            
+                <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
+                <div class = "search-field" >
+                    <input type = "text" class ="search-input" placeholder="Хайлт хийх"> 
+                    <button type ="search" class ="search-button">
+                        <i class ="material-icons icon-search">search</i>
+                    </button>
+                </div>
 
-				<div class="wrap">
-					<div class="search">
-						<input type="text" class="searchTerm" placeholder="Хайх...">
-						<button type="search" class="search-button " aria-label="searchButton">
-							<i class="material-icons">search</i>
-						</button>
-					</div>
-				</div>
+                <i class = "material-icons icon-cart" style ="font-size: 4vmax;"><a href ="cart-list.html">shopping_cart</a></i>
 
-				<div class="navbar"> 
-					<img src="JPG/Placeholder.jpg" alt ="navigation">
-					<ul>
-						<li><a href ="bookCategory.html">Ном</a></li>
-						<li><a href ="bookCategory.html">Хүүхдийн ном</a></li>
-						<li><a href = "bookCategory.html">Гадаад ном</a></li>
-						<li><a href = "bookCategory.html">Бичиг хэрэг</a></li>
-						<li><a href="bookCategory.html">Бэлэг дурсгал</a></li>
-					</ul>
-				</div> 
-			</div>
-			
-		</header>
+            </div>
+
+            <div class ="mobile-search-field">
+                <button type ="search" class ="mobile-search-button">
+                    <i class ="material-icons icon-search">search</i>
+                </button>
+            </div>
+        </header>
+        <nav class ="navbar">
+        
+                <i class="material-icons" style ="margin-left: 5vw;">book</i>
+            
+                <a href ="bookCategory.html">Ном</a>
+                <a href ="bookCategory.html">Хүүхдийн ном</a>
+                <a href = "bookCategory.html">Гадаад ном</a>
+                <a href = "bookCategory.html">Бичиг хэрэг</a>
+                <a href="bookCategory.html" style = "margin-right: 5vw;">Бэлэг дурсгал</a>
+            
+            
+        </nav>
 
         <div class="cat-title">
             <p>
@@ -56,215 +66,193 @@
             </p>
         </div>
 
+            
+        <img src="PNG/Menu.png" class="cat-menu"></img>
+        <aside class="category" >
+            <div class="sub-cat">
+                <p>
+                    Үнээр
+                </p>
+                <select class="cat-drop-down">
+                    <option> Үнээр</option>
+                    <option> Үнээр</option>
+                    <option> Үнээр</option>
+                </select>
+            </div>
 
-        <aside class="card" style="min-width: 200px;">
-            <div class="card-body">
-                <div class="filter">
+            <div class="sub-cat">
+                <p>
+                    Сонгогдсон
+                </p>
+                <select class="cat-drop-down">
+                    <option> Төрөл</option>
+                    <option> Дэд төрөл </option>
+                </select>
+            </div>
+            <p>Дэд сэдэв</p>
+            <p>Бараа</p>
+            <div class="cat-checkbox-big">
+                <form>
+                    <input type="checkbox">
+                    <label for="vehicle1">Зөвхөн үлдэгдэлтэй</label><br>
+                </form>
+            </div>
+            <p>Формат</p>
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >Hardback</label><br>
+                </form>
+            </div>
 
-                    <div class="filter-body">
-                        <div class="filter-sub-title">Эрэмбэ</div>
-                        <div class="form-group">
-                            <select class="filter-control pa-8">
-                                <option> Үнээр</option>
-                                <option> Үнээр</option>
-                                <option> Үнээр</option>
-                            </select>
-                        </div>
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >Paperback</label><br>
+                </form>
+            </div>
 
-                        <div class="filter-sub-title">Сонгогдсон</div>
-                        <div class="form-group">
-                            <label>
-                                
-                                <input type="text" class="filter-control pa-8"
-                                value="Төрөл">
-                            </label>
-                        </div>
+            <p>Үнэ</p>
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >0-5000₮</label><br>
+                </form>
+            </div>
 
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >5000-10000₮</label><br>
+                </form>
+            </div>
 
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >10000-20000₮</label><br>
+                </form>
+            </div>
 
-                        <div class="filter-title">
-                            Дэд сэдэв
-                        </div>
-                        <div>
-                            <div class="filter-sub-title">Бараа</div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="baraa">Зөвхөн
-                                            <input type="checkbox" id="baraa" />
-                                        үлдэгдэлтэй</label>
-                                </div>
-                            </div>
-                        </div>
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >20000-50000₮</label><br>
+                </form>
+            </div>
 
-                        <div>
-                            <div class="filter-sub-title">Формат</div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="Hardback">
-                                        <input type="checkbox" id="Hardback" />
-                                        Hardback</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="Paperback">
-                                    <input type="checkbox" id="Paperback" />
-                                        Paperback</label>
-                                </div>
-                            </div>
-                        </div>
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >50000₮-с дээш</label><br>
+                </form>
+            </div>
+            <p>Нас</p>
 
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >3 хүртэлх</label><br>
+                </form>
+            </div>
 
-                        <div>
-                            <div class="filter-sub-title">Үнэ</div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="price1">
-                                    <input type="checkbox" id="price1" />
-                                        0-5000₮</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="price2">
-                                    <input type="checkbox" id="price2" />
-                                        5000-10000₮</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="price2">
-                                    <input type="checkbox" id="price3" />
-                                        5000-10000₮</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="price2">
-                                    <input type="checkbox" id="price4" />
-                                        5000-10000₮</label>
-                                </div>
-                            </div>
-                        </div>
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >3-5</label><br>
+                </form>
+            </div>
 
-                        <div>
-                            <div class="filter-sub-title">Нас</div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <input type="checkbox" id="age1" />
-                                    <label class="filter-label" for="age1">3
-                                        Хүртлэх</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="age2">
-                                    <input type="checkbox" id="age2" />
-                                        3-5</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="age2">
-                                    <input type="checkbox" id="age3" />
-                                        3-5</label>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="filter-control pa-4">
-                                    <label class="filter-label" for="age2">
-                                    <input type="checkbox" id="age4" />
-                                        3-5</label>
-                                </div>
-                            </div>
-                        </div>
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >6-8</label><br>
+                </form>
+            </div>
 
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >9-12</label><br>
+                </form>
+            </div>
 
-
-                    </div>
-                </div>
+            <div class="cat-checkbox">
+                <form>
+                    <input type="checkbox">
+                    <label >12 дээш</label><br>
+                </form>
             </div>
         </aside>
         
+        <main class="cat-main">
 
-
-        <section class="book-row-3">
-            <div class = "book-row-container">
-       
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+            <div class = "cat-book-row-container">
+                
+                
+                <div class="book-small book1 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book2 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book3 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book4 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
                     <p class = "book-title">Book Name</p>
                 </div>
-           
+                
             </div>
-
-            <div class = "book-row-container">
-       
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+            <div class = "cat-book-row-container">
+                
+                
+                <div class="book-small book1 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book2 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book3 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book4 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
                     <p class = "book-title">Book Name</p>
                 </div>
-           
+                    
             </div>
-
-            <div class = "book-row-container">
-       
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+            <div class = "cat-book-row-container">
+                
+            
+                <div class="book-small book1 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book2 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book3 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
                     <p class = "book-title">Book Name</p>
                 </div>
-
-                <div class="book-small">
-                    <img class ="book-small-photo" alt = "Book photo" src = "JPG/book-cover-4.jpg">
+                <div class="book-small book4 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
                     <p class = "book-title">Book Name</p>
                 </div>
-           
+                
             </div>
-     
-    </section>
+        </main>
+
+
         
        
 

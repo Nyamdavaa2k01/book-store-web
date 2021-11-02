@@ -8,13 +8,13 @@
     float: left;
 }
 .list{
-    height: 25.2vh;
-    width: 64vw;
+    height: 16VW;
+    width: 59vw;
 
 }
 .list-title{
     height: 5vh;
-    width: 60vw;
+    width: 58vw;
     background-color: #E2E0E0;
 }
 
@@ -29,8 +29,8 @@
 
 
 .list-cover{
-    height: 25vh;
-    width: 15vw;
+    height: 16VW;
+    width: 10vw;
     border-style: none none solid solid;
     border-width:1px;
     float: left;
@@ -38,15 +38,17 @@
 }
 
 .list-book-cover{
-    height: 21vh;
-    width: 12vw;
+
+    height: auto;
+    width: 80%;
+
     margin-top: 2vh;
     margin-bottom: 2vh;
-    margin-left: 1.5vw;
+    margin-left: 1.1vw;
     border-radius: 20px;
 }
 .list-book-name{
-    height: 25vh;
+    height: 16VW;
     width: 15vw;
     border-style: none none solid solid;
     border-width:1px;
@@ -66,7 +68,7 @@
 }
 
 .list-qnt{
-    height: 25vh;
+    height: 16VW;
     width: 6vw;
     border-style: none none solid solid;
     border-width:1px;
@@ -87,7 +89,7 @@
 }
 
 .list-price{
-    height: 25vh;
+    height: 16VW;
     width: 8vw;
     border-style: none none solid solid;
     border-width:1px;
@@ -106,7 +108,7 @@
     justify-content: center;
 }
 .list-sum{
-    height: 25vh;
+    height: 16VW;
     width: 12vw;
     border:1px;
     float: left;

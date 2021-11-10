@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <style>
+            
+            :root {
+            --main-special-color:#F24C1A ;  
+            --sub-bg-color:#E2E0E0 ; 
+          }
+                            .book-small{
+                background-color: var(--sub-bg-color) ; 
+                width:14.5vw; 
+                height: 26.4vmax ; 
+                border-radius: 2vw; 
+                margin:3vw;
+                }
+                .book-small-photo{
+                width:100%; 
+                width:14.5vw;
+                height:auto ; 
+                border-radius: var(--book-photo-half-border);
+                }
+                .book-title {
+                font-size: var(--book-title-size);
+                text-align: center;
+                }
+                #book-row-container{
+                display: flex;
+                justify-content: space-between;
+                width:90vw ; 
+                margin : 2vw 5vw 2vw 5vw; 
+                overflow-x: scroll;
+            
+                align-items: center;
+                }
+
+                .book-row-container .material-icons {
+                clear:both;
+                font-size: 40px;
+                }
+                .wrapper button {
+                width : 50px ; 
+                height : 50px ;
+                }
+
+                .wrapper {
+                    display: flex;
+                    align-items: center;
+                }
+                p{
+                    font-size: 16px; 
+                    color: black;
+                }
+                .book-row-scroll {
+                    width : 76vw ; 
+                    height:1vw ;
+                    margin : 2vw 12vw 2vw 12vw ; 
+                    /* background-color: var(--sub-bg-color); */
+                    background-color: #FABD88;
+                    border-radius: 0.8vw ; 
+                    }
+                    .book-row-scroll-progress {
+                    width : 30vw ; 
+                    height:1vw ; 
+                    background-color: var(--main-bg-color);
+                    border-radius: 0.8vw;
+                    }
+                ::-webkit-scrollbar{
+                    width: 50px; 
+                    height:20px
+                }
+                ::-webkit-scrollbar-track {
+                    background-color: var(--sub-bg-color);
+                    width:20vw;
+                    border-radius: 25px; 
+                    background-color: #FABD88;
+                }
+                ::-webkit-scrollbar-thumb {
+                    background-color: black ; 
+                    border-radius: 25px;
+                }
+              
+        </style>
+
+        <script>
+         
+          function sliding (dir) {
+              scrolled = 0 ; 
+              var cont = document.getElementById("book-row-container") ; 
+               var slideTimer = setInterval(function(){
+                   if (dir == 0) {
+                       cont.scrollLeft -= 20 ;  
+                   }
+                   else cont.scrollLeft += 20 ; 
+                   scrolled += 20 ; 
+                   if (scrolled >= 200) {
+                       window.clearInterval(slideTimer) ; 
+                   }
+               
+                }, 50)
+          }
+     
+        </script>
+        
+    </head>
+    <body>
+        <div class="wrapper">
+            <button type ="move" class ="move-left" onclick="sliding(0)"><i class ="material-icons">chevron_left</i></button>
+            <div id = "book-row-container">
+       
+                
+    
+                <!-- <button type ="move" class ="move"><i class ="material-icons">chevron_left</i></button> -->
+                <div class="book-small book1">
+                    <a href ="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+                <div class="book-small book2 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+                <div class="book-small book3 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+                <div class="book-small book4 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+                <div class="book-small book5 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+                <div class="book-small book5 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+                <div class="book-small book5 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+                <div class="book-small book5 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+                <div class="book-small book5 ">
+                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
+                    <p class = "book-title">Book Name</p>
+                </div>
+       
+                
+                 <!-- <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button> -->
+                
+            </div>
+            <button type = "move" class ="move-right" onclick="sliding(1)"><i class ="material-icons">chevron_right</i></button>
+        </div>
+        <p id = "go"></p>
+    </body>
+
+</html>

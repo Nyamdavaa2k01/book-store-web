@@ -125,7 +125,7 @@ width:90vw ;
 left:5vw ; 
 top:5vw ;  */
 margin : 2vw 5vw 2vw 5vw; 
-
+overflow-x: auto;
 align-items: center;
 }
 
@@ -185,11 +185,11 @@ justify-content:space-evenly;
 margin-right: 10vw;
 align-items: center;
 }
-.book-row-scroll {
+/* .book-row-scroll {
 width : 76vw ; 
 height:1vw ;
 margin : 2vw 12vw 2vw 12vw ; 
-/* background-color: var(--sub-bg-color); */
+background-color: var(--sub-bg-color);
 background-color: #FABD88;
 border-radius: 0.8vw ; 
 }
@@ -198,7 +198,7 @@ width : 30vw ;
 height:1vw ; 
 background-color: var(--main-bg-color);
 border-radius: 0.8vw;
-}
+} */
 .icon{ 
 height:40px; 
 width :40px ; 
@@ -476,5 +476,5 @@ footer i{
     .logo-photo-container img {
         width : 90% 
     }
-    
+
 }

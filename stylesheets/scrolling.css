@@ -55,7 +55,24 @@
                 
                     align-items: center;
                     }
-
+                    #book-row-container5{
+                        display: flex;
+                        justify-content: space-between;
+                        width:90vw ; 
+                        margin : 2vw 5vw 2vw 5vw; 
+                        overflow-x: scroll;
+                    
+                        align-items: center;
+                        }
+                        #book-row-container6{
+                            display: flex;
+                            justify-content: space-between;
+                            width:90vw ; 
+                            margin : 2vw 5vw 2vw 5vw; 
+                            overflow-x: scroll;
+                        
+                            align-items: center;
+                            }
         .book-row-container .material-icons {
         clear:both;
         font-size: 40px;

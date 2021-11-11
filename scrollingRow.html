@@ -83,23 +83,9 @@
               
         </style>
 
-        <script>
+        <script src = "./Script codes/scrolling.js">
          
-          function sliding (dir) {
-              scrolled = 0 ; 
-              var cont = document.getElementById("book-row-container") ; 
-               var slideTimer = setInterval(function(){
-                   if (dir == 0) {
-                       cont.scrollLeft -= 20 ;  
-                   }
-                   else cont.scrollLeft += 20 ; 
-                   scrolled += 20 ; 
-                   if (scrolled >= 200) {
-                       window.clearInterval(slideTimer) ; 
-                   }
-               
-                }, 50)
-          }
+          
      
         </script>
         
@@ -155,7 +141,6 @@
             </div>
             <button type = "move" class ="move-right" onclick="sliding(1)"><i class ="material-icons">chevron_right</i></button>
         </div>
-        <p id = "go"></p>
     </body>
 
 </html>

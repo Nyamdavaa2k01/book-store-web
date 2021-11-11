@@ -15,8 +15,22 @@ import {News, getInfo} from './exporting.js';
                             document.getElementById(id3).innerHTML += element.create() ; 
                             let id4 = 'book' + (30+i) ; 
                             document.getElementById(id4).innerHTML += element.create() ; 
+                            // let id5 = 'book' + (40+i) ; 
+                            // document.getElementById(id5).innerHTML += element.create() ; 
                       i ++ ; 
                     })
                     
-                })
+                }
+                // , 
+                // (categories) => {
+                //     let j = 1 ; 
+                //     categories.forEach(
+                //         (element) => {
+                //             let id_cat = 'cat'+j ; 
+                //             document.getElementById(id_cat).innerHTML += element.display() ; 
+                //         }
+                //     )
+                // }
+                
+                )
                 

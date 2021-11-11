@@ -9,6 +9,10 @@ getInfo(url,
           (element) => {
               
           if (i==1)document.getElementById("onOwn").innerHTML += element.onOwn() ; 
+          let id = 'book'+(40+i) ; 
+          document.getElementById(id).innerHTML += element.create() ; 
+          let id2 ='book'+ (50+i) ; 
+          document.getElementById(id2).innerHTML += element.create() ; 
           i ++ ; 
         })
         //document.getElementById("onOwn").innerHTML += books[1] ; 

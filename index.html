@@ -5,7 +5,8 @@
 		<meta name="description" content="online book store" />
 		<meta name="keywords" content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=6">
-		
+		<script src = "Script codes/scrolling.js"></script>
+        <script src = "Script codes/main.js" type = "module"></script>
         <title>
             Internom
         </title>
@@ -16,6 +17,7 @@
         background-color: var(--sub-bg-color);
         }       
         </style>
+        <link rel = "stylesheet" href = "stylesheets/scrolling.css">
     </head>
     <body>
        <header>
@@ -94,37 +96,44 @@
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>
-                <div class = "book-row-container">
-       
-                    <!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
-                    <button type ="move" class ="move"><i class ="material-icons">chevron_left</i></button>
-                    <div class="book-small book1">
-                        <a href ="individualBook.html" aria-label="book cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
+                <div class="wrapper">
+                    <button type ="move" class ="move-left" onclick="sliding(0,1)"><i class ="material-icons">chevron_left</i></button>
+                    <div id = "book-row-container1">
+                        <div id="book1"></div>
+                        <div id="book2"></div>
+                        <div id="book3"></div>
+                        <div id="book4"></div>
+                        <div id="book5"></div>
+                        <div id="book6"></div>
+                        <div id="book7"></div>
+                        <div id="book8"></div>
+                        <div id="book9"></div>
+                        <div id= "book10"></div>
+                        
                     </div>
-                    <div class="book-small book2 ">
-                        <a href="individualBook.html" aria-label="book cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book3 ">
-                        <a href="individualBook.html" aria-label="book cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book4 ">
-                        <a href="individualBook.html"  aria-label="book cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book5 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book"  aria-label="book cover"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button>
-                    <!-- <button type = "move"> <a href="individualBook.html" aria-label="book-cover" name = "More about book"><img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
+                    <button type = "move" class ="move-right" onclick="sliding(1,1)"><i class ="material-icons">chevron_right</i></button>
                 </div>
-                <div class ="book-row-scroll">
-                    <div class="book-row-scroll-progress"></div>
+                
+                <div class="wrapper">
+                    <button type ="move" class ="move-left" onclick="sliding(0,2)"><i class ="material-icons">chevron_left</i></button>
+                    <div id = "book-row-container2">
+                        <div id="book11"></div>
+                        <div id="book12"></div>
+                        <div id="book13"></div>
+                        <div id="book14"></div>
+                        <div id="book15"></div>
+                        <div id="book16"></div>
+                        <div id="book17"></div>
+                        <div id="book18"></div>
+                        <div id="book19"></div>
+                        <div id="book20"></div>
+               
+                        
+                         <!-- <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button> -->
+                        
+                    </div>
+                    <button type = "move" class ="move-right" onclick="sliding(1,2)"><i class ="material-icons">chevron_right</i></button>
                 </div>
-
                 <div class ="book-row-title">
                     <hr/>
                         <p class = "category-title">
@@ -143,36 +152,7 @@
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>
-                <div class = "book-row-container">
-       
-                    <!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
-                    <button type ="move" class ="move"><i class ="material-icons">chevron_left</i></button>
-                    <div class="book-small book1">
-                        <a href ="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book2 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book3 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book4 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book5 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button>
-                    <!-- <button type = "move"> <img src = PNG/right-arrow.pngwebpt ="Move to the Right" class ="icon"></button> -->
-                </div>
-                <div class ="book-row-scroll">
-                    <div class="book-row-scroll-progress"></div>
-                </div>
+               
 
                 <a href ="individualBook.html"  aria-label="book-cover" name = "More about book"><img src = "WEBP/mobile-book-cover.webp" alt = "Book photo" class ="mobile-main-book"> </a>
                 <div class ="mobile-main-book-explanation">
@@ -200,35 +180,22 @@
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>
-                <div class = "book-row-container">
-       
-               
-                    <button type ="move" class ="move"><i class ="material-icons">chevron_left</i></button>
-                    <div class="book-small book1">
-                        <a href ="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
+                <div class="wrapper">
+                    <button type ="move" class ="move-left" onclick="sliding(0, 3)"><i class ="material-icons">chevron_left</i></button>
+                    <div id = "book-row-container3">
+                        <div id="book21"></div>
+                        <div id="book22"></div>
+                        <div id="book23"></div>
+                        <div id="book24"></div>
+                        <div id="book25"></div>
+                        <div id="book26"></div>
+                        <div id="book27"></div>
+                        <div id="book28"></div>
+                        <div id="book29"></div>
+                        <div id= "book30"></div>
+                        
                     </div>
-                    <div class="book-small book2 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book3 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book4 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book5 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <button type = "move" class ="move" ><i class = "material-icons"> chevron_right</i></button>
-                 
-                </div>
-                <div class ="book-row-scroll">
-                    <div class="book-row-scroll-progress"></div>
+                    <button type = "move" class ="move-right" onclick="sliding(1, 3)"><i class ="material-icons">chevron_right</i></button>
                 </div>
 
 
@@ -251,36 +218,24 @@
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>
-                <div class = "book-row-container">
-       
-                    <!-- <button type = "move"> <img src = PNG/left-arrow.png alt ="Move to the Right" class ="icon"></button> -->
-                    <button type ="move" class ="move" name = "move"><i class ="material-icons">chevron_left</i></button>
-                    <div class="book-small book1">
-                        <a href ="individualBook.html" aria-label="book-cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
+                <div class="wrapper">
+                    <button type ="move" class ="move-left" onclick="sliding(0, 4)"><i class ="material-icons">chevron_left</i></button>
+                    <div id = "book-row-container4">
+                        <div id="book31"></div>
+                        <div id="book32"></div>
+                        <div id="book33"></div>
+                        <div id="book34"></div>
+                        <div id="book35"></div>
+                        <div id="book36"></div>
+                        <div id="book37"></div>
+                        <div id="book38"></div>
+                        <div id="book39"></div>
+                        <div id= "book40"></div>
+                        
+                         <!-- <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button> -->
+                        
                     </div>
-                    <div class="book-small book2 ">
-
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book3 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book4 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <div class="book-small book5 ">
-                        <a href="individualBook.html" aria-label="book-cover" name = "More about book"><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                        <p class = "book-title">Book Name</p>
-                    </div>
-                    <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button>
-                    <!-- <button type = "move"> <img src = PNG/right-arrow.png alt ="Move to the Right" class ="icon"></button> -->
-                </div>
-                <div class ="book-row-scroll">
-                    <div class="book-row-scroll-progress"></div>
+                    <button type = "move" class ="move-right" onclick="sliding(1, 4)"><i class ="material-icons">chevron_right</i></button>
                 </div>
             </main>
             <footer>

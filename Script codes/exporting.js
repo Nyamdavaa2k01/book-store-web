@@ -10,8 +10,31 @@ export function getInfo (url, callMeBack) {
                     books.push(new News(book.title, book.photo, book.author, book.published, book.category,
                         book.isbn, book.language, book.page,book.size, book.shelf, book.price, book.discount, book.about))}) 
                  callMeBack(books)    
+                let categories = [] ; 
+            data.categoryTitles.forEach(
+                (cat) => {
+                    categories.push(new categoryTitle(cat.category1, cat.category2)) })
+                callMeBack(categories)
                 })
 }
+
+// export class categoryTitle {
+//     constructor (cat1, cat2) {
+//         this.category1 = cat1 ; 
+//         this.category2 = cat2 ; 
+//     }
+//     display () {
+//         return `
+//         <hr/>
+//         <p class = "category-title">
+//             <p class ="highlight">${this.category1} </p> 
+//             <p>болон </p> 
+//             <p class = "highlight">${this.category2}</p>
+//         </p>
+//     <hr/> 
+//         `
+//     }
+// }
 
 export class News {
     constructor(newTitle,newPhoto , newAuthor, newPublisher, newCategory, newIsbn, newLang, newPage, newSize,newShelf, newPrice, disc, about,  ) {
@@ -43,7 +66,7 @@ export class News {
 
         return `
         <div class="book-small" >
-            <a href ="" aria-label="${this.title}'s photo" name = "More about ${this.title}">
+            <a href ="individualBook.html" aria-label="${this.title}'s photo" name = "More about ${this.title}">
             <img class ="book-small-photo" alt = "photo of ${this.title}" src = "${this.photo}"></a>
 
             <p class = "book-title">${this.title}</p>

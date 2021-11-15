@@ -10,11 +10,11 @@ export function getInfo (url, callMeBack) {
                     books.push(new News(book.title, book.photo, book.author, book.published, book.category,
                         book.isbn, book.language, book.page,book.size, book.shelf, book.price, book.discount, book.about))}) 
                  callMeBack(books)    
-                let categories = [] ; 
-            data.categoryTitles.forEach(
-                (cat) => {
-                    categories.push(new categoryTitle(cat.category1, cat.category2)) })
-                callMeBack(categories)
+            //     let categories = [] ; 
+            // data.categoryTitles.forEach(
+            //     (cat) => {
+            //         categories.push(new categoryTitle(cat.category1, cat.category2)) })
+            //     callMeBack(categories)
                 })
 }
 

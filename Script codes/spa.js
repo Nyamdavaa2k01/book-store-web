@@ -1,68 +1,83 @@
 
-// //#region Testing Codes 
 
-// class MyApp {
-//     constructor(appId) {
-//         this.appContainerId = appId ; 
-//         this.appData = new Map() ; 
-//         this.appData.set("/", new Map()) ; 
-//     }
-
-//     AddRoute (parentRoute, routeName, data) {
-//         this.appData.get(parentRoute).set(routeName, data) ; 
-//     }
-
-         
-
-//     notFound () {
-//         return html `Хуудаст дамжихад алдаа гарлаа`
-//     }
-// }
-
-// const html = String.raw() ; 
-// class AboutUs {
-//     constructor(objData) {
-//         this.data = objData ; 
-//     }
-//     Render () {
-//         return html` 
-//         <p>Bolkulenda</p>
-//         <h1>About MEEEE</h1>
-//         `
-//     }
-// }
-
-// class News {
-   
-// Article (dataObj) {
-//     return html `<p>${dataObj.title}</p>` ; 
-// }
-
-//     Render () {
-//         let returnHTML ="" ; 
-//         for (let article of this.data.articles) { 
-//             returnHTML += this.Article (article) ; 
-//         }
-
-//         return html `
-//         ${returnHTML} 
-//         `
-//     }
-// }
-// //#endregion
-
-import {myHeader, navBar, mainPage} from './pages.js'; 
+import { navBar, mainPage, footer, News, category, cartList} from './pages.js'; 
 
 
-const header = new myHeader() ; 
-document.getElementById("header1").innerHTML = header.showData() ; 
+// const header = new myHeader() ; 
+// document.getElementById("header1").innerHTML = header.showData() ; 
 
-// const row1 = new bookRow() ; 
-// document.getElementById("book-row-container1").innerHTML = row1.showData(1) ; 
+// const navigation = new navBar() ; 
+// document.getElementById("navbar").innerHTML = navigation.showData() ; 
 
-const navigation = new navBar() ; 
-document.getElementById("navbar").innerHTML = navigation.showData() ; 
+
+const field = document.getElementById("mainPage") ; 
+
+
+const foot = new footer () ; 
+document.getElementById("footer").innerHTML = foot.showData() ; 
 
 const main = new mainPage () ; 
 document.getElementById("mainPage").innerHTML = main.showData() ; 
 
+// document.getElementById("test").addEventListener("click", pageSwap) ; 
+document.getElementById("opt4").addEventListener("click", function(){ 
+    // const bookInfo = new individualBook () ; 
+    // document.getElementById("mainPage").innerHTML = bookInfo.showData() ; 
+    const cat = new category() ; 
+    document.getElementById("mainPage").innerHTML = cat.showData() ;
+
+});
+
+document.getElementById("opt3").addEventListener("click", function(){ 
+    // const bookInfo = new individualBook () ; 
+    // document.getElementById("mainPage").innerHTML = bookInfo.showData() ; 
+    const cat = new category() ; 
+    document.getElementById("mainPage").innerHTML = cat.showData() ;
+
+});
+document.getElementById("opt2").addEventListener("click", function(){ 
+    // const bookInfo = new individualBook () ; 
+    // document.getElementById("mainPage").innerHTML = bookInfo.showData() ; 
+    const cat = new category() ; 
+    document.getElementById("mainPage").innerHTML = cat.showData() ;
+
+});
+document.getElementById("opt1").addEventListener("click", function(){ 
+    // const bookInfo = new individualBook () ; 
+    // document.getElementById("mainPage").innerHTML = bookInfo.showData() ; 
+    const cat = new category() ; 
+    document.getElementById("mainPage").innerHTML = cat.showData() ;
+
+});
+
+
+document.getElementById("navToMain").addEventListener("click", function () {
+    const main = new mainPage () ; 
+    field.innerHTML = main.showData() ; 
+}); 
+
+document.getElementById("navToRegister").addEventListener("click", function() {
+  
+    field.preventDefault();
+    const registering = new register() ; 
+    // document.getElementById("mainPage").style.display ="none";
+    document.getElementById("mainPage").innerHTML += registering.showData() ; 
+
+});
+
+document.getElementById("navToLogin").addEventListener("click", function() {
+   
+    const signin = new login() ; 
+    document.getElementById("mainPage").innerHTML += signin.showData() ;
+    document.getElementById("mainPage").style.zIndex = 999;
+}
+
+) ; 
+
+document.getElementById("navToCart").addEventListener("click", function() {
+    
+    const cart = new cartList () ; 
+    field.innerHTML = cart.showData(); 
+}
+
+) ; 

@@ -1,0 +1,134 @@
+
+            * {
+                margin :0 ; 
+                padding : 0 ;
+            }
+            .card {
+             
+              
+                /* position: absolute; */
+                background: #E2E0E0;
+                border-radius: 25px;
+                /* padding: auto; */
+                min-width: 300px;
+                max-height: 100vh;
+                display: flexbox; 
+            }
+
+.card .card-header {
+    font-size: large;
+    text-align: center;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.card .card-body {
+    padding: 10px 20px 10px 10px;
+    margin: -20px 20px 20px 20px;
+}
+
+form {
+    display: flexbox;
+}
+
+.form-group {
+    width: 100%;
+    padding: 10px;
+}
+
+.form-group label {
+    font-size: 18px;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.form-group .form-control {
+    width: 100%;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 25px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button {
+    display: inline-block;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 0px;
+    min-width: 70%;
+}
+
+.button i {
+    min-width: 20px;
+    height: 20px;
+    padding: 3px;
+    border-radius: 500px;
+    border: 2px solid #fff;
+    color:  #fff;
+    margin-right: 10px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+.yellow {
+    background-color: #FAA809;
+    color:  #fff;
+}
+
+.blue {
+    background-color: #385997;
+    color:  #fff;
+}
+
+.padding-top {
+    padding-top: 10px
+}
+
+html {
+    height: 100%
+}
+/* .body {
+    background-image: url("./bg.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} */
+
+/* .register {
+    padding-top: 5%; 
+    padding-left: 66%
+} */
+.register {
+    margin-left: 60%;
+    width:30%; 
+
+}
+
+.pa-4 {
+    padding:4px
+}
+
+.pa-8 {
+    padding:8px
+}
+
+.pa-10 {
+    padding:10px
+}
+@media screen and (max-width:720px) {
+    .body {
+        background-image :none;
+    }
+    .register{
+        margin-top: 5vw;
+        margin-left: 5%;
+        width:90%;
+    }
+}

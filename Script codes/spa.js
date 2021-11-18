@@ -1,6 +1,6 @@
 
 
-import { navBar, mainPage, footer, News, category, cartList} from './pages.js'; 
+import { navBar, mainPage, footer, News, category, cartList, register, login} from './pages.js'; 
 
 
 // const header = new myHeader() ; 
@@ -18,6 +18,7 @@ document.getElementById("footer").innerHTML = foot.showData() ;
 
 const main = new mainPage () ; 
 document.getElementById("mainPage").innerHTML = main.showData() ; 
+
 
 // document.getElementById("test").addEventListener("click", pageSwap) ; 
 document.getElementById("opt4").addEventListener("click", function(){ 
@@ -58,17 +59,17 @@ document.getElementById("navToMain").addEventListener("click", function () {
 
 document.getElementById("navToRegister").addEventListener("click", function() {
   
-    field.preventDefault();
+
     const registering = new register() ; 
     // document.getElementById("mainPage").style.display ="none";
-    document.getElementById("mainPage").innerHTML += registering.showData() ; 
+    document.getElementById("mainPage").innerHTML = registering.showData() ; 
 
 });
 
 document.getElementById("navToLogin").addEventListener("click", function() {
    
     const signin = new login() ; 
-    document.getElementById("mainPage").innerHTML += signin.showData() ;
+    document.getElementById("mainPage").innerHTML = signin.showData() ;
     document.getElementById("mainPage").style.zIndex = 999;
 }
 
@@ -77,6 +78,7 @@ document.getElementById("navToLogin").addEventListener("click", function() {
 document.getElementById("navToCart").addEventListener("click", function() {
     
     const cart = new cartList () ; 
+   
     field.innerHTML = cart.showData(); 
 }
 

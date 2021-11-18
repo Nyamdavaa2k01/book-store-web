@@ -7,7 +7,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=6">
         <link rel="stylesheet" href="category.css" /> 
          <link rel = "stylesheet" href = "./stylesheets/register.css">
+         <!-- <link rel = "stylesheet" href = "style.css"> -->
         <link rel = "stylesheet" href = "cart-list.css">
+        
+        <link rel = "stylesheet" href = "login.css">
 		<script src = "Script codes/scrolling.js"></script>
         <script src = "Script codes/main.js" type = "module"></script>
         <!-- <script src = "Script codes/exporting.js" type = "module"></script>  -->
@@ -15,7 +18,9 @@
         <title>
             Internom
         </title>
+        
         <link  rel ="stylesheet" href = "main-style-2.css"> 
+      
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             button {
@@ -29,12 +34,7 @@
             height: 100px; 
             width: 100px;
         }
-        .spaMenu {
-            
-        }
-        form {
-            
-        }
+       
         /* .body {
     background-image: url("./bg.png");
     background-repeat: no-repeat;
@@ -54,18 +54,34 @@
 
        <header>
            
-        <div class = "header-top"> 
-             <a href = "" id = "navToMain"><p style = "color:white;" id = "" >Бие даасан номын дэлгүүр</p></a>
+        <!-- <div class = "header-top"> 
+
+            
              
              <div class ="header-right">
                  <div id = "navToRegister" style = "display:flex; align-items: center;">
-                    <a  href = "" name = "register" ><i class ="material-icons register-icon" >account_circle</i></a>
-                    <a href =""  name = "sign up via link"> <p style="color:white" >Бүртгүүлэх</p></a>
+                   <i class ="material-icons register-icon" >account_circle</i>
+                  <p style="color:white" >Бүртгүүлэх</p>
                  </div>
-                 <a href ="" name = "sign-in" id = "navToLogin"><i class ="material-icons login-icon" name = "login">login</i></a>
-            
-                 <p><a href = "" name = "login">Нэвтрэх</a></p>
+              
+                <div id="navToLogin"><i class ="material-icons login-icon" name = "login">login</i></div>
+                 <p style ="color:white;" >Нэвтрэх</p>
              </div>
+         </div> -->
+
+         <div class="header-top">
+            <div id="navToMain"> <p style = "color:white">Бие даасан номын дэлгүүр</p></div>
+            <div class="header-right">
+                <div id="navToRegister" style = "display:flex; align-items: center;">
+                    <i class ="material-icons register-icon" >account_circle</i>
+                    <p style="color:white" >Бүртгүүлэх</p>
+                </div>
+
+                <div id="navToLogin">
+                    <i class ="material-icons login-icon" name = "login">login</i></div>
+                    <p style ="color:white;" >Нэвтрэх</p>
+                </div>
+            </div>
          </div>
          <!-- <div  class = "header-top-right">
              <i class ="material-icons">shopping_cart</i>
@@ -80,8 +96,10 @@
                  </button>
              </div>
 
-             <i id = "navToCart" class = "material-icons icon-cart" style ="font-size: 4vmax;"><a href ="" name = "view cart list">shopping_cart</a></i>
-
+            
+            <div id="navToCart">
+                <i  class = "material-icons icon-cart" style ="font-size: 4vmax;">shopping_cart</i>
+            </div>
          </div>
 
          <div class ="mobile-search-field">

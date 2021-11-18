@@ -57,6 +57,11 @@ document.getElementById("navToMain").addEventListener("click", function () {
     field.innerHTML = main.showData() ; 
 }); 
 
+document.getElementById("navToMain2").addEventListener("click", function () {
+    const main = new mainPage () ; 
+    field.innerHTML = main.showData() ; 
+}); 
+
 document.getElementById("navToRegister").addEventListener("click", function() {
   
 

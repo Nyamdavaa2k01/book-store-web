@@ -1,5 +1,6 @@
 //const url = "https://api.jsonbin.io/b/618c95b4820eda3cc81b7988/2" ; 
-const url = "https://api.jsonbin.io/b/618c95b4820eda3cc81b7988/latest"
+// const url = "https://api.jsonbin.io/b/618c95b4820eda3cc81b7988/latest"
+const url = "https://api.jsonbin.io/b/61963b900ddbee6f8b0e09df/latest" ;
 export function getInfo (url, callMeBack) {
     fetch(url)
     .then(response => response.json())
@@ -10,31 +11,12 @@ export function getInfo (url, callMeBack) {
                     books.push(new News(book.title, book.photo, book.author, book.published, book.category,
                         book.isbn, book.language, book.page,book.size, book.shelf, book.price, book.discount, book.about))}) 
                  callMeBack(books)    
-            //     let categories = [] ; 
-            // data.categoryTitles.forEach(
-            //     (cat) => {
-            //         categories.push(new categoryTitle(cat.category1, cat.category2)) })
-            //     callMeBack(categories)
+           
                 })
 }
 
-// export class categoryTitle {
-//     constructor (cat1, cat2) {
-//         this.category1 = cat1 ; 
-//         this.category2 = cat2 ; 
-//     }
-//     display () {
-//         return `
-//         <hr/>
-//         <p class = "category-title">
-//             <p class ="highlight">${this.category1} </p> 
-//             <p>болон </p> 
-//             <p class = "highlight">${this.category2}</p>
-//         </p>
-//     <hr/> 
-//         `
-//     }
-// }
+
+
 
 export class News {
     constructor(newTitle,newPhoto , newAuthor, newPublisher, newCategory, newIsbn, newLang, newPage, newSize,newShelf, newPrice, disc, about,  ) {
@@ -53,19 +35,9 @@ export class News {
         this.size = newSize;
     }
     create () {
-        // return `<p> ${this.title} </p> 
-        // <p>${this.price}</p> 
-        // <p>written by ${this.author}</p>
-        // <img src = ${this.photo}>
-        // `
-        // return `<a href ="individualBook.html" aria-label="${this.title}'s photo" name = "More about ${this.title}">
-        // <img class ="book-small-photo" alt = "photo of ${this.title}" src = "${this.photo}"></a>
-
-        // <p class = "book-title">${this.title}</p>
-        // `
-
+    
         return `
-        <div class="book-small" >
+        <div class="book-small" onclick = "pageSwap(0)">
             <a href ="individualBook.html" aria-label="${this.title}'s photo" name = "More about ${this.title}">
             <img class ="book-small-photo" alt = "photo of ${this.title}" src = "${this.photo}"></a>
 

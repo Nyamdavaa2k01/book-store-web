@@ -23,7 +23,7 @@ h1 {font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, 
     box-sizing: border-box;
   }
 
-  
+/*   
 header {
     height: 30vh;
     margin-top: -8px;
@@ -61,14 +61,11 @@ header {
     width: 100%;
     position: relative;
 }
-
-  
 .search {
     width: 100%;
     position: absolute;
     display: flex;
 }
-
 .searchTerm {
     width: 100%;
     height: 7vh;    
@@ -159,21 +156,21 @@ header {
     width: 12vw;
     border: 0px;
     border-radius: 25px 25px 0px 0px ;
-}
+} */
 
-.book-button{
+/* .book-button{
     background-color: #E2E0E0;
     width: 12vw;
     height: 3vw;
     border: 0px;
     margin-top: -1vw;
     border-radius: 0px 0px 25px 25px;
-}
+} */
 
 /*nnn*/
 
 .card {
-    position: absolute;
+
     background: #E2E0E0;
     border-radius: 25px;
     padding: auto;
@@ -383,7 +380,7 @@ html {
 .filter-checkbox {
 
 }
-
+/* 
 .footer{
     position: relative;
     height: 50vh;
@@ -453,5 +450,5 @@ footer ul li{
     top: 50%;
     left: 20%;
     transform: translate(-30%, -30%);
-}
+} */
 

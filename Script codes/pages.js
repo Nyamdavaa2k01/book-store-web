@@ -683,7 +683,7 @@ export class category {
 export class register {
     showData() {
         return `
-        <div class="register">
+        <div class="register" style ="margin-top : 5vw ;">
             <div class="card">
                 <div class="card-header">
                     Бүртгүүлэх
@@ -759,9 +759,9 @@ export class register {
 
 export class login {
     showData() {
-        this.preventDefault() ;
+       
         return `
-        <section class="main" onsubmit="event.preventDefault();>
+        <section class="main" style = "width: 50vw;"  >
 
         <div style="padding: 50px;">
             <div class="card">
@@ -769,7 +769,7 @@ export class login {
                     Нэвтрэх
                 </div>
                 <div class="card-body">
-                    <form  onsubmit="event.preventDefault(); getFormvalue()">
+                    <form >
                         <div class="form-group">
                             <label for="name">Нэр</label>
                             <input type="text" class="form-control" id="name"

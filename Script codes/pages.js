@@ -876,6 +876,21 @@ export class cartList {
                     </div>
                 </div>
             </div>
+            <aside>
+                <div class="info">
+                    <div class="info-title">
+                        Төлбөрийн мэдээлэл
+                    </div>
+                    <p>Нийт үнэ: 59000₮</p>
+                    <p>Тоо ширхэг: 3</p>
+                    <button class="order">
+                        Захиалах
+                    </button >
+                    <button class="cancel">
+                        Өөр бараа сонгох
+                    </button>
+                </div>
+            </aside>
         `
     }
 }

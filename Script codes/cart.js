@@ -1,5 +1,9 @@
-const template = document.createElement('template');
-template.innerHTML = `
+
+var qnt = 3;
+var sumPrice = 45000;
+
+const listTemp = document.createElement('template');
+listTemp.innerHTML = `
     <style>
 
 .cart{
@@ -134,99 +138,12 @@ template.innerHTML = `
     width: 3vw;
     height: 5vh;
 }
-@media screen and (min-width: 480px) {
-    .cart-mobile{
-        display: none;
-    }
- 
 
-}
-
-@media screen and (max-width:480px) {
-    .cart{
-        display: none;
-    }
-
-  
-
-
-
-    .cart-mobile{
-        width: 100vw;
-        height: 75vh;
-        margin-left: -8px;
-
-    }
-
-    .list-mobile{
-        width: 90vw;
-        height: 25vh;
-        border-style: solid none none none;
-        border-width: 1px;
-        margin-left: 5vw;
-    }
-
-    .list-mobile p {
-        margin-bottom: 0px;
-        margin-top:0px;
-    }
-
-    .book-cover-mobile{
-        width: 24vw;
-        height: 18vh;
-        float: left;
-        margin-left: 3vw;
-        margin-top: 2vw;
-        border-radius: 25px;
-    }
-
-    .list-info-mobile{
-        float: left;
-        width: 60vw;
-        height: 21vh;
-        margin-left: 2vw;
-        padding-top: 2vh;
-    }
-
-    .book-title-mobile{
-        width: 45vw;
-        height: 5vh;
-        background-color: #E2E0E0;
-        border-radius: 20px;
-        float: left;
-        display: flex;
-        justify-content: center;
-        font-size: 6vw;
-    }
-
-    .book-trash-mobile{
-        width: 8vw;
-        height: 5vh;
-        float: left;
-        border-radius: 20px;
-        margin-left: 2vw;
-    }
-    .book-car-mobile{
-        margin-top: 2vh;
-        margin-right: 2vw;
-        width: 15vw;
-        height: 5vh;
-        background-color: #E2E0E0;
-        border-radius: 20px;
-        float: left;
-        display: flex;
-        justify-content: center;
-        font-size: 4vw;
-
-    }
-
-
-}
     </style>
     <div class="list">
         
     <div class="list-cover">
-            <a href="individualBook.html" aria-label="book cover" name = "More about book">
+            <a aria-label="book cover" name = "More about book">
                 <img class ="list-book-cover" alt = "Book photo" src = "WEBP/book-cover-4.webp">
             </a>
     </div>
@@ -256,12 +173,34 @@ template.innerHTML = `
     </div>
     
 `;
+
+
 // document.getElementById("test").addEventListener("click",function(){
 //     var list = new CartList();
 //     document.getElementById("cart").appendChild(list);
 
 // })
 
+listTemp.addEventListener('qntChanged', function (e) {
+    var elem = document.getElementById('info');
+    e.detail.qnt--;
+    qnt--;
+    sumPrice -= 15000;
+    e.detail.price -= 15000;
+    elem.shadowRoot.querySelector('#info-qnt').innerHTML =  "Тоо ширхэг: " + e.detail.qnt;
+    elem.shadowRoot.querySelector('#info-price').innerHTML =  "Нийт үнэ: " + e.detail.price;
+})
+
+function changeQnt (qnt, price){
+    const event = new CustomEvent('qntChanged',{
+        detail: {
+            qnt: qnt,
+            price: price
+        }
+    });
+
+    listTemp.dispatchEvent(event);
+}
 
 class CartList extends HTMLElement {
     constructor(){
@@ -271,15 +210,13 @@ class CartList extends HTMLElement {
             mode: 'open'
         });
 
-        this.shadowRoot.appendChild(template.content.cloneNode(true));
-        
-       
+        this.shadowRoot.appendChild(listTemp.content.cloneNode(true));
+        this.shadowRoot.querySelector('a').href = 'individualBook.html';
     }
 
     deleteList(){
-        
+        changeQnt(qnt, sumPrice);
         this.remove();
-        //console.log(elem);
     }
 
     createList(){
@@ -287,9 +224,119 @@ class CartList extends HTMLElement {
     }
 
     connectedCallback() {
-        this.shadowRoot.querySelector('#trash-icon').addEventListener("click", ()=> this.deleteList());
+        this.shadowRoot.querySelector('#trash-icon').
+        addEventListener("click", ()=> this.deleteList());
     }
 
 }
 
+class InfoList extends HTMLElement {
+
+
+    constructor(){
+        super();
+
+        this.attachShadow({
+            mode: 'open'
+        });
+
+        this.shadowRoot.innerHTML = `
+            <style>
+                .info{
+
+                    width: 20vw;
+                    height: 40vh;
+                    float: left;
+                    margin-top: 5vh;
+                    margin-left:3vw;
+                    border-style: solid;
+                    border-width:1px;
+                }
+                
+                .info p{
+                    margin-left: 2vw;
+                    margin-top: 2vh;
+                    margin-right: 2vw;
+                    margin-bottom: 0vh;
+                    float: left;
+                }
+                
+                .info-title{
+                    float: left;
+                    width: 20vw;
+                    height: 5vh;
+                    background: #E2E0E0;
+                    padding-left: auto;
+                    display: flex;
+                    justify-content: center;
+                }
+                
+                .order{
+                    width: 18vw;
+                    height: 6vh;
+                    background-color: #3BEF0E;
+                    float: left;
+                    border-width: 0em;
+                    border-radius: 20px;
+                    margin-top: 8vh;
+                    margin-left: 1vw;
+                }
+                
+                .cancel{
+                    width: 18vw;
+                    height: 6vh;
+                    background-color: #F5734C;
+                    float: left;
+                    border-width: 0em;
+                    border-radius: 20px;
+                    margin-top: 2vh;
+                    margin-left: 1vw;
+                }
+            </style>
+            <div class="info">
+
+                <div class="info-title">
+                    Төлбөрийн мэдээлэл
+                </div>
+
+                <p id="info-price"></p>
+                <p id="info-qnt"></p>
+
+                <button id="order" class="order">
+                    Захиалах
+                </button >
+
+                <button class="cancel">
+                    Өөр бараа сонгох
+                </button>
+            </div>
+        `
+        this.shadowRoot.querySelector('#info-qnt').innerHTML = "Тоо ширхэг: " + qnt;
+        this.shadowRoot.querySelector('#info-price').innerHTML = "Нийт үнэ: " + sumPrice;
+       
+    }
+
+
+    getPrice(){
+        var price = this.shadowRoot.querySelector('#info-price').nodeValue;
+    }
+
+    set Qnt(qnt ){
+        this.shadowRoot.querySelector('#info-qnt').innerHTML = ">Тоо ширхэг: " + qnt;
+        return qnt;
+    }
+
+    getQnt(){
+        qnt = document.getElementById("cart").childElementCount;
+        return qnt;
+    }
+    connectedCallback() {
+        this.shadowRoot.querySelector('#order').
+        addEventListener("click", ()=> this.getPrice());
+    }
+}
+
+
+
+window.customElements.define('info-list', InfoList);
 window.customElements.define('cart-list', CartList);

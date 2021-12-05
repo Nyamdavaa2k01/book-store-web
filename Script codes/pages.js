@@ -813,84 +813,73 @@ export class login {
 export class cartList {
     showData() {
         return `
-        <div class="cart">
-                <div class="list-title">
+        <div id="cart" class="cart">
+        <div class="list-title">
+            <p style="margin-left: 3vw">Зураг</p>
+            <p style="margin-left: 6vw">Номын нэр</p>
+            <p style="margin-left: 6.5vw">Тоо</p>
+            <p style="margin-left: 3vw">Нэгж үнэ</p>
+            <p style="margin-left: 4.5vw;margin-right: 3vw">Нийт үнэ  </p>
+        </div>
+        
+        <cart-list name="list1"></cart-list>
+        <cart-list name="list2"></cart-list>
+        <cart-list name="list3"></cart-list>
+    </div>
 
-                    <p style="margin-left: 3vw">Зураг</p>
-                    <p style="margin-left: 6vw">Номын нэр</p>
-                    <p style="margin-left: 6.5vw">Тоо</p>
-                    <p style="margin-left: 3vw">Нэгж үнэ</p>
-                    <p style="margin-left: 4.5vw;margin-right: 3vw">Нийт үнэ  </p>
-                </div>
-                <cart-list name="list1"></cart-list>
-                <cart-list name="list2"></cart-list>
-                <cart-list name="list3"></cart-list>
+    <div class="cart-mobile">
+        <div class="list-mobile">
+
+
+            <a href="individualBook.html" aria-label="book cover" name = "More about book">
+                <img class ="book-cover-mobile" alt = "Book photo" src = "WEBP/book-cover-4.webp">
+            </a>
+            
+            <div class="list-info-mobile">
+                <div class="book-title-mobile"> Book name</div>
+                <img class="book-trash-mobile" alt="Trash" src="SVG/trash.svg"> 
+                <div class="book-car-mobile"> 1 </div>
+                <div class="book-car-mobile"> 17000 </div>
+                <div class="book-car-mobile"> 17000 </div>
             </div>
+        </div>
 
-            <div class="cart-mobile">
-                <div class="list-mobile">
-   
+        <div class="list-mobile">
 
-                    <a href="individualBook.html" aria-label="book cover" name = "More about book">
-                        <img class ="book-cover-mobile" alt = "Book photo" src = "WEBP/book-cover-4.webp">
-                    </a>
-                    
-                    <div class="list-info-mobile">
-                        <div class="book-title-mobile"> Book name</div>
-                        <img class="book-trash-mobile" alt="Trash" src="SVG/trash.svg"> 
-                        <div class="book-car-mobile"> 1 </div>
-                        <div class="book-car-mobile"> 17000 </div>
-                        <div class="book-car-mobile"> 17000 </div>
-                    </div>
-                </div>
+            <a href="individualBook.html" aria-label="book cover" name = "More about book">
+                <img class ="book-cover-mobile" alt = "Book photo" src = "WEBP/book-cover-4.webp">
+            </a>
+            
+            <div class="list-info-mobile">
+                <div class="book-title-mobile"> Book name</div>
+                <img class="book-trash-mobile" alt="Trash" src="SVG/trash.svg"> 
+                <div class="book-car-mobile"> 1 </div>
+                <div class="book-car-mobile"> 17000 </div>
+                <div class="book-car-mobile"> 17000 </div>
+            </div>
+        </div>
 
-                <div class="list-mobile">
-      
+        <div class="list-mobile">
 
-                    <a href="individualBook.html" aria-label="book cover" name = "More about book">
-                        <img class ="book-cover-mobile" alt = "Book photo" src = "WEBP/book-cover-4.webp">
-                    </a>
-                    
-                    <div class="list-info-mobile">
-                        <div class="book-title-mobile"> Book name</div>
-                        <img class="book-trash-mobile" alt="Trash" src="SVG/trash.svg"> 
-                        <div class="book-car-mobile"> 1 </div>
-                        <div class="book-car-mobile"> 17000 </div>
-                        <div class="book-car-mobile"> 17000 </div>
-                    </div>
-                </div>
 
-                <div class="list-mobile">
+            <a href="individualBook.html" aria-label="book cover" name = "More about book">
+                <img class ="book-cover-mobile" alt = "Book photo" src = "WEBP/book-cover-4.webp">
+            </a>
+            
+            <div class="list-info-mobile">
+                <div class="book-title-mobile"> Book name</div>
+                <img class="book-trash-mobile" alt="Trash" src="SVG/trash.svg"> 
+                <div class="book-car-mobile"> 1 </div>
+                <div class="book-car-mobile"> 17000 </div>
+                <div class="book-car-mobile"> 17000 </div>
+            </div>
+        </div>
+    </div>
+
+    <aside>
+        <info-list id="info"></info-list>   
+    </aside>
     
-
-                    <a href="individualBook.html" aria-label="book cover" name = "More about book">
-                        <img class ="book-cover-mobile" alt = "Book photo" src = "WEBP/book-cover-4.webp">
-                    </a>
-                    
-                    <div class="list-info-mobile">
-                        <div class="book-title-mobile"> Book name</div>
-                        <img class="book-trash-mobile" alt="Trash" src="SVG/trash.svg"> 
-                        <div class="book-car-mobile"> 1 </div>
-                        <div class="book-car-mobile"> 17000 </div>
-                        <div class="book-car-mobile"> 17000 </div>
-                    </div>
-                </div>
-            </div>
-            <aside>
-                <div class="info">
-                    <div class="info-title">
-                        Төлбөрийн мэдээлэл
-                    </div>
-                    <p>Нийт үнэ: 59000₮</p>
-                    <p>Тоо ширхэг: 3</p>
-                    <button class="order">
-                        Захиалах
-                    </button >
-                    <button class="cancel">
-                        Өөр бараа сонгох
-                    </button>
-                </div>
-            </aside>
         `
     }
 }

@@ -1,4 +1,6 @@
-
+const template = document.createElement('template');
+template.innerHTML = `
+    <style>
 
 .cart{
  
@@ -136,63 +138,8 @@
     .cart-mobile{
         display: none;
     }
-    .info{
+ 
 
-        width: 20vw;
-        height: 40vh;
-        float: left;
-        margin-top: 5vh;
-        margin-left:3vw;
-        border-style: solid;
-        border-width:1px;
-    }
-    
-    .info p{
-        margin-left: 2vw;
-        margin-top: 2vh;
-        margin-right: 2vw;
-        margin-bottom: 0vh;
-        float: left;
-    }
-    
-    .info-title{
-        float: left;
-        width: 20vw;
-        height: 5vh;
-        background: #E2E0E0;
-        padding-left: auto;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .order{
-        width: 18vw;
-        height: 6vh;
-        background-color: #3BEF0E;
-        float: left;
-        border-width: 0em;
-        border-radius: 20px;
-        margin-top: 8vh;
-        margin-left: 1vw;
-    }
-    
-    .cancel{
-        width: 18vw;
-        height: 6vh;
-        background-color: #F5734C;
-        float: left;
-        border-width: 0em;
-        border-radius: 20px;
-        margin-top: 2vh;
-        margin-left: 1vw;
-    }
-    
-    /* .header-1{
-        display: none;
-    }
-    .header-2{
-        display: none;
-    } */
 }
 
 @media screen and (max-width:480px) {
@@ -200,64 +147,9 @@
         display: none;
     }
 
-    .info{
-
-        width: 80vw;
-        height: 40vh;
-
-        margin-top: 5vh;
-        margin-left:10vw;
-        border-style: solid;
-        border-width:1px;
-    }
-    .info p{
-        margin-left: 8vw;
-        margin-top: 2vh;
-        margin-right: 4vw;
-        margin-bottom: 0vh;
-        font-size: 6vw;
-        float: left;
-    }
-
-    .info-title{
-        float: left;
-        width: 80vw;
-        height: 5vh;
-        background: #E2E0E0;
-        padding-left: auto;
-        display: flex;
-        justify-content: center;
-        font-size: 6vw;
-    }
-
-    .order{
-        width: 68vw;
-        height: 6vh;
-        background-color: #3BEF0E;
-        float: left;
-        border-width: 0em;
-        border-radius: 20px;
-        margin-top: 4vh;
-        margin-left: 6vw;
-    }
-
-    .cancel{
-        width: 68vw;
-        height: 6vh;
-        background-color: #F5734C;
-        float: left;
-        border-width: 0em;
-        border-radius: 20px;
-        margin-top: 2vh;
-        margin-left: 6vw;
-    }
+  
 
 
-        
-
-    .list-title{
-        display: none;
-    }
 
     .cart-mobile{
         width: 100vw;
@@ -330,3 +222,67 @@
 
 
 }
+    </style>
+    <div class="list">
+        
+    <div class="list-cover">
+            <a href="individualBook.html" aria-label="book cover" name = "More about book">
+                <img class ="list-book-cover" alt = "Book photo" src = "WEBP/book-cover-4.webp">
+            </a>
+    </div>
+    <div class="list-book-name">
+        <div class="book-name-con">
+            Book name
+        </div>
+    </div>
+    <div class="list-qnt">
+        <div class="list-qnt-con">
+                1
+        </div>
+    </div>
+    <div class="list-price">
+        <div class="list-price-con">
+                15000
+        </div>
+    </div>
+    <div class="list-sum">
+        <div class="list-sum-con">
+                15000
+        </div>
+    </div>
+    <button id="trash-icon" >
+    <img src="SVG/trash.svg" alt = "deleting icon"class="list-trash" >
+    </button>
+    </div>
+`;
+document.getElementById("test").addEventListener("click",function(){
+    var list = new CartList();
+    document.getElementById("cart").appendChild(list);
+
+})
+class CartList extends HTMLElement {
+    constructor(){
+        super();
+
+        this.attachShadow({
+            mode: 'open'
+        });
+
+        this.shadowRoot.appendChild(template.content.cloneNode(true));
+        
+        this.innerHTML = ' Test';
+    }
+
+    deleteList(){
+        
+        this.remove();
+        //console.log(elem);
+    }
+
+    connectedCallback() {
+        this.shadowRoot.querySelector('#trash-icon').addEventListener("click", ()=> this.deleteList());
+    }
+
+}
+
+window.customElements.define('cart-list', CartList);

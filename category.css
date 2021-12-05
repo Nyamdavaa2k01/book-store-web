@@ -31,7 +31,7 @@
 
 .category{
     width: 12vw;
-    height: 150vh;
+
     background-color: #E2E0E0;
     margin-left: 2vw;
     position: relative;
@@ -142,7 +142,6 @@
         height: 5vh;
         border-width: 0px;
     }
-
 
 
 }

@@ -254,12 +254,15 @@ template.innerHTML = `
     <img src="SVG/trash.svg" alt = "deleting icon"class="list-trash" >
     </button>
     </div>
+    
 `;
-document.getElementById("test").addEventListener("click",function(){
-    var list = new CartList();
-    document.getElementById("cart").appendChild(list);
+// document.getElementById("test").addEventListener("click",function(){
+//     var list = new CartList();
+//     document.getElementById("cart").appendChild(list);
 
-})
+// })
+
+
 class CartList extends HTMLElement {
     constructor(){
         super();
@@ -270,13 +273,17 @@ class CartList extends HTMLElement {
 
         this.shadowRoot.appendChild(template.content.cloneNode(true));
         
-        this.innerHTML = ' Test';
+       
     }
 
     deleteList(){
         
         this.remove();
         //console.log(elem);
+    }
+
+    createList(){
+
     }
 
     connectedCallback() {

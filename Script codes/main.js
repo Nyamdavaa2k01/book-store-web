@@ -11,7 +11,6 @@ import {News, getInfo} from './exporting.js';
                           (element) => {
                               let id = 'book'+i; 
                           document.getElementById(id).innerHTML += element.create() ; 
-                          // creating four clones is only temporary solution!!! 
                                 let id2 = 'book' + (10+i) ; 
                                 document.getElementById(id2).innerHTML += element.create() ; 
                                 let id3 = 'book' + (20+i) ; 
@@ -26,4 +25,5 @@ import {News, getInfo} from './exporting.js';
                     }), 3000
             )
                 
+
             

@@ -35,16 +35,18 @@ export class News {
     }
     create () {
 
-        return `
-        <div class="book-small" onclick = "pageSwap(0)">
-            <a href ="individualBook.html" aria-label="${this.title}'s photo" name = "More about ${this.title}">
-            <img class ="book-small-photo" alt = "photo of ${this.title}" src = "${this.photo}"></a>
+        // return `
+        // <div class="book-small" onclick = "pageSwap(0)">
+        //     <a href ="individualBook.html" aria-label="${this.title}'s photo" name = "More about ${this.title}">
+        //     <img class ="book-small-photo" alt = "photo of ${this.title}" src = "${this.photo}"></a>
 
-            <p class = "book-title">${this.title}</p>
-        </div>
-        `
+        //     <p class = "book-title">${this.title}</p>
+        // </div>
+        // `
     
-
+        return `
+            <book-info name = "${this.title}" pic = ${this.photo} author = "${this.author} price = "${this.author}""> </book-info>
+        `
     }
     onOwn ()  {
         return `
@@ -122,3 +124,67 @@ export class News {
         `
     }
 }
+class bookSmall extends HTMLElement {
+    constructor() {
+        super() ; 
+     //   this.shadowRoot.querySelector('#id');
+    }
+    render () {
+        let name = this.getAttribute('name') ; 
+        let pic = this.getAttribute('pic') ; 
+        let author = this.getAttribute('author') ; 
+        let price = this.getAttribute('price') ; 
+        this.innerHTML = `
+
+        <style>
+        .book-small{
+
+            background-color: #E2E0E0;
+            width:14.5vw; 
+            height: 26.4vmax ; 
+            border-radius: 2vw;
+            
+            }
+            .book-small-photo{
+            width:100%; 
+            height:auto ; 
+            border-radius: 2vw 2vw 0px 0px;
+            }
+
+            .book-title {
+            font-size: var(--book-title-size);
+            text-align: center;
+            
+            }
+        </style>
+
+        <div class="book-small">
+            <a href ="individualBook.html" aria-label="${name}'s photo" name = "More about ${name}" ><img class ="book-small-photo" alt = "Book photo" src = "${pic}"></a>
+            <p class = "book-title">${name}</p>
+        </div>
+        `      
+    }
+    get count () {
+        return this.getAttribute('count') ; 
+    }
+    set count (val)  {
+        this.setAttribute('count', val) ; 
+    }
+
+    static get observedAttributes () {
+        return ["count"] ; 
+    }
+
+    connectedCallback () {
+        if (!this.rendered) {
+            this.render() ; 
+            this.rendered= true ;
+        }
+    }
+    attributeChangedCallback () {
+        this.render() ;
+
+    }
+}
+
+customElements.define("book-info", bookSmall) ; 

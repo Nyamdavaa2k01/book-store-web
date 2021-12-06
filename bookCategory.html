@@ -7,6 +7,12 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes">
         <title>Document</title>
         <link rel="stylesheet" href="category.css" />
+        <style>
+            book-info {
+                background-color: #E2E0E0;
+                border-radius: 25px;
+            }
+        </style>
         <link rel="stylesheet" href="main-style-2.css" />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
@@ -24,9 +30,6 @@
                     <p><a href = "login.html">Нэвтрэх</a></p>
                 </div>
             </div>
-            <!-- <div  class = "header-top-right">
-                <i class ="material-icons">shopping_cart</i>
-            </div> -->
             <div class ="header-bottom">
             
                 <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
@@ -56,6 +59,7 @@
                 <a href = "bookCategory.html">Гадаад ном</a>
                 <a href = "bookCategory.html">Бичиг хэрэг</a>
                 <a href="bookCategory.html" style = "margin-right: 5vw;">Бэлэг дурсгал</a>
+                <div id = "testing">Ном</div>
             
             
         </nav>
@@ -184,75 +188,139 @@
                 </form>
             </div>
         </aside>
-        
         <main class="cat-main">
 
             <div class = "cat-book-row-container">
                 
                 
-                <div class="book-small book1 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book2 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book3 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book4 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
-                    <p class = "book-title">Book Name</p>
-                </div>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
                 
             </div>
-            <div class = "cat-book-row-container">
-                
-                
-                <div class="book-small book1 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book2 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book3 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book4 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                    
-            </div>
-            <div class = "cat-book-row-container">
-                
             
-                <div class="book-small book1 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book2 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book3 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"></a>
-                    <p class = "book-title">Book Name</p>
-                </div>
-                <div class="book-small book4 ">
-                    <a href="individualBook.html" aria-label="book-cover" name = "More about book" ><img class ="book-small-photo" alt = "Book photo" src = "WEBP/book-cover-4.webp"> </a>
-                    <p class = "book-title">Book Name</p>
-                </div>
+            <div class = "cat-book-row-container">
+                
+                
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
                 
             </div>
+            <!-- <div class = "cat-book-row-container">
+                
+                
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                <book-info pic ="WEBP/book-cover-4.webp" name = "12 Rules for Life">
+                    <div slot = "author">Зохиолч: Jordan</div>
+                    <div slot = "price">Үнэ: 15000</div>
+                    <div slot = "addtoList">Сагсанд нэмэх</div>
+                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                </book-info>
+                
+            </div> -->
+            <script src = "Script codes/bookInfo.js"></script>
         </main>
 
-
+        <footer >
+            <div class="footer-left">
+                <div class = "logo-photo-container">
+                    <img src = "SVG/footerLogo.svg" alt = "Logo">
+                </div>
+                <p class = "email-explanation">
+                    Шинэ, бэстселлер ном, хямдрал, урамшууллын талаарх мэдээллийг цаг алдалгүй авахыг хүсвэл манай жагсаалтад бүртгүүлээрэй!
+                </p>
+                <div class="email-register">
+                    <input type = "email" name ="email" placeholder="И-мейл хаяг">
+                    <button type ="submit" name ="register the email">Бүртгүүлэх</button>
+                </div>
+                <div class="inline">
+                    <i class = "material-icons">mark_as_unread</i>
+                <p>info@internom.mn</p>
+                </div>
+                <div class="inline "><i class ="material-icons phone">call</i>
+                    <p>7577 7700</p></div>
+            </div>
+            <div class ="footer-right">
+                <ul class="li-1">
+                    <li>ИНТЕРНОМ</li>
+                    <li>Бидний тухай</li>
+                    <li>Холбоо барих</li>
+                    <li>Манай дэлгүүрүүд</li>
+                    <li>Бэстселлер</li>
+                    <li>Шинэ</li>
+                    <li>Арга хэмжээ</li>
+                </ul>
+                <ul class="li-2">
+                    <li>ТУСЛАМЖ</li>
+                    <li>Захиалга хийх</li>
+                    <li>Төлбөрийн хэрэгслүүд</li>
+                    <li>Захиалга батлах, цуцлах</li>
+                    <li>Хүргэлт, буцаалт</li>
+                    <li>Бараа сонгох</li>
+                    <li>Үйлчилгээний нөхцөл</li>
+                </ul>
+            </div>
+        </footer>
         
        
 

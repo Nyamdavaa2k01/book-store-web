@@ -44,9 +44,18 @@ export class News {
         // </div>
         // `
     
+        // return `
+        //     <book-info name = "${this.title}" pic = ${this.photo} author = "${this.author} price = "${this.author}""> </book-info>
+        // `
         return `
-            <book-info name = "${this.title}" pic = ${this.photo} author = "${this.author} price = "${this.author}""> </book-info>
-        `
+        <book-info pic = "${this.photo}" name = "${this.title}">
+                <div slot = "author">Зохиолч: ${this.author}</div>
+                <div slot = "price">Үнэ: ${this.price}</div>
+                <div slot = "addtoList">Сагсанд нэмэх</div>
+               <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                
+            </book-info>
+            `
     }
     onOwn ()  {
         return `
@@ -124,67 +133,186 @@ export class News {
         `
     }
 }
+
+const template = document.createElement('template') ; 
+template.innerHTML = `
+
+    <style>
+    .book-small{
+        margin-left : 2vw;
+        background-color: #E2E0E0;
+        width:14.5vw; 
+        height: fit-content ; 
+        border-radius: 2vw;
+        
+        }
+        .book-small-photo{
+        width:100%; 
+        height:auto ; 
+        border-radius: 2vw 2vw 0px 0px;
+        }
+
+        .book-title {
+        font-size: var(--book-title-size);
+        text-align: center;
+        margin-left : 10px;
+        padding-left : 0px;
+        }
+        .info {
+            display:none;
+            padding : 10px;
+        }
+        .main-view{ 
+            display:flex;
+            justify-content : space-between ;
+        }
+        #toggle-info{
+            width :50px ; 
+            border:none; 
+            background-color:#E2E0E0;
+        }
+        .toggle-icon {
+            height : 100%; 
+            width : 100% ;
+        }
+        .button-icon {
+            width:40px;
+            border:none;
+            background-color:#E2E0E0;
+            padding:0px;
+        }
+
+    </style>
+   
+    <div class="book-small">
+            <a href ="individualBook.html"><img class ="book-small-photo" ></a>
+            <div class ="main-view">
+                <h3 class = "book-title"></h3>
+                <button id = "toggle-info">
+                    <img class = "toggle-icon" src = "SVG/dropdown-icon.jpg">
+                </button>
+            </div>
+            <div class = "info"> 
+                <p><slot name = "author"/></p>
+                <p><slot name = "price"/> </p>
+                <div style = "display:flex">
+                <p><slot name = "addtoList"/></p>
+                <button class = "button-icon"><slot name = "cartIcon"/></button>
+                <div>
+            </div>
+            
+    </div>
+`
+
 class bookSmall extends HTMLElement {
     constructor() {
         super() ; 
-     //   this.shadowRoot.querySelector('#id');
+        this.showInfo = false; 
+        this.attachShadow({mode : 'open'}) ; 
+        this.shadowRoot.appendChild(template.content.cloneNode(true)) ; 
+        this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name') ; 
+        this.shadowRoot.querySelector('img').src = this.getAttribute('pic') ; 
     }
-    render () {
-        let name = this.getAttribute('name') ; 
-        let pic = this.getAttribute('pic') ; 
-        let author = this.getAttribute('author') ; 
-        let price = this.getAttribute('price') ; 
-        this.innerHTML = `
-
-        <style>
-        .book-small{
-
-            background-color: #E2E0E0;
-            width:14.5vw; 
-            height: 26.4vmax ; 
-            border-radius: 2vw;
-            
-            }
-            .book-small-photo{
-            width:100%; 
-            height:auto ; 
-            border-radius: 2vw 2vw 0px 0px;
-            }
-
-            .book-title {
-            font-size: var(--book-title-size);
-            text-align: center;
-            
-            }
-        </style>
-
-        <div class="book-small">
-            <a href ="individualBook.html" aria-label="${name}'s photo" name = "More about ${name}" ><img class ="book-small-photo" alt = "Book photo" src = "${pic}"></a>
-            <p class = "book-title">${name}</p>
-        </div>
-        `      
+    
+toggleInfo () {
+    this.showInfo = !this.showInfo ; 
+    const info = this.shadowRoot.querySelector('.info') ; 
+    const toggleBtn = this.shadowRoot.querySelector('#toggle-info') ; 
+    //const toggleIcon = his.shadowRoot.querySelector('#toggle-icon') ;  
+    if (this.showInfo) {
+        info.style.display = 'block' ; 
+        toggleBtn.innerHTML ='<img class = "toggle-icon" src = "SVG/upward-icon.jpg">' ; 
+       
     }
-    get count () {
-        return this.getAttribute('count') ; 
+    else {
+        info.style.display = 'none' ; 
+        toggleBtn.innerHTML='<img class = "toggle-icon" src = "SVG/dropdown-icon.jpg">' ; 
+      
     }
-    set count (val)  {
-        this.setAttribute('count', val) ; 
+}
+
+    connectedCallback() {
+        this.shadowRoot.querySelector('#toggle-info').
+        addEventListener('click', () => this.toggleInfo());
+    }
+
+    disconnectedCallback() {
+        this.shadowRoot.querySelector('#toggle-info').
+        removeEventListener();
     }
 
     static get observedAttributes () {
         return ["count"] ; 
     }
-
-    connectedCallback () {
-        if (!this.rendered) {
-            this.render() ; 
-            this.rendered= true ;
-        }
-    }
-    attributeChangedCallback () {
-        this.render() ;
-
-    }
+   
+    
 }
 
 customElements.define("book-info", bookSmall) ; 
+
+
+
+// class bookSmall extends HTMLElement {
+//     constructor() {
+//         super() ; 
+//      //   this.shadowRoot.querySelector('#id');
+//     }
+//     render () {
+//         let name = this.getAttribute('name') ; 
+//         let pic = this.getAttribute('pic') ; 
+//         let author = this.getAttribute('author') ; 
+//         let price = this.getAttribute('price') ; 
+//         this.innerHTML = `
+
+//         <style>
+//         .book-small{
+
+//             background-color: #E2E0E0;
+//             width:14.5vw; 
+//             height: 26.4vmax ; 
+//             border-radius: 2vw;
+            
+//             }
+//             .book-small-photo{
+//             width:100%; 
+//             height:auto ; 
+//             border-radius: 2vw 2vw 0px 0px;
+//             }
+
+//             .book-title {
+//             font-size: var(--book-title-size);
+//             text-align: center;
+            
+//             }
+//         </style>
+
+//         <div class="book-small">
+//             <a href ="individualBook.html" aria-label="${name}'s photo" name = "More about ${name}" ><img class ="book-small-photo" alt = "Book photo" src = "${pic}"></a>
+//             <p class = "book-title">${name}</p>
+//         </div>
+//         `      
+//     }
+//     get count () {
+//         return this.getAttribute('count') ; 
+//     }
+//     set count (val)  {
+//         this.setAttribute('count', val) ; 
+//     }
+
+//     static get observedAttributes () {
+//         return ["count"] ; 
+//     }
+
+//     connectedCallback () {
+//         if (!this.rendered) {
+//             this.render() ; 
+//             this.rendered= true ;
+//         }
+//     }
+//     attributeChangedCallback () {
+//         this.render() ;
+
+//     }
+// }
+
+// customElements.define("book-info", bookSmall) ; 

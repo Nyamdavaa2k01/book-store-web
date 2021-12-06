@@ -20,6 +20,7 @@ const main = new mainPage () ;
 document.getElementById("mainPage").innerHTML = main.showData() ; 
 
 
+
 // document.getElementById("test").addEventListener("click", pageSwap) ; 
 document.getElementById("opt4").addEventListener("click", function(){ 
     // const bookInfo = new individualBook () ; 
@@ -87,4 +88,41 @@ document.getElementById("navToCart").addEventListener("click", function() {
     field.innerHTML = cart.showData(); 
 }
 
-) ; 
+) ;
+
+// let appContainerID = "mainPage" ; 
+
+// class SpaNav {
+//     AddRoute(parentRoute, routeName, data) {
+//         this.appData.get(parentRoute).
+//         set(routeName, data) ; 
+//     }
+//     onRoute (route) {
+//         console.log(`route = ${route}`) ; 
+//     document.getElementById(this.appContainerID).innerHTML = this.appData.get("/").get(route)?.showData() || "not Found"; 
+//     }
+
+//     notFound() {
+//         return html ` 
+//             <p></p>
+//         `    
+//         }
+// }
+
+// // Adding routes 
+// SpaNav.AddRoute("/", "cartList", cartList) ; 
+// SpaNav.AddRoute("/", "login", )
+// document.getElementById("mainPage").array.forEach(element => {
+//     element.addEventListener("click", e => {
+//         e.preventDefault() ; 
+//         history.pushState(null, "", e.target.href) ; 
+//     } 
+//     )
+// });
+
+// window.addEventListener("popstate", e => {
+//     console.log("testing") ; 
+//     mainPage
+// }
+
+// )

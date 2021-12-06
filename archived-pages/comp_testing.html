@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <script src = "./Script codes/component.js" type = "module"></script> -->
+        <script src = "Script codes/scrolling.js"></script>
+        <link  rel ="stylesheet" href = "main-style-2.css"> 
+        <link rel = "stylesheet" href = "stylesheets/scrolling.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
+        <script>
+            function showMore () {
+                // document.getElementById("test1").setAttribute('name', 'helloo');
+                // document.getElementById("test2").setAttribute('name', 'helloo');
+                // document.getElementById("test3").setAttribute('name', 'helloo');
+                // document.getElementById("test4").setAttribute('name', 'helloo');
+                // document.getElementById("test5").setAttribute('name', 'helloo');
+            }
+                </script>
+    </head>
+   <body>
+    <div class="wrapper">
+        <button type ="move" class ="move-left" onclick="sliding(0,1)"><i class ="material-icons">chevron_left</i></button>
+        <div id = "book-row-container1">
+            <book-info id = "test1" pic = "JPG/book-cover.jpg" name = "12 Rules for Life">
+                <div slot = "author">Зохиолч: Jordan</div>
+                <div slot = "price">Үнэ: 15000</div>
+                <div slot = "addtoList">Сагсанд нэмэх</div>
+               <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
+                
+            </book-info>
+            <book-info id = "test1" pic = "JPG/book-cover.jpg" name = "12 Rules for Life">
+                <div slot = "author"> Peterson</div>
+                <div slot = "price"> 25000</div>
+            </book-info>
+            <book-info id = "test1" pic = "JPG/book-cover.jpg" name = "12 Rules for Life">
+                <div slot = "author"> Jordan</div>
+                <div slot = "price"> 15000</div>
+            </book-info>
+            <book-info id = "test1" pic = "JPG/book-cover.jpg" name = "12 Rules for Life">
+                <div slot = "author"> Jordan</div>
+                <div slot = "price"> 15000</div>
+            </book-info>
+            <book-info id = "test1" pic = "JPG/book-cover.jpg" name = "12 Rules for Life">
+                <div slot = "author"> Jordan</div>
+                <div slot = "price"> 15000</div>
+            </book-info>
+            <book-info id = "test1" pic = "JPG/book-cover.jpg" name = "12 Rules for Life">
+                <div slot = "author"> Jordan</div>
+                <div slot = "price"> 15000</div>
+            </book-info>
+            <book-info id = "test1" pic = "JPG/book-cover.jpg" name = "12 Rules for Life">
+                <div slot = "author"> Jordan</div>
+                <div slot = "price"> 15000</div>
+            </book-info>
+            <script src = "Script codes/comp_testing2.js"></script>
+        </div>
+        <button type = "move" class ="move-right" onclick="sliding(1,1)"><i class ="material-icons">chevron_right</i></button>
+    </div>
+    <!-- <button onclick="showMore()">tada</button> -->
+   
+   </body>
+</html>

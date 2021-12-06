@@ -1,6 +1,7 @@
 //const url = "https://api.jsonbin.io/b/618c95b4820eda3cc81b7988/2" ; 
 // const url = "https://api.jsonbin.io/b/618c95b4820eda3cc81b7988/latest"
 const url = "https://api.jsonbin.io/b/61963b900ddbee6f8b0e09df/latest" ;
+
 export function getInfo (url, callMeBack) {
     fetch(url)
     .then(response => response.json())
@@ -14,8 +15,6 @@ export function getInfo (url, callMeBack) {
            
                 })
 }
-
-
 
 
 export class News {
@@ -35,7 +34,7 @@ export class News {
         this.size = newSize;
     }
     create () {
-    
+
         return `
         <div class="book-small" onclick = "pageSwap(0)">
             <a href ="individualBook.html" aria-label="${this.title}'s photo" name = "More about ${this.title}">
@@ -44,7 +43,8 @@ export class News {
             <p class = "book-title">${this.title}</p>
         </div>
         `
-        
+    
+
     }
     onOwn ()  {
         return `

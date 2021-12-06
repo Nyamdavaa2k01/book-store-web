@@ -6,141 +6,148 @@ const listTemp = document.createElement('template');
 listTemp.innerHTML = `
     <style>
 
-.cart{
- 
-    width: 64vw;
-    margin-top: 5vh;
-    margin-left: 5vw;
-    float: left;
-}
-.list{
-    height: 16VW;
-    width: 59vw;
+    .cart{
+        opacity: 1;
+        width: 64vw;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        float: left;
+    }
+    .list{
+        height: 16VW;
+        width: 59vw;
+        webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
-}
-.list-title{
-    height: 5vh;
-    width: 58vw;
-    background-color: #E2E0E0;
-}
-
-.list-title p{
-    float: left;
-    margin-top: 1vh;
-    margin-bottom:0px;
-    margin-left: 0px;
-
-    font-size: 1.5vw;
-}
+    }
 
 
-.list-cover{
-    height: 16VW;
-    width: 10vw;
-    border-style: none none solid solid;
-    border-width:1px;
-    float: left;
-    position: relative;
-}
+    .list-title{
+        height: 5vh;
+        width: 58vw;
+        background-color: #E2E0E0;
+    }
 
-.list-book-cover{
+    .list-title p{
+        float: left;
+        margin-top: 1vh;
+        margin-bottom:0px;
+        margin-left: 0px;
 
-    height: auto;
-    width: 80%;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    margin-left: 1.1vw;
-    border-radius: 20px;
-}
-.list-book-name{
-    height: 16VW;
-    width: 15vw;
-    border-style: none none solid solid;
-    border-width:1px;
-    float: left;
+        font-size: 1.5vw;
+    }
 
-}
-.book-name-con{
-    height: 5vh;
-    width: 13vw;
-    background-color: #E2E0E0;
-    border-radius: 25px;
-    margin-top: 2vh;
-    margin-left: 1vw;
-    display: flex;
-    justify-content: center;
-    font-size: 2vw;
-}
 
-.list-qnt{
-    height: 16VW;
-    width: 6vw;
-    border-style: none none solid solid;
-    border-width:1px;
-    float: left;
-}
+    .list-cover{
+        height: 16VW;
+        width: 10vw;
+        border-style: none none solid solid;
+        border-width:1px;
+        float: left;
+        position: relative;
+    }
 
-.list-qnt-con{
-    height: 5vh;
-    width: 4vw;
-    background-color: #E2E0E0;
-    border-radius: 20px;
-    font-size: 2vw;
-    margin-top: 2vh;
-    margin-left: 1vw;
-    display: flex;
-    justify-content: center;
+    .list-book-cover{
 
-}
+        height: auto;
+        width: 80%;
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+        margin-left: 1.1vw;
+        border-radius: 20px;
+    }
+    .list-book-name{
+        height: 16VW;
+        width: 15vw;
+        border-style: none none solid solid;
+        border-width:1px;
+        float: left;
 
-.list-price{
-    height: 16VW;
-    width: 8vw;
-    border-style: none none solid solid;
-    border-width:1px;
-    float: left;
-}
+    }
+    .book-name-con{
+        height: 5vh;
+        width: 13vw;
+        background-color: #E2E0E0;
+        border-radius: 25px;
+        margin-top: 2vh;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: center;
+        font-size: 2vw;
+    }
 
-.list-price-con{
-    height: 5vh;
-    width: 6vw;
-    background-color: #E2E0E0;
-    border-radius: 20px;
-    font-size: 2vw;
-    margin-top: 2vh;
-    margin-left: 1vw;
-    display: flex;
-    justify-content: center;
-}
-.list-sum{
-    height: 16VW;
-    width: 12vw;
-    border:1px;
-    float: left;
-    border-style: none none solid solid;
-    border-width:1px;
-}
+    .list-qnt{
+        height: 16VW;
+        width: 6vw;
+        border-style: none none solid solid;
+        border-width:1px;
+        float: left;
+    }
 
-.list-sum-con{
-    height: 5vh;
-    width: 10vw;
-    background-color: #E2E0E0;
-    border-radius: 20px;
-    font-size: 2vw;
-    margin-top: 2vh;
-    margin-left: 1vw;
-    display: flex;
-    justify-content: center;
-}
+    .list-qnt-con{
+        height: 5vh;
+        width: 4vw;
+        background-color: #E2E0E0;
+        border-radius: 20px;
+        font-size: 2vw;
+        margin-top: 2vh;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: center;
 
-.list-trash{
-    margin-top: 2vh;
-    width: 3vw;
-    height: 5vh;
-}
+    }
+
+    .list-price{
+        height: 16VW;
+        width: 8vw;
+        border-style: none none solid solid;
+        border-width:1px;
+        float: left;
+    }
+
+    .list-price-con{
+        height: 5vh;
+        width: 6vw;
+        background-color: #E2E0E0;
+        border-radius: 20px;
+        font-size: 2vw;
+        margin-top: 2vh;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: center;
+    }
+    .list-sum{
+        height: 16VW;
+        width: 12vw;
+        border:1px;
+        float: left;
+        border-style: none none solid solid;
+        border-width:1px;
+    }
+
+    .list-sum-con{
+        height: 5vh;
+        width: 10vw;
+        background-color: #E2E0E0;
+        border-radius: 20px;
+        font-size: 2vw;
+        margin-top: 2vh;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    .list-trash{
+        margin-top: 2vh;
+        width: 3vw;
+        height: 5vh;
+    }
 
     </style>
-    <div class="list">
+    <div id='list' class="list">
         
     <div class="list-cover">
             <a aria-label="book cover" name = "More about book">
@@ -203,7 +210,7 @@ function changeQnt (qnt, price){
 }
 
 class CartList extends HTMLElement {
-    constructor(){
+    constructor(){  
         super();
 
         this.attachShadow({
@@ -214,10 +221,35 @@ class CartList extends HTMLElement {
         this.shadowRoot.querySelector('a').href = 'individualBook.html';
     }
 
+
     deleteList(){
         changeQnt(qnt, sumPrice);
-        this.remove();
+        
+        var id= null;
+        var elem  = this.shadowRoot.querySelector('#list');
+        var opacity = 1;
+
+        clearInterval(id);
+        id = setInterval(frame, 10);
+        function frame(){
+
+            if (opacity == 0) {
+                clearInterval(id);
+            } else {
+                opacity -= 0.2
+                elem.style.opacity = opacity;
+                
+            }
+        }
+        
+      
+        elem.addEventListener("transitionend",() => {
+            this.remove();
+   
+        })
+        
     }
+
 
     createList(){
 

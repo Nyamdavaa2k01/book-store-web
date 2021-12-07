@@ -68,7 +68,8 @@ header p {
     align-items: center;
 }
 .header-bottom a {
-    color:black ;
+    color:black
+    
 }
 .logo-photo {
     width : 16vw ; 
@@ -459,6 +460,12 @@ footer i{
     } */
     footer {
         display:block;
+    }
+    .class {
+        color:white ; 
+    }
+    .orange {
+        color:var(--main-bg-color);
     }
     .footer-left{
         width:90%;

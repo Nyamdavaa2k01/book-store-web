@@ -19,12 +19,13 @@
         }       
         </style>
         <link rel = "stylesheet" href = "stylesheets/scrolling.css">
+        <link rel = "stylesheet" href = "tests/carousel.css">
     </head>
     <body>
        <header>
            
            <div class = "header-top"> 
-                <a href = "index.html"><p style = "color: white">Бие даасан номын дэлгүүр</p></a>
+                <a href = "tests/carousel2.html"><p style = "color: white">Бие даасан номын дэлгүүр</p></a>
                 
                 <div class ="header-right">
                     <a href = "register.html" name = "register"><i class ="material-icons register-icon" >account_circle</i></a>
@@ -39,7 +40,7 @@
             </div> -->
             <div class ="header-bottom">
                
-                <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
+                
                 <div class = "search-field" >
                     <input type = "text" class ="search-input" placeholder="Хайлт хийх"> 
                     <button type ="search" class ="search-button">
@@ -78,7 +79,30 @@
                         Хуурмаг гэрч номны зохиолч 
                         -Karin slaughter </p>
                 </div>
-                <a href = "individualBook.html" name ="More about book" aria-label="book cover"><img src = "WEBP/big-cover-5.webp" alt = "Book photo" class = "desktop-main-book"></a>
+                <div class="carousel">
+                    <button class="c_button c_button--left is-hidden"><img src = "JPG/left.jpg "></button>
+                    <div class="c_track-container">
+                        <ul class="c_track">
+                            <li class="c_slide current-slide" >
+                                <img src = "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=912&q=80" class = "c_image">
+                            </li>
+                            <li class="c_slide">
+                                <img src = "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=912&q=80" class = "c_image">
+                            </li>
+                            <li class="c_slide">
+                                <img src = "https://images.unsplash.com/photo-1601640365825-66327247a242?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=864&q=80" class = "c_image">
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="c_button c_button--right"><img src = "JPG/right.jpg"></button>
+                    <div class="c_nav">
+                        <button class="c_indicator current-slide"></button>
+                        <button class="c_indicator"></button>
+                        <button class="c_indicator"></button>
+                    </div>
+                    <script src = "Script codes/carousel2.js"></script>
+
+
                 <div class ="book-row-title" id = "cat1">
                     <hr/>
                         <p class = "category-title">
@@ -87,6 +111,7 @@
                             <p class = "highlight">БЭСТСЕЛЛЕР</p>
                         </p>
                     <hr/> 
+                </div>
                 </div>
                 <div class ="book-row-options">
                     <button class ="chosen">ШИНЭ</button>

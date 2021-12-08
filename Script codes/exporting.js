@@ -145,7 +145,7 @@ template.innerHTML = `
         width:14.5vw; 
         height: fit-content ; 
         border-radius: 2vw;
-        
+        margin-bottom:3vw;
         }
         .book-small-photo{
         width:100%; 

@@ -17,9 +17,10 @@ template.innerHTML = `
         }
 
         .book-title {
-        font-size: var(--book-title-size);
+        
+        font-size: 12px;
         text-align: center;
-        margin-left : 10px;
+        margin-left : 15px;
         padding-left : 0px;
         }
         .info {
@@ -46,7 +47,13 @@ template.innerHTML = `
             background-color:#E2E0E0;
             padding:0px;
         }
-
+        p {
+            margin:3px;
+            font-size:14px;
+        }
+        .cart-icon{
+            border-radius:50%; 
+        }
     </style>
    
     <div class="book-small">
@@ -62,7 +69,7 @@ template.innerHTML = `
                 <p><slot name = "price"/> </p>
                 <div style = "display:flex">
                 <p><slot name = "addtoList"/></p>
-                <button class = "button-icon"><slot name = "cartIcon"/></button>
+                <button class = "button-icon"><slot class ="cart-icon" name = "cartIcon"/></button>
                 <div>
             </div>
             

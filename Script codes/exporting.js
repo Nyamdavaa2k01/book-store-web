@@ -140,24 +140,25 @@ template.innerHTML = `
 
     <style>
     .book-small{
-        margin-left : 2vw;
-        background-color: #E2E0E0;
-        width:14.5vw; 
-        height: fit-content ; 
-        border-radius: 2vw;
-        margin-bottom:3vw;
+            margin-left : 2vw;
+            background-color: #E2E0E0;
+            width:14.5vw; 
+            height: fit-content ; 
+            border-radius: 2vw;
+            margin-bottom:3vw;
         }
         .book-small-photo{
-        width:100%; 
-        height:auto ; 
-        border-radius: 2vw 2vw 0px 0px;
+            width:100%; 
+            height:auto ; 
+            border-radius: 2vw 2vw 0px 0px;
         }
 
         .book-title {
-        font-size: var(--book-title-size);
+        font-size: 12px;
         text-align: center;
-        margin-left : 10px;
+        margin-left : 15px;
         padding-left : 0px;
+        
         }
         .info {
             display:none;
@@ -171,6 +172,7 @@ template.innerHTML = `
             width :50px ; 
             border:none; 
             background-color:#E2E0E0;
+            border-radius:50%;
         }
         .toggle-icon {
             height : 100%; 
@@ -182,7 +184,18 @@ template.innerHTML = `
             background-color:#E2E0E0;
             padding:0px;
         }
-
+        p {
+            margin:3px;
+            font-size:14px;
+        }
+        .cart-icon{
+            border-radius:50%; 
+        }
+        @media screen and (max-width:480px) {
+            .book-small {
+                width:25vw;
+            }
+        }
     </style>
    
     <div class="book-small">

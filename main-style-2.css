@@ -251,6 +251,7 @@ display: none;
     .mobile-main-book-explanation{
         display: none;
     }
+   
 }
 
 
@@ -483,5 +484,7 @@ footer i{
     .logo-photo-container img {
         width : 90% 
     }
-
+    .move-left, .move-right {
+        display: none;
+    }
 }

@@ -1,109 +1,65 @@
 <!DOCTYPE html>
-<html lang = "en">
-
+<html lang="en">
 <head>
-
-    <meta charset="utf-8">
-    <meta name="description" content="online book store" />
-    <meta name="keywords"
-        content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes">
-    <link rel="stylesheet" href="style.css">
-    <link rel = "stylesheet" href = "main-style-2.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <title>Internom</title>
-    <style>
-        .main {
-            width: 30%;
-        }
-        .main button {
-            margin :0.3rem;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href = "stylesheets/loginForm.css" rel = "stylesheet">
 </head>
-
 <body>
-    <header>
-           
-        <div class = "header-top"> 
-             <a href = "index.html"><p>Бие даасан номын дэлгүүр</p></a>
-             
-             <div class ="header-right">
-                 <a href = "register.html"><i class ="material-icons register-icon" >account_circle</i></a>
-                 <a href ="register.html" name = "sign up via link"> <p>Бүртгүүлэх</p></a>
-                 <a href ="login.html"i class ="material-icons login-icon">login</i></a>
-            
-                 <p><a href = "login.html">Нэвтрэх</a></p>
-             </div>
-         </div>
-         <!-- <div  class = "header-top-right">
-             <i class ="material-icons">shopping_cart</i>
-         </div> -->
-         <div class ="header-bottom">
-            
-             <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
-             <div class = "search-field" >
-                 <input type = "text" class ="search-input" placeholder="Хайлт хийх"> 
-                 <button type ="search" class ="search-button">
-                     <i class ="material-icons icon-search">search</i>
-                 </button>
-             </div>
-             <i class = "material-icons icon-cart" style ="font-size: 4vmax;"><a href ="cartList.html">shopping_cart</a></i>
-         </div>
-
-         <div class ="mobile-search-field">
-             <button type ="search" class ="mobile-search-button">
-                 <i class ="material-icons icon-search">search</i>
-             </button>
-         </div>
-         </header>
-
-         <main>
-    <section class="main">
-
-        <div style="padding: 50px;">
-            <div class="card">
-                <div class="card-header">
-                    Нэвтрэх
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Нэр</label>
-                            <input type="text" class="form-control" id="name"
-                                name="name"
-                                placeholder="Таны нэр">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="password">Нууц үг</label>
-                            <input type="password" class="form-control"
-                                id="password"
-                                name="password"
-                                placeholder="Нууц үг">
-                        </div>
-                        <div class="center">
-                            <button type="submit" class="button yellow">
-                                Нэвтрэх
-                            </button>
-                        </div>
-                        <div class="center padding-top">
-    
-                            <button type="submit" class="button blue">
-                                <i>F</i>
-                                Login with facebook
-                            </button>
-                        </div>
-    
-                    </form>
-                </div>
-    
+    <div class="hero">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn-login"></div>
+                <button type = "button" class ="toggle-login" onclick = "login()"><p id="login-text">Log in</p></button>
+                <button type = "button" class ="toggle-login" onclick = "register()"><p id="reg-text">Register</p></button>
             </div>
+            <div class="social-icons">
+                <img src = "PNG/fb.png"> 
+                <img src = "PNG/ig.png">
+                <img src = "PNG/tweet.png">
+            </div>
+            <form id = "login" class ="form-input"> 
+                <input type= "text" class = "input-field" placeholder="User Id" required>  
+                <input type= "password" class = "input-field" placeholder="Enter Password" required>
+                <input type = "checkbox" class = "check-box"> <span>Remember password</span>
+                <button type = "submit" class = "submit-btn">Log in</button>
+            </form>
+            <form id = "register" class ="form-input"> 
+                <input type= "text" class = "input-field" placeholder="User Id" required>  
+                <input type= "password" class = "input-field" placeholder="Enter Password" required>
+                <input type= "email" class = "input-field" placeholder="Enter email" required>
+                <input type = "checkbox" class = "check-box"> <span>I agree to the terms</span>
+                <button type = "submit" class = "submit-btn">Register</button>
+            </form>
         </div>
-
-    </section>
-</main>
-    
+        <script>
+            const x = document.getElementById("login") ; 
+            const y = document.getElementById("register") ; 
+            const z = document.getElementById("btn-login") ; 
+            // const logText = document.querySelectorAll('login-text') ;
+            // const regText = document.querySelectorAll('reg-text') ; 
+            // regText.style.color="red";
+            const t1 = document.getElementById("login-text") ; 
+            const t2 = document.getElementById("reg-text") ; 
+         
+            function register () {
+                x.style.left = "-400px" ; 
+                y.style.left = "50px" ; 
+                z.style.left = "110px";
+                t2.style.color = "white";
+                t1.style.color = "black" ; 
+            }
+            function login () {
+                x.style.left = "50px" ; 
+                y.style.left = "450px" ; 
+                z.style.left = "0";
+                t1.style.color = "white" ; 
+                t2.style.color=  "black" ; 
+                // logText.style.color = "white";
+            }
+        </script>
+    </div>
 </body>
-
 </html>

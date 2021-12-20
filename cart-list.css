@@ -132,6 +132,8 @@
     width: 3vw;
     height: 5vh;
 }
+
+
 @media screen and (min-width: 480px) {
     .cart-mobile{
         display: none;

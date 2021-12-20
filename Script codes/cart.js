@@ -274,8 +274,68 @@ class InfoList extends HTMLElement {
 
         this.shadowRoot.innerHTML = `
             <style>
+            @media screen and (max-width:480px) {
+                .cart{
+                    display: none;
+                }
+            
                 .info{
-
+            
+                    width: 80vw;
+                    height: 40vh;
+            
+                    margin-top: 5vh;
+                    margin-left:10vw;
+                    border-style: solid;
+                    border-width:1px;
+                }
+                .info p{
+                    margin-left: 8vw;
+                    margin-top: 2vh;
+                    margin-right: 4vw;
+                    margin-bottom: 0vh;
+                    font-size: 6vw;
+                    float: left;
+                }
+            
+                .info-title{
+                    float: left;
+                    width: 80vw;
+                    height: 5vh;
+                    background: #E2E0E0;
+                    padding-left: auto;
+                    display: flex;
+                    justify-content: center;
+                    font-size: 6vw;
+                }
+                .order{
+                    width: 68vw;
+                    height: 6vh;
+                    background-color: #3BEF0E;
+                    float: left;
+                    border-width: 0em;
+                    border-radius: 20px;
+                    margin-top: 4vh;
+                    margin-left: 6vw;
+                }
+            
+                .cancel{
+                    width: 68vw;
+                    height: 6vh;
+                    background-color: #F5734C;
+                    float: left;
+                    border-width: 0em;
+                    border-radius: 20px;
+                    margin-top: 2vh;
+                    margin-left: 6vw;
+                }
+            }
+            @media screen and (min-width: 480px) {
+                .cart-mobile{
+                    display: none;
+                }
+                .info{
+            
                     width: 20vw;
                     height: 40vh;
                     float: left;
@@ -324,6 +384,14 @@ class InfoList extends HTMLElement {
                     margin-top: 2vh;
                     margin-left: 1vw;
                 }
+                
+                /* .header-1{
+                    display: none;
+                }
+                .header-2{
+                    display: none;
+                } */
+            }
             </style>
             <div class="info">
 

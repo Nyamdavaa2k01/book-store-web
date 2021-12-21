@@ -5,18 +5,27 @@
         <link rel="stylesheet" href="cart-list.css">
         <link  rel ="stylesheet" href = "main-style-2.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     </head>
     <body>
         <h3>hello world</h3>
         <button id="test">add </button>
         <div id="cart">
-            <cart-list name="list1"></cart-list>
-            <cart-list name="list2"></cart-list>
-            <cart-list name="list3"></cart-list>
+
         </div>
         <aside>
             <info-list id="info"></info-list>    
+            
         </aside>
         <script src = "Script codes/cart.js"></script>
+        <script>
+   
+                document.getElementById("test").addEventListener('click', function()  {
+         
+                    changeInfo(1, 15000);
+            
+                    
+                })
+        </script>
     </body>
 </html>

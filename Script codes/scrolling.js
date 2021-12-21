@@ -14,3 +14,5 @@ function sliding (dir, index) {
      
       }, 50)
 }
+
+localStorage.setItem("itemQnt", 3);

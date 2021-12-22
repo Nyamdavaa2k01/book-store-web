@@ -1,7 +1,7 @@
 
 
 .cart{
- 
+  
     width: 64vw;
     margin-top: 5vh;
     margin-left: 5vw;
@@ -13,6 +13,7 @@
 
 }
 .list-title{
+    border-radius: 15px;
     height: 5vh;
     width: 58vw;
     background-color: #E2E0E0;
@@ -132,12 +133,14 @@
     width: 3vw;
     height: 5vh;
 }
+
+
 @media screen and (min-width: 480px) {
     .cart-mobile{
         display: none;
     }
     .info{
-
+        border-radius: 20px;
         width: 20vw;
         height: 40vh;
         float: left;
@@ -201,7 +204,7 @@
     }
 
     .info{
-
+        border-radius: 20px;
         width: 80vw;
         height: 40vh;
 

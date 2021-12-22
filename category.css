@@ -42,8 +42,10 @@
 
 .category p{
     text-align: center;
-    font-size: 1.6vw
-       
+    font-size: 1.3vw;
+    margin-bottom: -7px; 
+    margin-top: 10px; 
+    color: #F24C1A;
 }
 
 .cat-drop-down{
@@ -61,21 +63,24 @@
     margin-left: 1vw;
 
 }
+
 .cat-checkbox-big{
     width: 10vw;
     height: 10vh;
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-left: 1vw;
-    border-radius: 10px;
+    border-radius: 20px;
+    padding-top: 10px;
     background: white
 }
 .cat-checkbox{
     width:10vw;
     height: 5vh;
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-left: 1vw;
-    border-radius: 10px;
-    background: white
+    border-radius: 20px;
+    background: white;
+    padding-top: 10px;
 }
 
 .cat-checkbox form{

@@ -1,0 +1,27 @@
+{
+  "name": "-",
+  "version": "1.0.0",
+  "description": "Web programming хичээлийн хүрээнд хийж буй номын дэлгүүрийн сайт",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nyamdavaa2k01/book-store-web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nyamdavaa2k01/book-store-web/issues"
+  },
+  "homepage": "https://github.com/Nyamdavaa2k01/book-store-web#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "pg": "^8.7.1"
+  }
+}

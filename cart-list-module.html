@@ -20,12 +20,45 @@
         <script src = "Script codes/cart.js"></script>
         <script>
    
-                document.getElementById("test").addEventListener('click', function()  {
-         
-                    changeInfo(1, 15000);
-            
+            let book1 = 
+            {
                     
-                })
-        </script>
+                    "title": "HARRY POTTER AND THE ORDER OF THE PHOENIX",
+                    "photo": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+                    "author": "J. K. Rowling",
+                    "published": "Bloomsbury Publishing PLC",
+                    "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
+                    "isbn": "978-14088-55-69-0",
+                    "language": "Англи",
+                    "page": "816",
+                    "size": "198 x 135 x 129 мм",
+                    "shelf": "Байгаа",
+                    "price": 60000,
+                    "discount": 45000,
+                    "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
+                
+
+            }
+            let book2 ={
+                    "title": "12 Rules for Life",
+                    "photo": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80",
+                    "author": "Jordan Peterson",
+                    "published": "Bloomsbury Publishing PLC",
+                    "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
+                    "isbn": "978-14088-55-69-0",
+                    "language": "Англи",
+                    "page": "816",
+                    "size": "198 x 135 x 129 мм",
+                    "shelf": "Байгаа",
+                    "price": 60000,
+                    "discount": 45000,
+                    "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
+                
+            }
+        
+            document.getElementById("test").addEventListener('click', function()  {
+                addBookToList(book1);
+            })
+            </script>
     </body>
 </html>

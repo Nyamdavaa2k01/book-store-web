@@ -1,6 +1,6 @@
 var qnt;
 var sumPrice;
-
+var objStr = [];
 window.onload = function(){
     qnt = localStorage.getItem("itemQnt");
     if(qnt == null ){
@@ -11,17 +11,34 @@ window.onload = function(){
         localStorage.setItem("sumPrice", 0);
   
     }
-    console.log(qnt);
+ 
+    tmp = localStorage.getItem("books");
 
-    for(var i = 0; i < qnt; i++){
+    if(tmp != null){
 
-        var elem = document.getElementById("cart");
-        var tmp = new CartList();
+        tmp = JSON.parse(tmp);
 
-        elem.appendChild(tmp);
+        let len = Object.keys(tmp.books).length;
 
-    }
-    changeVal();
+
+        for(var i = 0; i < len; i++){
+
+            var elem = document.getElementById("cart");
+            var cart = new CartList();
+            cart.setName(tmp.books[i].title);
+            cart.setPrice(tmp.books[i].price);
+            cart.setSumPrice(tmp.books[i].price);
+            cart.setPhotos(tmp.books[i].photo);
+            cart.setIsbn(tmp.books[i].isbn);
+            elem.appendChild(cart);
+            
+        }
+
+        qnt = len;
+        localStorage.setItem("itemQnt", qnt);
+        changeVal();
+    } 
+    
 }
 
 
@@ -31,97 +48,6 @@ if(qnt == null || sumPrice == null){
    
     sumPrice = 0;
 }
-
-let books = 
-{
-    "books": [
-    {
-    "title": "HARRY POTTER AND THE ORDER OF THE PHOENIX",
-    "photo": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    "author": "J. K. Rowling",
-    "published": "Bloomsbury Publishing PLC",
-    "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
-    "isbn": "978-14088-55-69-0",
-    "language": "Англи",
-    "page": "816",
-    "size": "198 x 135 x 129 мм",
-    "shelf": "Байгаа",
-    "price": 60000,
-    "discount": 45000,
-    "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
-    },
-    {
-    "title": "12 Rules for Life",
-    "photo": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80",
-    "author": "Jordan Peterson",
-    "published": "Bloomsbury Publishing PLC",
-    "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
-    "isbn": "978-14088-55-69-0",
-    "language": "Англи",
-    "page": "816",
-    "size": "198 x 135 x 129 мм",
-    "shelf": "Байгаа",
-    "price": 60000,
-    "discount": 45000,
-    "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
-    },
-    {
-    "title": "HARRY POTTER AND THE ORDER OF THE PHOENIX",
-    "photo": "https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
-    "author": "J. K. Rowling",
-    "published": "Bloomsbury Publishing PLC",
-    "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
-    "isbn": "978-14088-55-69-0",
-    "language": "Англи",
-    "page": "816",
-    "size": "198 x 135 x 129 мм",
-    "shelf": "Байгаа",
-    "price": 60000,
-    "discount": 45000,
-    "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
-    },
-    {
-    "title": "HARRY POTTER AND THE ORDER OF THE PHOENIX",
-    "photo": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=387&q=80",
-    "author": "J. K. Rowling",
-    "published": "Bloomsbury Publishing PLC",
-    "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
-    "isbn": "978-14088-55-69-0",
-    "language": "Англи",
-    "page": "816",
-    "size": "198 x 135 x 129 мм",
-    "shelf": "Байгаа",
-    "price": 60000,
-    "discount": 45000,
-    "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
-    },
-    {
-    "title": "HARRY POTTER AND THE ORDER OF THE PHOENIX",
-    "photo": "https://images.unsplash.com/photo-1602399481667-07536109851e?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzh8fGJvb2t8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-    "author": "J. K. Rowling",
-    "published": "Bloomsbury Publishing PLC",
-    "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
-    "isbn": "978-14088-55-69-0",
-    "language": "Англи",
-    "page": "816",
-    "size": "198 x 135 x 129 мм",
-    "shelf": "Байгаа",
-    "price": 60000,
-    "discount": 45000,
-    "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
-    }
-    ]
-}
-
-let obj = JSON.stringify(books);
-
-
-localStorage.setItem("test", obj);
-let tst = localStorage.getItem("test");
-
-obj = JSON.parse(tst);
-
-
 
 
 
@@ -193,7 +119,7 @@ listTemp.innerHTML = `
 .book-name-con{
     height: 5vh;
     width: 13vw;
-    background-color: #E2E0E0;
+
     border-radius: 25px;
     margin-top: 2vh;
     margin-left: 1vw;
@@ -300,7 +226,7 @@ listTemp.innerHTML = `
 
     <div class="list-cover">
         <a aria-label="book cover" name = "More about book">
-        <img class ="list-book-cover" alt = "Book photo" src = "WEBP/book-cover-4.webp">
+        <img class ="list-book-cover" alt = "Book photo" id="bookCover">
         </a>
     </div>
     <div class="list-book-name">
@@ -333,11 +259,7 @@ listTemp.innerHTML = `
 `;
 
 
-// document.getElementById("test").addEventListener("click",function(){
-    //     var list = new CartList();
-    //     document.getElementById("cart").appendChild(list);
-    
-    // })
+
     
     function changeVal(){
         var elem = document.getElementById('info');
@@ -350,11 +272,12 @@ listTemp.innerHTML = `
     }
 
     listTemp.addEventListener('qntChanged', function (e) {
-        var elem = document.getElementById('info');
- 
-        
+
+
         sumPrice = parseInt(localStorage.getItem("sumPrice"));
+ 
         sumPrice  += e.detail.price;
+    
         localStorage.setItem("sumPrice", sumPrice);
 
 
@@ -367,12 +290,49 @@ listTemp.innerHTML = `
     function changeInfo (q, p){
         const event = new CustomEvent('qntChanged',{
             detail: {
-                qnt: q,
-                price: p
+                qnt : q,
+                price : p
             }
         });
-    
+     
         listTemp.dispatchEvent(event);
+    }
+
+    function addBookToList(obj){
+        obj = JSON.stringify(obj);
+        obj = JSON.parse(obj);
+        let bookA=  localStorage.getItem("books");
+        if(bookA != null){
+            bookA = JSON.parse(bookA);
+
+        }else{
+            bookA = {
+                books : []
+            };
+
+        }
+
+        
+        bookA.books.push({
+            "title": obj.title,
+            "photo": obj.photo,
+            "author": obj.author,
+            "published": obj.published,
+            "category": obj.category,
+            "isbn": book1.isbn,
+            "language": book1.language,
+            "page": obj.page,
+            "size": obj.size,
+            "shelf": obj.shelf,
+            "price": obj.price,
+            "discount": obj.discount,
+            "about": obj.about
+        });
+     
+
+        bookA = JSON.stringify(bookA);
+        localStorage.setItem("books", bookA);
+        changeInfo(1, obj.price);
     }
     
     class CartList extends HTMLElement {
@@ -386,26 +346,66 @@ listTemp.innerHTML = `
 
             this.shadowRoot.appendChild(listTemp.content.cloneNode(true));
             this.shadowRoot.querySelector('a').href = 'individualBook.html';
+            this.state = {
+                isbn: ""
+              };
+            // let bookQnt = this.shadowRoot.querySelector('#book-qnt').innerHTML;
+            // let bookPrice =  this.shadowRoot.querySelector('#book-price').innerHTML;
+            // let bookPriceSum =  this.shadowRoot.querySelector('#book-price-sum').innerHTML;
+            // let bookName = this.shadowRoot.querySelector('#book-name').innerHTML;
 
-            let bookQnt = this.shadowRoot.querySelector('#book-qnt').innerHTML;
-            let bookPrice =  this.shadowRoot.querySelector('#book-price').innerHTML;
-            let bookPriceSum =  this.shadowRoot.querySelector('#book-price-sum').innerHTML;
-            let bookName = this.shadowRoot.querySelector('#book-name').innerHTML;
-            // this.state = {
-            //     bookName: bookName,
-            //     bookQnt: bookQnt,
-            //     bookPrice: bookPrice,
-            //     bookPriceSum: bookPriceSum
-            // };
     
         }
         
-        
+        setName(name){
+            this.shadowRoot.querySelector('#book-name').innerHTML = name;
+        }
+        setQnt(qnt){
+            this.shadowRoot.querySelector('#book-qnt').innerHTML = qnt;
+        }
+
+        setPrice(price){
+            this.shadowRoot.querySelector('#book-price').innerHTML = price;
+        }
+
+        setSumPrice(){
+            let bookQnt = this.shadowRoot.querySelector('#book-qnt').innerHTML;
+            let bookPrice =  this.shadowRoot.querySelector('#book-price').innerHTML;
+            this.shadowRoot.querySelector('#book-price-sum').innerHTML = bookQnt * bookPrice;
+        }
+        setPhotos(img){
+            this.shadowRoot.querySelector("#bookCover").src = img;
+        }
+
+        setIsbn(isbn){
+            this.state.isbn = isbn; 
+        }
+
+  
         deleteList(){
             let bookPriceSum =  this.shadowRoot.querySelector('#book-price-sum').innerHTML;
 
             changeInfo(-1, -bookPriceSum);
+
+            let bookAr = localStorage.getItem("books");
+            bookAr = JSON.parse(bookAr);
+            let len = Object.keys(bookAr.books).length;
+            let tmp1 = this.state.isbn;
+         
+      
+            for(var i = 0; i < len; i++){
+                let tmp2 = bookAr.books[i].isbn;
+                let check = tmp1.localeCompare(tmp2);
+                if(check === 0){
+                    bookAr.books.splice(i,1);
+                    bookAr = JSON.stringify(bookAr);
+                    localStorage.setItem("books", bookAr);
+                    break;
+                }
+            }
             
+
+
             var id= null;
             var elem  = this.shadowRoot.querySelector('#list');
             var opacity = 1;
@@ -465,11 +465,7 @@ listTemp.innerHTML = `
                 changeInfo(0, tmp);
             })
         }
-        disconnectedCallback(){
-    
 
-        }
-        
     }
     
     class InfoList extends HTMLElement {
@@ -637,16 +633,7 @@ listTemp.innerHTML = `
             this.shadowRoot.querySelector('#info-price').innerHTML = "Нийт үнэ: " + sumPrice;
         }
     }
-    
-    // var btn = document.getElementById("test").addEventListener('click', function()  {
-    //     var elem = document.getElementById("cart");
-    //     var tmp = new CartList();
-    //     console.log(tmp);
-    //     elem.appendChild(tmp);
-    //     changeInfo(1, 15000);
-  
-        
-    // })
+ 
 
 
     

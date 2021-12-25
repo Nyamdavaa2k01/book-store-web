@@ -1,3 +1,5 @@
+-- Note that these arent actual queries, but just a kind of documentation
+
 CREATE DATABASE books ; 
 
 CREATE TABLE book (
@@ -12,14 +14,14 @@ CREATE TABLE book (
     page VARCHAR(255),
     size VARCHAR(255),
     shelf VARCHAR(255),
-    price VARCHAR(255),
-    discount VARCHAR(255),
+    price int,
+    discount int,
     about VARCHAR(255)
 
 ) ; 
 
 ALTER TABLE book 
-ALTER COLUMN published TYPE VARCHAR(255);
+ALTER COLUMN published TYPE VARCHAR(255); 
 
 
 INSERT INTO book (
@@ -35,6 +37,4 @@ VALUES (
 	'Англи', 816, '198 x 135 x 129 мм',
 	'Байгаа', 60000, 45000, 
 	'Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар'
-	
-	
 )

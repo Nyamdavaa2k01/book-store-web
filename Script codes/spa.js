@@ -1,17 +1,12 @@
 
 
-import { navBar, mainPage, footer, News, category, cartList, register, login} from './pages.js'; 
+import { navBar, mainPage, footer, News, category, cartList, login2} from './pages.js'; 
+import {loginSPA, registerSPA} from "./spa_login.js";
 
-
-// const header = new myHeader() ; 
-// document.getElementById("header1").innerHTML = header.showData() ; 
-
-// const navigation = new navBar() ; 
-// document.getElementById("navbar").innerHTML = navigation.showData() ; 
+const mainSpa = document.getElementById("mainPage") ; 
 
 
 const field = document.getElementById("mainPage") ; 
-
 
 const foot = new footer () ; 
 document.getElementById("footer").innerHTML = foot.showData() ; 
@@ -19,34 +14,23 @@ document.getElementById("footer").innerHTML = foot.showData() ;
 const main = new mainPage () ; 
 document.getElementById("mainPage").innerHTML = main.showData() ; 
 
-
-
-// document.getElementById("test").addEventListener("click", pageSwap) ; 
 document.getElementById("opt4").addEventListener("click", function(){ 
-    // const bookInfo = new individualBook () ; 
-    // document.getElementById("mainPage").innerHTML = bookInfo.showData() ; 
-    const cat = new category() ; 
+   const cat = new category() ; 
     document.getElementById("mainPage").innerHTML = cat.showData() ;
 
 });
 
 document.getElementById("opt3").addEventListener("click", function(){ 
-    // const bookInfo = new individualBook () ; 
-    // document.getElementById("mainPage").innerHTML = bookInfo.showData() ; 
     const cat = new category() ; 
     document.getElementById("mainPage").innerHTML = cat.showData() ;
 
 });
 document.getElementById("opt2").addEventListener("click", function(){ 
-    // const bookInfo = new individualBook () ; 
-    // document.getElementById("mainPage").innerHTML = bookInfo.showData() ; 
     const cat = new category() ; 
     document.getElementById("mainPage").innerHTML = cat.showData() ;
 
 });
 document.getElementById("opt1").addEventListener("click", function(){ 
-    // const bookInfo = new individualBook () ; 
-    // document.getElementById("mainPage").innerHTML = bookInfo.showData() ; 
     const cat = new category() ; 
     document.getElementById("mainPage").innerHTML = cat.showData() ;
 
@@ -64,19 +48,29 @@ document.getElementById("navToMain2").addEventListener("click", function () {
 }); 
 
 document.getElementById("navToRegister").addEventListener("click", function() {
-  
-
-    const registering = new register() ; 
-    // document.getElementById("mainPage").style.display ="none";
-    document.getElementById("mainPage").innerHTML = registering.showData() ; 
+    const signin2 = new login2() ; 
+    document.getElementById("mainPage").innerHTML = signin2.showData() ; 
+    document.querySelector("#loginButtonSPA").addEventListener("click", loginSPA);
+    document.querySelector("#registerButtonSPA").addEventListener("click", registerSPA);
+    const mainSpa = document.getElementById("mainPage") ; 
+    mainSpa.style.margin = "50px 0 0 0 ";
+    mainSpa.style.width = "50% " ;
+    document.getElementById("mainPage").style.zIndex = 999 ; 
+    document.getElementById("footer").style.display = "none" ; 
 
 });
 
 document.getElementById("navToLogin").addEventListener("click", function() {
-   
-    const signin = new login() ; 
-    document.getElementById("mainPage").innerHTML = signin.showData() ;
-    document.getElementById("mainPage").style.zIndex = 999;
+    const signin2 = new login2() ; 
+    document.getElementById("mainPage").innerHTML = signin2.showData() ; 
+    document.querySelector("#loginButtonSPA").addEventListener("click", loginSPA);
+    document.querySelector("#registerButtonSPA").addEventListener("click", registerSPA);
+    const mainSpa = document.getElementById("mainPage") ; 
+    mainSpa.style.margin = "50px 0 0 0 ";
+    mainSpa.style.width = "50% " ;
+    document.getElementById("mainPage").style.zIndex = 999 ; 
+    document.getElementById("footer").style.display = "none" ; 
+
 }
 
 ) ; 

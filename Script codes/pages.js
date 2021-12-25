@@ -680,132 +680,37 @@ export class category {
     }
 }
 
-export class register {
-    showData() {
-        return `
-        <div class="register" style ="margin-top : 5vw ;">
-            <div class="card">
-                <div class="card-header">
-                    Бүртгүүлэх
-                </div>
-                <div class="card-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Нэр</label>
-                            <input type="text" class="form-control"
-                                id="First-name"
-                                name="name"
-                                placeholder="Таны нэр">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Нэр</label>
-                            <input type="text" class="form-control"
-                                id="Last-name"
-                                name="name"
-                                placeholder="Таны нэр">
-                        </div>
-                        <div class="form-group">
-                            <label for="name">Нэр</label>
-                            <input type="text" class="form-control"
-                                id="name"
-                                name="name"
-                                placeholder="Таны нэр">
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password">Нууц үг</label>
-                            <input type="password" class="form-control"
-                                id="password"
-                                name="password"
-                                placeholder="Нууц үг">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Нууц үг</label>
-                            <input type="password" class="form-control"
-                                id="re-password"
-                                name="password"
-                                placeholder="Нууц үг">
-                        </div>
-                        <!-- <div class="form-group">
-                            <label for="password">Нууц үг</label>
-                            <input type="password" class="form-control"
-                                id="el-password"
-                                name="password"
-                                placeholder="Нууц үг">
-                        </div> -->
-                        <div class="center">
-                            <button type="submit" class="button yellow">
-                                <p style = "color:black">Бүртгүүлэх</p>
-                            </button>
-                        </div>
-                        <div class="center padding-top">
-
-                            <button type="submit" class="button blue">
-                                <i class="icon">
-                                    f
-                                </i>
-                                Фейсбүүкээр нэвтрэх
-                            </button>
-                        </div>
-
+export class login2 {
+    showData () {
+        return ` 
+            <div class="hero">
+                <div class="form-box">
+                    <div class="button-box">
+                        <div id="btn-login"></div>
+                        <button type = "button" class ="toggle-login" id="loginButtonSPA"><p id="login-text">Log in</p></button>
+                        <button type = "button" class ="toggle-login" id="registerButtonSPA"><p id="reg-text">Register</p></button>
+                    </div>
+                    <div class="social-icons">
+                        <img src = "PNG/fb.png"> 
+                        <img src = "PNG/ig.png">
+                        <img src = "PNG/tweet.png">
+                    </div>
+                    <form id = "login" class ="form-input"> 
+                        <input type= "text" class = "input-field" placeholder="User Id" required>  
+                        <input type= "password" class = "input-field" placeholder="Enter Password" required>
+                        <input type = "checkbox" class = "check-box"> <span>Remember password</span>
+                        <button type = "submit" class = "submit-btn">Log in</button>
+                    </form>
+                    <form id = "register" class ="form-input"> 
+                        <input type= "text" class = "input-field" placeholder="User Id" required>  
+                         <input type= "email" class = "input-field" placeholder="Enter email" required>
+                        <input type= "password" class = "input-field" placeholder="Enter Password" required>
+                       
+                        <input type = "checkbox" class = "check-box"> <span>I agree to the terms</span>
+                        <button type = "submit" class = "submit-btn">Register</button>
                     </form>
                 </div>
-
             </div>
-        </div>
-        `
-    }
-}
-
-export class login {
-    showData() {
-       
-        return `
-        <section class="main" style = "width: 50vw;"  >
-
-        <div style="padding: 50px;">
-            <div class="card">
-                <div class="card-header">
-                    Нэвтрэх
-                </div>
-                <div class="card-body">
-                    <form >
-                        <div class="form-group">
-                            <label for="name">Нэр</label>
-                            <input type="text" class="form-control" id="name"
-                                name="name"
-                                placeholder="Таны нэр">
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="password">Нууц үг</label>
-                            <input type="password" class="form-control"
-                                id="password"
-                                name="password"
-                                placeholder="Нууц үг">
-                        </div>
-                        <div class="center">
-                            <button type="submit" class="button yellow">
-                                Нэвтрэх
-                            </button>
-                        </div>
-                        <div class="center padding-top">
-    
-                            <button onsubmit="event.preventDefault();  type="submit" class="button blue">
-                                <i class="icon">
-                                    F
-                                </i>
-                                Login with facebook
-                            </button>
-                        </div>
-    
-                    </form>
-                </div>
-    
-            </div>
-        </div>
-
-    </section>
         `
     }
 }

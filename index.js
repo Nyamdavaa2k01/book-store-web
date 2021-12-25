@@ -40,11 +40,12 @@ app.put ("/books/:id", async(req, res) => {
     try {
         const {id} = req.params ; 
         const {title} = req.body ; 
+        const {author} = req.body ;
         const updateBook = await pool.query("UPDATE book SET title = $1 WHERE book_id = $2", 
          [
              title, id
          ]); 
-         res.json ("Updated :)")
+         res.json ("Амжилттай өөрчиллөө.")
     }
     catch (err) {
         console.error(err.message) 
@@ -59,7 +60,7 @@ app.delete("/books/:id", async (req, res) => {
                 id 
             ] 
         ); 
-        res.json("Deleted :)") ; 
+        res.json("Амжилттай устгалаа.") ; 
     }
     
     catch(err) {
@@ -69,15 +70,14 @@ app.delete("/books/:id", async (req, res) => {
 
 
 app.get('/', (req, res) => { 
-    res.send ("Hey :)" ) ; 
-
+    res.send ("Веб програмчлал хичээлийн хүрээнд хийж буй WEB API даалгаврын эхлэх хэсэг харагдаж байна.") ; 
 }) ; 
 
 app.post ('/books', async(req,res) => {
     try {
-        const {title, author} = req.body ; 
-        const newBook = await pool.query("INSERT INTO book (title, author) VALUES($1, $2) RETURNING *", 
-        [title, author]) ; 
+        const {title, author, price} = req.body ; 
+        const newBook = await pool.query("INSERT INTO book (title, author, price) VALUES($1, $2, $3) RETURNING *", 
+        [title, author, price]) ; 
         res.json(newBook.rows[0]); 
         console.log(pool.query("SELECT * from book"));
     }
@@ -86,8 +86,6 @@ app.post ('/books', async(req,res) => {
         console.error(err.message) ; 
     }
 }) ; 
-
-
 
 const port = process.env.PORT || 3000 ; 
 app.listen(port, () => console.log(`Listening on port ${port}...`)) ;

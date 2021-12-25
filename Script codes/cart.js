@@ -1,5 +1,5 @@
 var qnt;
-var sumPrice;
+var sumPrice = 0;
 
 window.onload = function(){
 
@@ -29,7 +29,7 @@ window.onload = function(){
 
         qnt = len;
         localStorage.setItem("itemQnt", qnt);
-        
+
     }else{
         qnt = 0;
         localStorage.setItem("itemQnt", 0);
@@ -275,7 +275,7 @@ listTemp.innerHTML = `
         sumPrice = parseInt(localStorage.getItem("sumPrice"));
  
         sumPrice  += e.detail.price;
-    
+        
         localStorage.setItem("sumPrice", sumPrice);
 
 

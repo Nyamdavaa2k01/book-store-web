@@ -1,62 +1,62 @@
 <!DOCTYPE html>
-<html lang = "en">
-    <head>
-        <meta charset="utf-8">
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
 		<meta name="description" content="online book store" />
-		<meta name="keywords" content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=6">
-        <link rel="stylesheet" href="category.css" /> 
-         <link rel = "stylesheet" href = "./stylesheets/register.css">
-         <!-- <link rel = "stylesheet" href = "style.css"> -->
-        <link rel = "stylesheet" href = "cart-list.css">
-        
-        <link rel = "stylesheet" href = "login.css">
-        <link rel = "stylesheet" href = "stylesheets/loginForm.css">
-		<script src = "Script codes/scrolling.js"></script>
-        <script src = "Script codes/main.js" type = "module"></script>
-        <script src = "Script codes/cart.js"></script>
-        <!-- <script src = "Script codes/exporting.js" type = "module"></script>  -->
-        <!-- <script src = "./Script codes/more.js" type = "module"></script>  -->
-        <title>
-            Internom
-        </title>
-        
-        <link  rel ="stylesheet" href = "main-style-2.css"> 
-      
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <style>
-            button {
-        background-color: var(--sub-bg-color);
-        }       
-        #header {
-            background-color: tomato;
-        }
-        #test {
-            background-color: aqua;
-            height: 100px; 
-            width: 100px;
-        }
-       
-        /* .body {
+		<meta
+			name="keywords"
+			content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width,initial-scale=1,maximum-scale=6"
+		/>
+		<link rel="stylesheet" href="category.css" />
+		<link rel="stylesheet" href="./stylesheets/register.css" />
+		<!-- <link rel = "stylesheet" href = "style.css"> -->
+		<link rel="stylesheet" href="cart-list.css" />
+
+		<link rel="stylesheet" href="login.css" />
+		<link rel="stylesheet" href="stylesheets/loginForm.css" />
+		<script src="Script codes/scrolling.js"></script>
+		<script src="Script codes/main.js" type="module"></script>
+		<script src="Script codes/cart.js" type="module"></script>
+		<!-- <script src="Script codes/spa.js"></script> -->
+
+		<!-- <script src = "Script codes/exporting.js" type = "module"></script>  -->
+		<!-- <script src = "./Script codes/more.js" type = "module"></script>  -->
+		<title>Internom</title>
+
+		<link rel="stylesheet" href="main-style-2.css" />
+
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<style>
+			button {
+				background-color: var(--sub-bg-color);
+			}
+			#header {
+				background-color: tomato;
+			}
+			#test {
+				background-color: aqua;
+				height: 100px;
+				width: 100px;
+			}
+
+			/* .body {
     background-image: url("./bg.png");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 } */
-
-        </style>
-        <link rel = "stylesheet" href = "stylesheets/scrolling.css">
-        <script src = "./Script codes/spa.js" type ="module"></script>
-        <script>
-          
-        </script>
-
-    </head>
-    <body>
-      
-
-       <header>
-           
-        <!-- <div class = "header-top"> 
+		</style>
+		<link rel="stylesheet" href="stylesheets/scrolling.css" />
+	</head>
+	<body>
+		<header>
+			<!-- <div class = "header-top"> 
 
             
              
@@ -71,68 +71,81 @@
              </div>
          </div> -->
 
-         <div class="header-top">
-            <div id="navToMain"> <p style = "color:white">Бие даасан номын дэлгүүр</p></div>
-            <div class="header-right">
-                <div id="navToRegister" style = "display:flex; align-items: center;">
-                    <i class ="material-icons register-icon" >account_circle</i>
-                    <p style="color:white" >Бүртгүүлэх</p>
-                </div>
-
-                <div id="navToLogin">
-                    <i class ="material-icons login-icon" name = "login">login</i></div>
-                    <p style ="color:white;" >Нэвтрэх</p>
-                </div>
-            </div>
-         </div>
-         <!-- <div  class = "header-top-right">
+			<div class="header-top">
+				<div id="navToMain">
+					<p style="color: white">Бие даасан номын дэлгүүр</p>
+				</div>
+				<div class="header-right">
+					<div
+						id="navToRegister"
+						style="display: flex; align-items: center"
+					>
+						<i class="material-icons register-icon"
+							>account_circle</i
+						>
+						<p style="color: white">Бүртгүүлэх</p>
+					</div>
+					<div id="navToLogin">
+						<i class="material-icons login-icon" name="login"
+							>login</i
+						>
+					</div>
+					<p style="color: white">Нэвтрэх</p>
+				</div>
+			</div>
+			<!-- </div> -->
+			<!-- <div  class = "header-top-right">
              <i class ="material-icons">shopping_cart</i>
          </div> -->
-         <div class ="header-bottom">
-            
-          <div id="navToMain2"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></div>
-             <div class = "search-field" >
-                 <input type = "text" class ="search-input" placeholder="Хайлт хийх"> 
-                 <button type ="search" class ="search-button">
-                     <i class ="material-icons icon-search">search</i>
-                 </button>
-             </div>
+			<div class="header-bottom">
+				<div id="navToMain2">
+					<img
+						src="WEBP/logo.webp"
+						alt="book store logo"
+						class="logo-photo"
+					/>
+				</div>
+				<div class="search-field">
+					<input
+						type="text"
+						class="search-input"
+						placeholder="Хайлт хийх"
+					/>
+					<button type="search" class="search-button">
+						<i class="material-icons icon-search">search</i>
+					</button>
+				</div>
 
-            
-            <div id="navToCart">
-                <i  class = "material-icons icon-cart" style ="font-size: 4vmax;">shopping_cart</i>
-            </div>
-         </div>
+				<div id="navToCart">
+					<i class="material-icons icon-cart" style="font-size: 4vmax"
+						>shopping_cart</i
+					>
+				</div>
+			</div>
 
-         <div class ="mobile-search-field">
-             <button type ="search" class ="mobile-search-button">
-                 <i class ="material-icons icon-search">search</i>
-             </button>
-         </div>
-         </header>
-        <nav class ="navbar" id = "navbar">
-
- <i class="material-icons" style ="margin-left: 5vw;">book</i>
-				
-					<!-- <a href ="bookCategory.html">Ном</a>
+			<div class="mobile-search-field">
+				<button type="search" class="mobile-search-button">
+					<i class="material-icons icon-search">search</i>
+				</button>
+			</div>
+		</header>
+		<nav class="navbar" id="navbar">
+			<i class="material-icons" style="margin-left: 5vw">book</i>
+			<!-- <a href ="bookCategory.html">Ном</a>
 					<a href ="bookCategory.html">Хүүхдийн ном</a>
 					<a href = "bookCategory.html">Гадаад ном</a>
 					<a href = "bookCategory.html">Бичиг хэрэг</a>
 					<a href="bookCategory.html" style = "margin-right: 5vw;">Бэлэг дурсгал</a> -->
-                        <div class="spaMenu" id = "opt1">Ном</div>
-                        <div class="spaMenu" id = "opt2">Хүүхдийн ном</div>
-                        <div class="spaMenu" id = "opt3">Гадаад ном</div>
-                        <div class="spaMenu" id = "opt4">Бичиг хэрэг</div>
-                       
+			<div class="spaMenu" id="opt1">Ном</div>
+			<div class="spaMenu" id="opt2">Хүүхдийн ном</div>
+			<div class="spaMenu" id="opt3">Гадаад ном</div>
+			<div class="spaMenu" id="opt4">Бичиг хэрэг</div>
+		</nav>
 
-        </nav>
-        
-            <main id = "mainPage" ></main>
+		<main id="mainPage"></main>
 
-
-            <footer id = "footer">
-               
-            </footer>
-        
-    </body>
+		<footer id="footer"></footer>
+		<script src="./Script codes/spa_login.js" type="module"></script>
+		<script src="./Script codes/spa.js" type="module"></script>
+	</body>
 </html>

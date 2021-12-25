@@ -1,6 +1,6 @@
 var qnt;
 var sumPrice;
-var objStr = [];
+
 window.onload = function(){
 
  
@@ -11,6 +11,7 @@ window.onload = function(){
         tmp = JSON.parse(tmp);
 
         let len = Object.keys(tmp.books).length;
+        sumPrice = localStorage.getItem("sumPrice");
 
 
         for(var i = 0; i < len; i++){
@@ -28,14 +29,14 @@ window.onload = function(){
 
         qnt = len;
         localStorage.setItem("itemQnt", qnt);
-        changeVal();
+        
     }else{
         qnt = 0;
         localStorage.setItem("itemQnt", 0);
         sumPrice = 0;
         localStorage.setItem("sumPrice", 0);
     }
-    
+    changeVal();
 }
 
 

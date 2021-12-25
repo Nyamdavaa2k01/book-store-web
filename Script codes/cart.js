@@ -2,15 +2,7 @@ var qnt;
 var sumPrice;
 var objStr = [];
 window.onload = function(){
-    qnt = localStorage.getItem("itemQnt");
-    if(qnt == null ){
 
-        qnt = 0;
-        localStorage.setItem("itemQnt", 0);
-        sumPrice = 0;
-        localStorage.setItem("sumPrice", 0);
-  
-    }
  
     tmp = localStorage.getItem("books");
 
@@ -37,7 +29,12 @@ window.onload = function(){
         qnt = len;
         localStorage.setItem("itemQnt", qnt);
         changeVal();
-    } 
+    }else{
+        qnt = 0;
+        localStorage.setItem("itemQnt", 0);
+        sumPrice = 0;
+        localStorage.setItem("sumPrice", 0);
+    }
     
 }
 

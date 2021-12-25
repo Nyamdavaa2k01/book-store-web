@@ -251,8 +251,7 @@ toggleInfo () {
     }
 
     disconnectedCallback() {
-        this.shadowRoot.querySelector('#toggle-info').
-        removeEventListener();
+        // this.shadowRoot.querySelector('#toggle-info').removeEventListener();
     }
 
     static get observedAttributes () {

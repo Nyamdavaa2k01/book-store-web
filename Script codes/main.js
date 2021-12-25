@@ -9,8 +9,8 @@ import {News, getInfo} from './exporting.js';
                         let i = 1 ; 
                         books.forEach (
                           (element) => {
-                              let id = 'book'+i; 
-                          document.getElementById(id).innerHTML += element.create() ; 
+                                let id = 'book'+i; 
+                                document.getElementById(id).innerHTML += element.create() ; 
                                 let id2 = 'book' + (10+i) ; 
                                 document.getElementById(id2).innerHTML += element.create() ; 
                                 let id3 = 'book' + (20+i) ; 

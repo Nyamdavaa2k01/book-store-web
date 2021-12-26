@@ -5,14 +5,14 @@ window.onload = function(){
 
  
     tmp = localStorage.getItem("books");
-
+    var sumPrice = 0;
     if(tmp != null){
 
         tmp = JSON.parse(tmp);
-
+        localStorage.setItem("sumPrice", 0);
         let len = Object.keys(tmp.books).length;
-        sumPrice = localStorage.getItem("sumPrice");
-
+        sumPrice = parseInt(localStorage.getItem("sumPrice"));
+        console.log(sumPrice);
 
         for(var i = 0; i < len; i++){
 
@@ -23,13 +23,14 @@ window.onload = function(){
             cart.setSumPrice(tmp.books[i].price);
             cart.setPhotos(tmp.books[i].photo);
             cart.setIsbn(tmp.books[i].isbn);
+            sumPrice +=parseInt(tmp.books[i].price);
             elem.appendChild(cart);
             
         }
-
+        console.log(sumPrice);
         qnt = len;
         localStorage.setItem("itemQnt", qnt);
-
+        localStorage.setItem("sumPrice", sumPrice);
     }else{
         qnt = 0;
         localStorage.setItem("itemQnt", 0);
@@ -330,7 +331,7 @@ listTemp.innerHTML = `
 
         bookA = JSON.stringify(bookA);
         localStorage.setItem("books", bookA);
-        changeInfo(1, obj.price);
+        // changeInfo(1, obj.price);
     }
     
     class CartList extends HTMLElement {
@@ -352,7 +353,6 @@ listTemp.innerHTML = `
             // let bookPriceSum =  this.shadowRoot.querySelector('#book-price-sum').innerHTML;
             // let bookName = this.shadowRoot.querySelector('#book-name').innerHTML;
 
-    
         }
         
         setName(name){

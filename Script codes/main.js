@@ -7,6 +7,7 @@ import {News, getInfo} from './exporting.js';
                 getInfo(url, 
                     (books) => {
                         let i = 1 ; 
+                        console.log(this);
                         books.forEach (
                           (element) => {
                                 let id = 'book'+i; 

@@ -69,7 +69,7 @@ template.innerHTML = `
                 <p><slot name = "price"/> </p>
                 <div style = "display:flex">
                 <p><slot name = "addtoList"/></p>
-                <button class = "button-icon"><slot class ="cart-icon" name = "cartIcon"/></button>
+                <button class = "button-icon" id="add-book-cart"><slot class ="cart-icon" name = "cartIcon"/></button>
                 <div>
             </div>
             
@@ -86,30 +86,73 @@ class bookSmall extends HTMLElement {
         this.shadowRoot.querySelector('img').src = this.getAttribute('pic') ; 
     }
     
-toggleInfo () {
-    this.showInfo = !this.showInfo ; 
-    const info = this.shadowRoot.querySelector('.info') ; 
-    const toggleBtn = this.shadowRoot.querySelector('#toggle-info') ; 
-    //const toggleIcon = his.shadowRoot.querySelector('#toggle-icon') ;  
-    if (this.showInfo) {
-        info.style.display = 'block' ; 
-        toggleBtn.innerHTML ='<img class = "toggle-icon" src = "SVG/upward-icon.jpg">' ; 
-       
+    toggleInfo () {
+        this.showInfo = !this.showInfo ; 
+        const info = this.shadowRoot.querySelector('.info') ; 
+        const toggleBtn = this.shadowRoot.querySelector('#toggle-info') ; 
+        //const toggleIcon = his.shadowRoot.querySelector('#toggle-icon') ;  
+        if (this.showInfo) {
+            info.style.display = 'block' ; 
+            toggleBtn.innerHTML ='<img class = "toggle-icon" src = "SVG/upward-icon.jpg">' ; 
+        
+        }
+        else {
+            info.style.display = 'none' ; 
+            toggleBtn.innerHTML='<img class = "toggle-icon" src = "SVG/dropdown-icon.jpg">' ; 
+        
+        }
+
+        console.log( this.getAttribute);
     }
-    else {
-        info.style.display = 'none' ; 
-        toggleBtn.innerHTML='<img class = "toggle-icon" src = "SVG/dropdown-icon.jpg">' ; 
-      
+    
+    addBookToList(){
+        obj = JSON.stringify(obj);
+        obj = JSON.parse(obj);
+        let bookA=  localStorage.getItem("books");
+        if(bookA != null){
+            bookA = JSON.parse(bookA);
+
+        }else{
+            bookA = {
+                books : []
+            };
+
+        }
+
+        
+        bookA.books.push({
+            "title": obj.title,
+            "photo": obj.photo,
+            "author": obj.author,
+            "published": obj.published,
+            "category": obj.category,
+            "isbn": book1.isbn,
+            "language": book1.language,
+            "page": obj.page,
+            "size": obj.size,
+            "shelf": obj.shelf,
+            "price": obj.price,
+            "discount": obj.discount,
+            "about": obj.about
+        });
+    
+
+        bookA = JSON.stringify(bookA);
+        localStorage.setItem("books", bookA);
+        // changeInfo(1, obj.price);
     }
-}
 
     connectedCallback() {
         this.shadowRoot.querySelector('#toggle-info').
         addEventListener('click', () => this.toggleInfo());
+        this.shadowRoot.querySelector('#add-book-cart').
+        addEventListener('click', () => this.addBookToList(obj));
     }
 
     disconnectedCallback() {
         this.shadowRoot.querySelector('#toggle-info').
+        removeEventListener();
+        this.shadowRoot.querySelector('#add-book-cart').
         removeEventListener();
     }
 

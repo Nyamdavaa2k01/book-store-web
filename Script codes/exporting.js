@@ -229,7 +229,7 @@ template.innerHTML = `
                 <p><slot name = "price"/> </p>
                 <div style = "display:flex">
                 <p><slot name = "addtoList"/></p>
-                <button class = "button-icon"><slot name = "cartIcon"/></button>
+                <button class = "button-icon" id="add-book-cart"><slot name = "cartIcon"/></button>
                 <div>
             </div>
             
@@ -274,6 +274,7 @@ toggleInfo () {
 
 
     addBookToList(obj){
+        console.log("test");
         obj = JSON.stringify(obj);
         obj = JSON.parse(obj);
         let bookA=  localStorage.getItem("books");

@@ -318,14 +318,11 @@ toggleInfo () {
     }
 
     disconnectedCallback() {
-<<<<<<< Updated upstream
         // this.shadowRoot.querySelector('#toggle-info').removeEventListener();
-=======
         this.shadowRoot.querySelector('#toggle-info').
         removeEventListener();
         this.shadowRoot.querySelector('#add-book-cart').
         removeEventListener();
->>>>>>> Stashed changes
     }
     
 }

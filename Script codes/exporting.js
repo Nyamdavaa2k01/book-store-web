@@ -1,7 +1,25 @@
 //const url = "https://api.jsonbin.io/b/618c95b4820eda3cc81b7988/2" ; 
 // const url = "https://api.jsonbin.io/b/618c95b4820eda3cc81b7988/latest"
 const url = "https://api.jsonbin.io/b/61963b900ddbee6f8b0e09df/latest" ;
+let book1 = 
+{
+        
+        "title": "HARRY POTTER AND THE ORDER OF THE PHOENIX",
+        "photo": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "author": "J. K. Rowling",
+        "published": "Bloomsbury Publishing PLC",
+        "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
+        "isbn": "978-14088-55-69-0",
+        "language": "Англи",
+        "page": "816",
+        "size": "198 x 135 x 129 мм",
+        "shelf": "Байгаа",
+        "price": 60000,
+        "discount": 45000,
+        "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
+    
 
+}
 export function getInfo (url, callMeBack) {
     fetch(url)
     .then(response => response.json())
@@ -226,12 +244,21 @@ class bookSmall extends HTMLElement {
         this.shadowRoot.appendChild(template.content.cloneNode(true)) ; 
         this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name') ; 
         this.shadowRoot.querySelector('img').src = this.getAttribute('pic') ; 
+        this.state = {
+            name: "",
+            isbn: "",
+
+        };
+        this.state.name =  this.getAttribute('name');
+        this.state.author = this.getAttribute("author");
+     
     }
     
 toggleInfo () {
     this.showInfo = !this.showInfo ; 
     const info = this.shadowRoot.querySelector('.info') ; 
     const toggleBtn = this.shadowRoot.querySelector('#toggle-info') ; 
+    console.log(this);
     //const toggleIcon = his.shadowRoot.querySelector('#toggle-icon') ;  
     if (this.showInfo) {
         info.style.display = 'block' ; 
@@ -245,19 +272,61 @@ toggleInfo () {
     }
 }
 
+
+    addBookToList(obj){
+        obj = JSON.stringify(obj);
+        obj = JSON.parse(obj);
+        let bookA=  localStorage.getItem("books");
+        if(bookA != null){
+            bookA = JSON.parse(bookA);
+
+        }else{
+            bookA = {
+                books : []
+            };
+
+        }
+
+        
+        bookA.books.push({
+            "title": obj.title,
+            "photo": obj.photo,
+            "author": obj.author,
+            "published": obj.published,
+            "category": obj.category,
+            "isbn": book1.isbn,
+            "language": book1.language,
+            "page": obj.page,
+            "size": obj.size,
+            "shelf": obj.shelf,
+            "price": obj.price,
+            "discount": obj.discount,
+            "about": obj.about
+        });
+
+
+        bookA = JSON.stringify(bookA);
+        localStorage.setItem("books", bookA);
+        // changeInfo(1, obj.price);
+    }
+
     connectedCallback() {
         this.shadowRoot.querySelector('#toggle-info').
         addEventListener('click', () => this.toggleInfo());
+        this.shadowRoot.querySelector('#add-book-cart').
+        addEventListener('click', () => this.addBookToList(book1));
     }
 
     disconnectedCallback() {
+<<<<<<< Updated upstream
         // this.shadowRoot.querySelector('#toggle-info').removeEventListener();
+=======
+        this.shadowRoot.querySelector('#toggle-info').
+        removeEventListener();
+        this.shadowRoot.querySelector('#add-book-cart').
+        removeEventListener();
+>>>>>>> Stashed changes
     }
-
-    static get observedAttributes () {
-        return ["count"] ; 
-    }
-   
     
 }
 

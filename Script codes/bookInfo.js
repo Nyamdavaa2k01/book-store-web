@@ -75,7 +75,21 @@ template.innerHTML = `
             
     </div>
 `
-
+let book2 ={
+    "title": "12 Rules for Life",
+    "photo": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=388&q=80",
+    "author": "Jordan Peterson",
+    "published": "Bloomsbury Publishing PLC",
+    "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",
+    "isbn": "978-14088-55-69-0",
+    "language": "Англи",
+    "page": "816",
+    "size": "198 x 135 x 129 мм",
+    "shelf": "Байгаа",
+    "price": 60000,
+    "discount": 45000,
+    "about": "Ид шидийг дамжуулах цаг боллоо. Олон улсын сонгодог, бестселлер номны шинэчилсэн хувилбар"
+}
 class bookSmall extends HTMLElement {
     constructor() {
         super() ; 
@@ -146,7 +160,7 @@ class bookSmall extends HTMLElement {
         this.shadowRoot.querySelector('#toggle-info').
         addEventListener('click', () => this.toggleInfo());
         this.shadowRoot.querySelector('#add-book-cart').
-        addEventListener('click', () => this.addBookToList(obj));
+        addEventListener('click', () => this.addBookToList(book2));
     }
 
     disconnectedCallback() {

@@ -119,7 +119,7 @@ class bookSmall extends HTMLElement {
         console.log( this.getAttribute);
     }
     
-    addBookToList(){
+    addBookToList(obj){
         obj = JSON.stringify(obj);
         obj = JSON.parse(obj);
         let bookA=  localStorage.getItem("books");
@@ -140,8 +140,8 @@ class bookSmall extends HTMLElement {
             "author": obj.author,
             "published": obj.published,
             "category": obj.category,
-            "isbn": book1.isbn,
-            "language": book1.language,
+            "isbn": obj.isbn,
+            "language": obj.language,
             "page": obj.page,
             "size": obj.size,
             "shelf": obj.shelf,

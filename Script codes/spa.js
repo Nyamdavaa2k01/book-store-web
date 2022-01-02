@@ -8,7 +8,12 @@ import {
 	login2
 } from "./pages.js";
 import { loginSPA, registerSPA } from "./spa_login.js";
+import {getInfo} from './exporting.js'; 
 
+            // export const url = "https://api.jsonbin.io/b/618c95b4820eda3cc81b7988/latest" ;    
+            export const url = "https://api.jsonbin.io/b/61963b900ddbee6f8b0e09df/latest" ;
+
+            
 const mainSpa = document.getElementById("mainPage");
 
 const field = document.getElementById("mainPage");
@@ -26,6 +31,29 @@ function display(code) {
 		const foot = new footer();
 		footerSpa.style.display = "flex" ; 
         footerSpa.style.width = "100%" ; 
+        setInterval(
+
+            getInfo(url, 
+               (books) => {
+                   let i = 1 ; 
+                   console.log(this);
+                   books.forEach (
+                     (element) => {
+                           let id = 'book'+i; 
+                           document.getElementById(id).innerHTML += element.create() ; 
+                           let id2 = 'book' + (10+i) ; 
+                           document.getElementById(id2).innerHTML += element.create() ; 
+                           let id3 = 'book' + (20+i) ; 
+                           document.getElementById(id3).innerHTML += element.create() ; 
+                           let id4 = 'book' + (30+i) ; 
+                           document.getElementById(id4).innerHTML += element.create() ; 
+                           // let id5 = 'book' + (40+i) ; 
+                           // document.getElementById(id5).innerHTML += element.create() ; 
+                     i ++ ; 
+                   })
+                   
+               }), 3000
+       )
 
 	} else if (code == 2 ) {
 		const signin2 = new login2();

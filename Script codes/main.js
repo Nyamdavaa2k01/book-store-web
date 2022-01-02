@@ -4,7 +4,7 @@ import {News, getInfo} from './exporting.js';
             export const url = "https://api.jsonbin.io/b/61963b900ddbee6f8b0e09df/latest" ;
             setInterval(
 
-                getInfo(url, 
+                 getInfo(url, 
                     (books) => {
                         let i = 1 ; 
                         console.log(this);

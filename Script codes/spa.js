@@ -34,7 +34,7 @@ function display(code) {
 		document.querySelector("#registerButtonSPA").addEventListener("click", registerSPA);
 		const localMain = document.getElementById("mainPage");
 		localMain.style.margin = "50px 0 0 0 ";
-		localMain.style.width = "50% ";
+		localMain.style.width = "50%";
 		// document.getElementById("mainPage").style.zIndex = 999 ;
 		document.getElementById("footer").style.display = "none";
 	}

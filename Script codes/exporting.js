@@ -318,13 +318,13 @@ toggleInfo () {
         addEventListener('click', () => this.addBookToList(book1));
     }
 
-    disconnectedCallback() {
-        // this.shadowRoot.querySelector('#toggle-info').removeEventListener();
-        this.shadowRoot.querySelector('#toggle-info').
-        removeEventListener();
-        this.shadowRoot.querySelector('#add-book-cart').
-        removeEventListener();
-    }
+    // disconnectedCallback() {
+    //     // this.shadowRoot.querySelector('#toggle-info').removeEventListener();
+    //     this.shadowRoot.querySelector('#toggle-info').
+    //  //   removeEventListener();
+    //     this.shadowRoot.querySelector('#add-book-cart').
+    //   //  removeEventListener();
+    // }
     
 }
 

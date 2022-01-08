@@ -1,51 +1,48 @@
+*{
+    margin : 0 ; 
+    padding :0 ; 
+}
 :root{
     font-size: 16px;
     --book-photo-half-border:2vw 2vw 0px 0px ; 
-    /* --main-bg-color:#F24C1A ; */ 
-    /*ulbar shar ungu ni anh tuluvlugdsun ungu ba contrastiin asuudlaas bolon tur hugatsand har bolgow*/
     --main-bg-color:black ;
     --sub-bg-color:#E2E0E0 ; 
     --book-row-title-size:2.4vmax;
-    /* --book-title-size:1.4vmax; *
-        responsive media query ashiglahdaa desktopd zoriulsn bdlar oruulna
-    */
     --book-title-size:16px;
 }
 .cat-title{
-    position: relative ;
+    /* position: relative ; */
     background-color: #F24C1A;
     width: 30vw;
-    height: 8vh;
-    left: 45%;
-
-    margin: 4vh;
+    margin : 4vh ; 
+    margin-left:35vw;
     border-radius: 25px;
+    padding: 10px;
 }
 
-.cat-title p{
+.cat-title h1{
     text-align: center;
-    vertical-align: middle;
-    font-size: 2.5vw
+    font-size: 20px;
 }
 
 
 .category{
-    width: 12vw;
-
+    width:fit-content;
     background-color: #E2E0E0;
     margin-left: 2vw;
     position: relative;
     border-radius: 20px;
     float: left;
-    font-size: 1.2vw
+    font-size: 1.2vw ; 
+    padding: 10px;
 }
 
 .category p{
     text-align: center;
-    font-size: 1.3vw;
+    font-size: 16px;
     margin-bottom: -7px; 
     margin-top: 10px; 
-    color: #F24C1A;
+    color: black;
 }
 
 .cat-drop-down{
@@ -58,10 +55,15 @@
 }
 .sub-cat{
     margin-top: 2vh;
+    margin-bottom: 2vh;
     width: 10vw;
     height: 12vh;
     margin-left: 1vw;
 
+}
+
+.sub-cat p {
+    margin-bottom: 2vw ; 
 }
 
 .cat-checkbox-big{
@@ -98,7 +100,7 @@
 
 }
 .cat-book-row-container{
-    width:70vw ; 
+    width:65vw ; 
     /* position: relative; 
     left:5vw ; 
     top:5vw ;  */
@@ -114,7 +116,6 @@
     }
 
     .cat-main{
-
         width: 100vw;
         height: 80vh;
     }
@@ -127,7 +128,7 @@
     .cat-title{
         position: relative;
         left: 3%;
-        background-color: #F24C1A;
+        background-color: "#F24C1A" ; 
         width: 80vw;
         height: 5vh;
         

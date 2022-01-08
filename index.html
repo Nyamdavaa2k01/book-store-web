@@ -15,22 +15,67 @@
         <link  rel ="stylesheet" href = "./stylesheets/fonts.css"> 
         <link  rel ="stylesheet" href = "main-style-2.css"> 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        
         <link rel = "manifest" href = "manifest.json">
         <link rel = "apple-touch-icon" href = "PNG/logo192_real.png">
+        <link rel = "stylesheet" href = "mobile-modal.css">
         <style>
             button {
         background-color: var(--sub-bg-color);
         }       
+        .header-top i{
+            color : white ; 
+        }
+        .mobile-menu{
+            margin-left : -200px;
+            background: black;
+            border:none;
+        }
+       
+        
         </style>
         <link rel = "stylesheet" href = "stylesheets/scrolling.css">
         <link rel = "stylesheet" href = "stylesheets/carousel.css">
+        
     </head>
     <body>
+       
        <header>
-           
+    
            <div class = "header-top"> 
                 <a href = "index.html"><p style = "color: white">Бие даасан номын дэлгүүр</p></a>
-                
+               
+                <button data-modal-target = "#modal" class = "mobile-menu">
+                    <i class = "material-icons">menu</i>
+                </button>
+                <div class = "modal" id="modal">
+                    <div class="modal-header">
+                        <div class="modal-title" style ="color:black">
+                                <h1>Номын төрлүүд</h1>
+                        </div>
+                        <button data-close-button class = "close-button">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body" style = "color:black;">
+                    
+                        <ul>
+                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Ном</a> </div></li>
+                            <li> <div class = "modal-links"> <a class = "modal-href" href ="bookCategory.html">Хүүхдийн ном</a></div></li>
+                            <li> <div class = "modal-links"> <a class = "modal-href" href = "bookCategory.html">Гадаад ном</a></div></li>
+                            <li> <div class = "modal-links"> <a class = "modal-href" href = "bookCategory.html">Бичиг хэрэг</a></div></li>
+                            <li> <div class = "modal-links"> <a class = "modal-href" href="bookCategory.html" style = "margin-right: 5vw;">Бэлэг дурсгал</a></div></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="overlay">
+                    
+                </div>
+
+                <script src = "modal.js"></script>
+
+
                 <div class ="header-right">
                     <a href = "login.html" name = "register"><i class ="material-icons register-icon" >account_circle</i></a>
                     <a href ="login.html" name = "sign up via link"> <p style="color:white">Бүртгүүлэх</p></a>
@@ -38,11 +83,9 @@
                
                     <p><a href = "login.html" name = "login">Нэвтрэх</a></p>
                 </div>
+
             </div>
-            <!-- <div  class = "header-top-right">
-                <i class ="material-icons">shopping_cart</i>
-            </div> -->
-            <div class ="header-bottom">
+            <div class ="header-bottom" >
                
                 <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
                 <div class = "search-field" >
@@ -75,14 +118,7 @@
 				
             </nav>
             <main>
-                
-                <!-- mobile  -->
-                <!-- <a href ="individualBook.html" name ="More about book" aria-label="book cover"><img src = "WEBP/mobile-book-cover.webp" alt = "Book photo" class ="mobile-main-book"> </a>
-                <div class ="mobile-main-book-explanation">
-                    <p>“Айдас, догдлол зэрэг төрүүлэн уншигчийг олон төрлийн асуулт тавихад хүргэх нууцлаг зохиол”
-                        Хуурмаг гэрч номны зохиолч 
-                        -Karin slaughter </p>
-                </div> -->
+            
                     <div class="carousel">
                         <button class="c_button c_button--left is-hidden"><img src = "JPG/left.jpg "></button>
                         <div class="c_track-container">
@@ -104,6 +140,8 @@
                             <button class="c_indicator"></button>
                             <button class="c_indicator"></button>
                     </div>
+
+                
             
                     <script src = "Script codes/carousel2.js"></script>
 
@@ -149,9 +187,9 @@
                 <div class ="book-row-title" id = "cat2">
                     <hr/>
                         <p class = "category-title">
-                            <p class ="highlight">ШИНЭ </p> 
+                            <p class ="highlight">Англи </p> 
                             <p>болон </p> 
-                            <p class = "highlight">БЭСТСЕЛЛЕР</p>
+                            <p class = "highlight">Гадаад</p>
                         </p>
                     <hr/> 
                 </div>
@@ -159,8 +197,7 @@
                     <button class ="chosen">ШИНЭ</button>
                     <button class ="aux">БЕСТСЕЛЛЕР</button>
                     <button class ="view-all">
-                        <p>Бүгд</p> 
-                        <!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
+                        <p>Бүгд</p>
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>
@@ -176,23 +213,10 @@
                         <div id="book17"></div>
                         <div id="book18"></div>
                         <div id="book19"></div>
-                        <div id="book20"></div>
-               
-                        
-                         <!-- <button type = "move" class ="move"><i class = "material-icons"> chevron_right</i></button> -->
-                        
+                        <div id="book20"></div> 
                     </div>
                     <button type = "move" class ="move-right" onclick="sliding(1,2)"><i class ="material-icons">chevron_right</i></button>
                 </div>
-
-                <a href ="individualBook.html"  aria-label="book-cover" name = "More about book"><img src = "WEBP/mobile-book-cover.webp" alt = "Book photo" class ="mobile-main-book"> </a>
-                <div class ="mobile-main-book-explanation">
-                    <p>“Айдас, догдлол зэрэг төрүүлэн уншигчийг олон төрлийн асуулт тавихад хүргэх нууцлаг зохиол”
-                        Хуурмаг гэрч номны зохиолч 
-                        -Karin slaughter </p>
-                </div>
-                <a href = "individualBook.html"  aria-label="book-cover" name = "More about book"><img src = "WEBP/big-cover-5.webp" alt = "Book photo" class = "desktop-main-book"></a>
-
                 <div class ="book-row-title">
                     <hr/>
                         <p class = "category-title">
@@ -207,7 +231,6 @@
                     <button class ="aux">БЕСТСЕЛЛЕР</button>
                     <button class ="view-all">
                         <p>Бүгд</p> 
-                        <!-- <img class ="icon" src ="PNG/dashed-right-arwebp.png" alt ="See All"> -->
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>

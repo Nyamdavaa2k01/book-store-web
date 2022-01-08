@@ -12,6 +12,7 @@
 
         <link rel = "stylesheet" href = "stylesheets/scrolling.css">
         <link  rel ="stylesheet" href = "./stylesheets/fonts.css"> 
+        <link rel = "stylesheet" href = "mobile-modal.css">
         <title>
             Internom
         </title>
@@ -208,6 +209,21 @@
                     content:url(WEBP/book-photo-mid2.webp); 
                 } */
             }
+            button {
+        background-color: var(--sub-bg-color);
+        }       
+        .header-top i{
+            color : white ; 
+        }
+        .mobile-menu{
+            margin-left : -200px;
+            background: black;
+            border:none;
+        }
+        .modal-body a{
+            color:black;
+            font-size: 20px;
+        }
         </style>
 	</head>
 	<body>
@@ -216,6 +232,34 @@
             <div class = "header-top"> 
                  <a href = "index.html"><p style = "color:white">Бие даасан номын дэлгүүр</p></a>
                  
+                 <button data-modal-target = "#modal" class = "mobile-menu">
+                    <i class = "material-icons">menu</i>
+                </button>
+                <div class = "modal" id="modal">
+                    <div class="modal-header">
+                        <div class="modal-title" style ="color:black">
+                                <h1>Номын төрлүүд</h1>
+                        </div>
+                        <button data-close-button class = "close-button">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body" style = "color:black;">
+                    
+                        <ul>
+                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Ном</a> </div></li>
+                            <li> <div class = "modal-links"> <a class = "modal-href" href ="bookCategory.html">Хүүхдийн ном</a></div></li>
+                            <li> <div class = "modal-links"> <a class = "modal-href" href = "bookCategory.html">Гадаад ном</a></div></li>
+                            <li> <div class = "modal-links"> <a class = "modal-href" href = "bookCategory.html">Бичиг хэрэг</a></div></li>
+                            <li> <div class = "modal-links"> <a class = "modal-href" href="bookCategory.html" style = "margin-right: 5vw;">Бэлэг дурсгал</a></div></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="overlay">
+                    
+                </div>
+                <script src = "modal.js"></script>
                  <div class ="header-right">
                      <a href = "register.html"><i class ="material-icons register-icon">account_circle</i></a>
                      <a href ="register.html" name = "sign up via link"> <p style = "color:white">Бүртгүүлэх</p></a>

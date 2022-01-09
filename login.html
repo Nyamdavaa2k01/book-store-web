@@ -13,8 +13,8 @@
         <div class="form-box">
             <div class="button-box">
                 <div id="btn-login"></div>
-                <button type = "button" class ="toggle-login" onclick = "login()"><p id="login-text">Log in</p></button>
-                <button type = "button" class ="toggle-login" onclick = "register()"><p id="reg-text">Register</p></button>
+                <button aria-label = "submit" type = "button" class ="toggle-login" onclick = "login()"><p id="login-text">Log in</p></button>
+                <button aria-label = "submit" type = "button" class ="toggle-login" onclick = "register()"><p id="reg-text">Register</p></button>
             </div>
             <div class="social-icons">
                 <img alt = "social media icon" src = "PNG/fb.png"> 
@@ -25,7 +25,7 @@
                 <input type= "text" class = "input-field" placeholder="User Id" required>  
                 <input type= "password" class = "input-field" placeholder="Enter Password" required>
                 <input type = "checkbox" class = "check-box"> <span>Remember password</span>
-                <button type = "submit" class = "submit-btn">Log in</button>
+                <button aria-label = "submit" type = "submit" class = "submit-btn">Log in</button>
             </form>
             <form id = "register" class ="form-input"> 
                 <input type= "text" class = "input-field" placeholder="User Id" required>  
@@ -33,7 +33,7 @@
                 <input type= "password" class = "input-field" placeholder="Enter Password" required>
                
                 <input type = "checkbox" class = "check-box"> <span>I agree to the terms</span>
-                <button type = "submit" class = "submit-btn">Register</button>
+                <button aria-label = "submit" type = "submit" class = "submit-btn">Register</button>
             </form>
         </div>
         <script>

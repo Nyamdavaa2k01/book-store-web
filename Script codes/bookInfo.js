@@ -99,12 +99,10 @@ class bookSmall extends HTMLElement {
         this.shadowRoot.querySelector('h3').innerText = this.getAttribute('name') ; 
         this.shadowRoot.querySelector('img').src = this.getAttribute('pic') ; 
     }
-    
     toggleInfo () {
         this.showInfo = !this.showInfo ; 
         const info = this.shadowRoot.querySelector('.info') ; 
         const toggleBtn = this.shadowRoot.querySelector('#toggle-info') ; 
-        //const toggleIcon = his.shadowRoot.querySelector('#toggle-icon') ;  
         if (this.showInfo) {
             info.style.display = 'block' ; 
             toggleBtn.innerHTML ='<img class = "toggle-icon" src = "SVG/upward-icon.jpg">' ; 
@@ -115,7 +113,6 @@ class bookSmall extends HTMLElement {
             toggleBtn.innerHTML='<img class = "toggle-icon" src = "SVG/dropdown-icon.jpg">' ; 
         
         }
-
         console.log( this.getAttribute);
     }
     

@@ -2,6 +2,9 @@ const template = document.createElement('template') ;
 template.innerHTML = `
 
     <style>
+    button {
+        cursor:pointer;
+    }
     .book-small{
         margin-left : 
         background-color: #E2E0E0;

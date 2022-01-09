@@ -46,7 +46,7 @@
            <div class = "header-top"> 
                 <a href = "index.html"><p style = "color: white">Бие даасан номын дэлгүүр</p></a>
                
-                <button  aria-label = "move"  data-modal-target = "#modal" class = "mobile-menu">
+                <button  aria-label = "open menu"  data-modal-target = "#modal" class = "mobile-menu">
                     <i class = "material-icons">menu</i>
                 </button>
                 <div class = "modal" id="modal">
@@ -54,7 +54,7 @@
                         <div class="modal-title" style ="color:black">
                                 <h1>Номын төрлүүд</h1>
                         </div>
-                        <button  aria-label = "move"  data-close-button class = "close-button">
+                        <button  aria-label = "close menu"  data-close-button class = "close-button">
                             &times;
                         </button>
                     </div>
@@ -91,7 +91,7 @@
                 <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
                 <div class = "search-field" >
                     <input type = "text" class ="search-input" placeholder="Хайлт хийх"> 
-                    <button  aria-label = "move"  type ="search" class ="search-button">
+                    <button  aria-label = "search for books"  type ="search" class ="search-button">
                         <i class ="material-icons icon-search">search</i>
                     </button>
                 </div>
@@ -101,7 +101,7 @@
             </div>
 
             <div class ="mobile-search-field">
-                <button  aria-label = "move"  type ="search" class ="mobile-search-button">
+                <button  aria-label = "search books from mobile"  type ="search" class ="mobile-search-button">
                     <i class ="material-icons icon-search">search</i>
                 </button>
             </div>
@@ -120,7 +120,7 @@
             <main>
             
                     <div class="carousel">
-                        <button  aria-label = "move"  class="c_button c_button--left is-hidden"><img alt = "book photo" src = "JPG/left.jpg "></button>
+                        <button  aria-label = "move to left from container 1"  class="c_button c_button--left is-hidden"><img alt = "book photo" src = "JPG/left.jpg "></button>
                         <div class="c_track-container">
                             <ul class="c_track">
                                 <li class="c_slide current-slide" >
@@ -134,11 +134,11 @@
                                 </li>
                             </ul>
                         </div>
-                        <button  aria-label = "move"  class="c_button c_button--right"><img alt = "book photo" src = "JPG/right.jpg"></button>
+                        <button  aria-label = "move to right from container 1"  class="c_button c_button--right"><img alt = "book photo" src = "JPG/right.jpg"></button>
                         <div class="c_nav">
-                            <button  aria-label = "move"  class="c_indicator current-slide"></button>
-                            <button  aria-label = "move"  class="c_indicator"></button>
-                            <button  aria-label = "move"  class="c_indicator"></button>
+                            <button  aria-label = "jump to carousel 1"  class="c_indicator current-slide"></button>
+                            <button  aria-label = "jump to carousel 2"  class="c_indicator"></button>
+                            <button  aria-label = "jump to carousel 3"  class="c_indicator"></button>
                     </div>
 
                 
@@ -157,16 +157,16 @@
                 </div>
                 </div>
                 <div class ="book-row-options">
-                    <button  aria-label = "move"  class ="chosen">ШИНЭ</button>
-                    <button  aria-label = "move"  class ="aux">БЕСТСЕЛЛЕР</button>
-                    <button  aria-label = "move"  class ="view-all">
+                    <button  aria-label = "see new books"  class ="chosen">ШИНЭ</button>
+                    <button  aria-label = "see bestsellers"  class ="aux">БЕСТСЕЛЛЕР</button>
+                    <button  aria-label = "view all books"  class ="view-all">
                         <p>Бүгд</p> 
                         <!-- <img class ="icon" src ="PNG/dashed-right-arrow.png" alt ="See All"> -->
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>
                 <div class="wrapper">
-                    <button  aria-label = "move"  type ="move" class ="move-left" onclick="sliding(0,1)"><i class ="material-icons">chevron_left</i></button>
+                    <button  aria-label = "move to left from container 2"  type ="move" class ="move-left" onclick="sliding(0,1)"><i class ="material-icons">chevron_left</i></button>
                     <div id = "book-row-container1">
                         <div id="book1"></div>
                         <div id="book2"></div>
@@ -179,7 +179,7 @@
                         <div id="book9"></div>
                         <div id= "book10"></div>
                     </div>
-                    <button  aria-label = "move"  type = "move" class ="move-right" onclick="sliding(1,1)"><i class ="material-icons">chevron_right</i></button>
+                    <button  aria-label = "move to right from container 2"  type = "move" class ="move-right" onclick="sliding(1,1)"><i class ="material-icons">chevron_right</i></button>
                 </div>
                 <div class ="book-row-title" id = "cat2">
                     <hr/>
@@ -191,15 +191,15 @@
                     <hr/> 
                 </div>
                 <div class ="book-row-options">
-                    <button  aria-label = "move"  class ="chosen">ШИНЭ</button>
-                    <button  aria-label = "move"  class ="aux">БЕСТСЕЛЛЕР</button>
-                    <button  aria-label = "move"  class ="view-all">
+                    <button  aria-label = "move to new books from container 2"  class ="chosen">ШИНЭ</button>
+                    <button  aria-label = "move to bestsellers from container 2"  class ="aux">БЕСТСЕЛЛЕР</button>
+                    <button  aria-label = "move to view all books"  class ="view-all">
                         <p>Бүгд</p>
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>
                 <div class="wrapper">
-                    <button  aria-label = "move"  type ="move" class ="move-left" onclick="sliding(0,2)"><i class ="material-icons">chevron_left</i></button>
+                    <button  aria-label = "move to left from container 3"  type ="move" class ="move-left" onclick="sliding(0,2)"><i class ="material-icons">chevron_left</i></button>
                     <div id = "book-row-container2">
                         <div id="book11"></div>
                         <div id="book12"></div>
@@ -212,7 +212,7 @@
                         <div id="book19"></div>
                         <div id="book20"></div> 
                     </div>
-                    <button  aria-label = "move"  type = "move" class ="move-right" onclick="sliding(1,2)"><i class ="material-icons">chevron_right</i></button>
+                    <button  aria-label = "move to right from container 3"  type = "move" class ="move-right" onclick="sliding(1,2)"><i class ="material-icons">chevron_right</i></button>
                 </div>
                 <div class ="book-row-title">
                     <hr/>
@@ -224,15 +224,15 @@
                     <hr/> 
                 </div>
                 <div class ="book-row-options">
-                    <button  aria-label = "move"  class ="chosen">ШИНЭ</button>
-                    <button  aria-label = "move"  class ="aux">БЕСТСЕЛЛЕР</button>
-                    <button  aria-label = "move"  class ="view-all">
+                    <button  aria-label = "move to new books from container 3"  class ="chosen">ШИНЭ</button>
+                    <button  aria-label = "move to bestsellers from container 3"  class ="aux">БЕСТСЕЛЛЕР</button>
+                    <button  aria-label = "move to view all books"  class ="view-all">
                         <p>Бүгд</p> 
                         <i class ="material-icons">arrow_forward</i>
                     </button>
                 </div>
                 <div class="wrapper">
-                    <button  aria-label = "move"  type ="move" class ="move-left" onclick="sliding(0, 3)"><i class ="material-icons">chevron_left</i></button>
+                    <button  aria-label = "move to left from container 4"  type ="move" class ="move-left" onclick="sliding(0, 3)"><i class ="material-icons">chevron_left</i></button>
                     <div id = "book-row-container3">
                         <div id="book21"></div>
                         <div id="book22"></div>
@@ -246,7 +246,7 @@
                         <div id= "book30"></div>
                         
                     </div>
-                    <button  aria-label = "move"  type = "move" class ="move-right" onclick="sliding(1, 3)"><i class ="material-icons">chevron_right</i></button>
+                    <button  aria-label = "move to right from container 4"  type = "move" class ="move-right" onclick="sliding(1, 3)"><i class ="material-icons">chevron_right</i></button>
                 </div>
 
 

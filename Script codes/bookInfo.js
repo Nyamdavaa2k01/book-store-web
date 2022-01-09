@@ -57,11 +57,11 @@ template.innerHTML = `
     </style>
    
     <div class="book-small">
-            <a href ="individualBook.html"><img class ="book-small-photo" ></a>
+            <a href ="individualBook.html"><img class ="book-small-photo" alt = "book info photo"></a>
             <div class ="main-view">
                 <h3 class = "book-title"></h3>
-                <button id = "toggle-info">
-                    <img class = "toggle-icon" src = "SVG/dropdown-icon.jpg">
+                <button id = "toggle-info" aria-label = "toggle info downward button">
+                    <img alt = "drop down icon" class = "toggle-icon" src = "SVG/dropdown-icon.jpg">
                 </button>
             </div>
             <div class = "info"> 
@@ -69,7 +69,7 @@ template.innerHTML = `
                 <p><slot name = "price"/> </p>
                 <div style = "display:flex">
                 <p><slot name = "addtoList"/></p>
-                <button class = "button-icon" id="add-book-cart"><slot class ="cart-icon" name = "cartIcon"/></button>
+                <button  aria-label = "add to cart button" class = "button-icon" id="add-book-cart"><slot class ="cart-icon" name = "cartIcon"/></button>
                 <div>
             </div>
             
@@ -105,12 +105,12 @@ class bookSmall extends HTMLElement {
         const toggleBtn = this.shadowRoot.querySelector('#toggle-info') ; 
         if (this.showInfo) {
             info.style.display = 'block' ; 
-            toggleBtn.innerHTML ='<img class = "toggle-icon" src = "SVG/upward-icon.jpg">' ; 
+            toggleBtn.innerHTML ='<img class = "toggle-icon" src = "SVG/upward-icon.jpg" alt = "toggle info upward icon">' ; 
         
         }
         else {
             info.style.display = 'none' ; 
-            toggleBtn.innerHTML='<img class = "toggle-icon" src = "SVG/dropdown-icon.jpg">' ; 
+            toggleBtn.innerHTML='<img class = "toggle-icon" src = "SVG/dropdown-icon.jpg" alt = "toggle info downward">' ; 
         
         }
         console.log( this.getAttribute);

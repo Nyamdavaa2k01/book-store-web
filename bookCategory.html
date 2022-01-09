@@ -6,70 +6,120 @@
         <meta name="keywords" content="online, ebook ,book, bookstore, интерном, ном, номын худалдаа, монгол ном, mongolian books, гадаад ном, бичиг хэрэг, бэлэг дурсгал" />
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=4,user-scalable=yes">
         <title>Internom</title>
-        <link rel="stylesheet" href="category.css" />
+
         <style>
             book-info {
                 background-color: #E2E0E0;
                 border-radius: 25px;
             }
-            .header-top i{
-            color : white ; 
-        }
-        .mobile-menu{
-            margin-left : -200px;
-            background: black;
-            border:none;
-        }
-        .modal-body a{
-            color:black;
-            font-size: 20px;
-        }
         </style>
         <link rel="stylesheet" href="main-style-2.css" />
-        
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link  rel ="stylesheet" href = "./stylesheets/fonts.css"> 
+        <link rel = "stylesheet" href = "bookCategory3.css">
         <link rel = "stylesheet" href = "mobile-modal.css">
+        <link rel = "stylesheet" href = "sort_modal.css">
+        
+        <style>
+                .book-small {
+                    height:fit-content;
+                    padding-bottom: 5px;
+
+                    transition: .3s;
+                    box-shadow: 0px 0px 8px 0px rgb(0 0 0 / 25%);
+                }
+                .book-small:hover{
+                    box-shadow: 0px 2px 11px 6px rgb(0 0 0 / 25%);
+                }
+                .book-small:hover > .image-overlay .book-overlay{
+                    opacity: 1;
+                    z-index: 102;
+                }
+                .book-small .book-title {
+                    margin-top: 15px;
+                }
+                .book-small .image-overlay{
+                    position: relative;
+                }
+                .book-small .book-overlay{
+                    transition: .3s;
+                    opacity: 0;
+                    position: absolute;
+                    background-color: rgb(0 0 0 / 85%);
+                    width: 100%;
+                    height: calc(100% - 4px);
+                    top: 0;
+                    left: 0;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    color: white;
+                    z-index: -1;
+                    border-top-left-radius: 2vw;
+                    border-top-right-radius: 2vw;
+                }
+                .add-book {
+                    margin: 4% 10% 10% 10%;  
+                    width:80%;
+                    border-radius: 10px;
+                    border : none;
+                    background-color: black;
+                    color:white;
+                    padding : 4px;
+                }
+                .add-book {
+                    cursor: pointer;
+                }
+                @media screen and (max-width:480px) {
+                    /* .book-small {
+                        height: 28vmax;
+                    } */
+                    #sort_open {
+                    display: none;
+                }
+                    .book-4{
+                        display: none;
+                    }
+                }
+        </style>
     </head>
     <body>
         <header>
+
             <div class = "header-top"> 
-                <a href = "index.html"><p style = "color:white">Бие даасан номын дэлгүүр</p></a>
-                
+                <a href = "index.html"><p>Бие даасан номын дэлгүүр</p></a>
                 <button data-modal-target = "#modal" class = "mobile-menu">
-                   <i class = "material-icons">menu</i>
-               </button>
-               <div class = "modal" id="modal">
-                   <div class="modal-header">
-                       <div class="modal-title" style ="color:black">
-                               <h1>Номын төрлүүд</h1>
-                       </div>
-                       <button data-close-button class = "close-button">
-                           &times;
-                       </button>
-                   </div>
-                   <div class="modal-body" style = "color:black;">
-                   
-                       <ul>
-                           <li> <div class = "modal-links"> <a href ="bookCategory.html">Ном</a> </div></li>
-                           <li> <div class = "modal-links"> <a href ="bookCategory.html">Хүүхдийн ном</a></div></li>
-                           <li> <div class = "modal-links"> <a href = "bookCategory.html">Гадаад ном</a></div></li>
-                           <li> <div class = "modal-links"> <a href = "bookCategory.html">Бичиг хэрэг</a></div></li>
-                           <li> <div class = "modal-links"> <a href="bookCategory.html">Бэлэг дурсгал</a></div></li>
-                       </ul>
-                   </div>
-               </div>
+                    <i class = "material-icons">menu</i>
+                </button>
+                <div class = "modal" id="modal">
+                    <div class="modal-header">
+                        <div class="modal-title" style ="color:black">
+                                <h1>Номын төрлүүд</h1>
+                        </div>
+                        <button data-close-button class = "close-button">
+                            &times;
+                        </button>
+                    </div>
+                    <div class="modal-body" style = "color:black;">
+                    
+                        <ul>
+                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Ном</a> </div></li>
+                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Хүүхдийн ном</a></div></li>
+                            <li> <div class = "modal-links"> <a href = "bookCategory.html">Гадаад ном</a></div></li>
+                            <li> <div class = "modal-links"> <a href = "bookCategory.html">Бичиг хэрэг</a></div></li>
+                            <li> <div class = "modal-links"> <a href="bookCategory.html">Бэлэг дурсгал</a></div></li>
+                        </ul>
+                    </div>
+                </div>
 
-               <div id="overlay">
-                   
-               </div>
-               <script src = "modal.js"></script>
+                <div id="overlay">
+                    
+                </div>
 
+                <script src = "modal.js"></script>
                 <div class ="header-right">
-                    <a href = "register.html"><i class ="material-icons register-icon" >account_circle</i></a>
-                    <a href ="register.html" name = "sign up via link"> <p>Бүртгүүлэх</p></a>
+                    <a href = "login.html"><i class ="material-icons register-icon" >account_circle</i></a>
+                    <a href ="login.html" name = "sign up via link"> <p>Бүртгүүлэх</p></a>
                     <a href ="login.html"i class ="material-icons login-icon">login</i></a>
-            
                     <p><a href = "login.html">Нэвтрэх</a></p>
                 </div>
             </div>
@@ -83,7 +133,7 @@
                     </button>
                 </div>
 
-                <i class = "material-icons icon-cart" style ="font-size: 4vmax;"><a href ="cart-list.html">shopping_cart</a></i>
+                <a href = "cart-list.html"> <i class = "material-icons icon-cart" style = "font-size: 3.5vmax;" > shopping_cart</i></a>
 
             </div>
 
@@ -106,209 +156,669 @@
             
         </nav>
 
-        <div class="cat-title">
-            <h1>Self Growth Books</h1>
+        <div class="category-title">
+            <h2>Self growth</h2>
+        </div>
+        
+        <button id="sort_open">
+            Erembeleh
+        </button>
+
+        <div class="sort_modal" id = "sort_modal">
+            <div class="sort_modal_header">
+                <div class="sort_title">
+                    Эрэмбэлэх
+                </div>
+                <button class = "sort_close_button" id = "sort_close">
+                    &times;
+                </button>
+            </div>
+            <div class="sort_modal_body">
+                <ul>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                    <li>sdsd</li>
+                </ul>
+            </div>
+
         </div>
 
+        <div id="sort_overlay"></div>
+        <script src = "sort_modal.js"></script>
+        
+        <div class="inline">
             
-        <img src="SVG/Menu.svg" class="cat-menu" alt="menu icon"></img>
-        <aside class="category" >
-            <div class="sub-cat">
-                <p>
+            <aside>
+                <h3>Эрэмбэлэх</h3>
+                
+                <hr />
+
+                <p class="cat-sort-title">
                     Үнээр
                 </p>
+
                 <select class="cat-drop-down">
                     <option> Үнэ буурахаар</option>
                     <option> Үнэ өсөхөөр</option>
                 </select>
-            </div>
 
-            <div class="sub-cat">
-                <p>
-                    Сонгогдсон
+                <p class="cat-sort-title">
+                    Үнэлгээ
                 </p>
+
                 <select class="cat-drop-down">
-                    <option> Төрөл</option>
-                    <option> Дэд төрөл </option>
+                    <option> Үнэлгээ буурахаар</option>
+                    <option> Үнэлгээ өсөхөөр</option>
+        
                 </select>
-            </div>
-            <p>Формат</p>
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >Hardback</label><br>
-                </form>
-            </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >Paperback</label><br>
-                </form>
-            </div>
+                <p class="cat-sort-title">
+                    Уншигч
+                </p>
 
-            <p>Үнэ</p>
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >0-5000₮</label><br>
-                </form>
-            </div>
+                <select class="cat-drop-down">
+                    <option> Уншигч буурахаар</option>
+                    <option> Уншигч өсөхөөр</option>
+        
+                </select>
+                <p class="cat-sort-title">
+                    Формат
+                </p>
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label>Hardback</label><br>
+                    </form>
+                </div>
+    
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label >Paperback</label><br>
+                    </form>
+                </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >5000-10000₮</label><br>
-                </form>
-            </div>
+                <p class="cat-sort-title">
+                    Үнэ
+                </p>
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label>5000-10000₮</label><br>
+                    </form>
+                </div>
+    
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label >10000-20000₮</label><br>
+                    </form>
+                </div>
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label>20000-50000₮</label><br>
+                    </form>
+                </div>
+    
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label >50000₮-с дээш</label><br>
+                    </form>
+                </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >10000-20000₮</label><br>
-                </form>
-            </div>
+                <p class="cat-sort-title">
+                    Нас
+                </p>
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label>3 хүртэлх</label><br>
+                    </form>
+                </div>
+    
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label >3-5 нас</label><br>
+                    </form>
+                </div>
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label>6-8 нас</label><br>
+                    </form>
+                </div>
+    
+                <div class="cat-checkbox">
+                    <form class = "checkbox-option">
+                        <input type="checkbox">
+                        <label >9-12 нас</label><br>
+                    </form>
+                </div>
+            </aside>
+        <main>
+    
+            <div class="mobile-main">
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >20000-50000₮</label><br>
-                </form>
-            </div>
+                <div class = "category-bookrow">
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-1.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >50000₮-с дээш</label><br>
-                </form>
-            </div>
-            <p>Нас</p>
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+                    
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-2.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >3 хүртэлх</label><br>
-                </form>
-            </div>
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >3-5</label><br>
-                </form>
-            </div>
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-3.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >6-8</label><br>
-                </form>
-            </div>
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label >9-12</label><br>
-                </form>
-            </div>
+                    <div class="book-small book-4">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-4.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
 
-            <div class="cat-checkbox">
-                <form>
-                    <input type="checkbox">
-                    <label> 12 дээш</label><br>
-                </form>
-            </div>
-        </aside>
-        <main class="cat-main">
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+                </div>
 
-            <div class = "cat-book-row-container">
-                <book-info pic ="WEBP/book-cover-small-5.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-4.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-3.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-2.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                
+                <div class = "category-bookrow">
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-1.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+                    
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-2.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-3.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+
+                    <div class="book-small book-4">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-4.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+                </div>
+
+                <div class = "category-bookrow">
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-5.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+                    
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-1.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-2.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+
+                    <div class="book-small book-4">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-3.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+                </div>
+
+                <div class = "category-bookrow">
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-4.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+                    
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-5.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+
+                    <div class="book-small">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-1.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+
+                    <div class="book-small book-4">
+                        <div class="image-overlay">
+                            <img class = "book-small-photo" src = "WEBP/book-cover-small-2.webp">
+                            <div class="book-overlay">
+                                <p class = "book-overlay-title" style = "margin-top:-5px">
+                                    Зохиолч:
+                                </p>
+                                <p class = "book-overlay-body">
+                                    J.K.Rowling
+                                </p>
+                                
+                                <p class = "book-overlay-title">
+                                    Үнэ: 37800
+                                </p>
+                               
+                                <div class="link-back">
+                                    <p class = "book-overlay-title">
+                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="book-title">
+                            12 Rules For Life
+                        </div>
+                        <button class = "add-book">
+                            Сагсанд хийх
+                        </button>
+                    </div>
+                </div>
+            
+                </div>
             </div>
             
-            <div class = "cat-book-row-container">
-                
-                
-                <book-info pic ="WEBP/book-cover-small-1.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-2.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-4.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-3.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                
-            </div>
-            <div class = "cat-book-row-container">
-                
-                
-                <book-info pic ="WEBP/book-cover-small-2.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-1.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-5.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                <book-info pic ="WEBP/book-cover-small-3.webp" name = "12 Rules for Life">
-                    <div slot = "author">Зохиолч: Jordan</div>
-                    <div slot = "price">Үнэ: 15000</div>
-                    <div slot = "addtoList">Сагсанд нэмэх</div>
-                   <div slot = "cartIcon"><i class ="material-icons">shopping_cart</i></div>
-                </book-info>
-                
-            </div>
             <script src = "Script codes/bookInfo.js"></script>
         </main>
+        </div>
 
         <footer style = "position: relative; top:10vw;">
             <div class="footer-left">

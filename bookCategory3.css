@@ -109,7 +109,11 @@ aside .cat-sort-title {
     margin-left:3vmax;
 }
 
-
+@media screen and (min-width:720px) {
+    #sort_open {
+        display: none;
+    }
+}
 
 @media screen and (max-width:720px){
     aside {
@@ -132,5 +136,11 @@ aside .cat-sort-title {
     }
     .book-overlay {
         font-size: 14px;
+    }
+    .category-title {
+        margin-left: 20%;
+    }
+    #sort_open {
+        display:block;
     }
 }

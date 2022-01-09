@@ -159,33 +159,140 @@
         <div class="category-title">
             <h2>Self growth</h2>
         </div>
-        
+        <style>
+            @media screen and (max-width:720px){
+                #sort_open {
+                    display:block ; 
+                }
+            }
+            .sort_modal_body {
+                color:black;
+            }
+        </style>
         <button id="sort_open">
-            Erembeleh
+            Эрэмбэлэх
         </button>
-
         <div class="sort_modal" id = "sort_modal">
             <div class="sort_modal_header">
-                <div class="sort_title">
-                    Эрэмбэлэх
+                <div class="inline">
+                    <h3>Эрэмбэлэх</h3>
+                    <button class = "sort_close_button" id = "sort_close">
+                        &times;
+                    </button>
                 </div>
-                <button class = "sort_close_button" id = "sort_close">
-                    &times;
-                </button>
             </div>
             <div class="sort_modal_body">
-                <ul>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                    <li>sdsd</li>
-                </ul>
+               <form class = "sort_form">
+                <div class = "mobile_aside">
+                  
+                    <hr />
+    
+                    <p class="cat-sort-title">
+                        Үнээр
+                    </p>
+    
+                    <select class="cat-drop-down">
+                        <option> Үнэ буурахаар</option>
+                        <option> Үнэ өсөхөөр</option>
+                    </select>
+    
+                    <p class="cat-sort-title">
+                        Үнэлгээ
+                    </p>
+    
+                    <select class="cat-drop-down">
+                        <option> Үнэлгээ буурахаар</option>
+                        <option> Үнэлгээ өсөхөөр</option>
+            
+                    </select>
+    
+                    <p class="cat-sort-title">
+                        Уншигч
+                    </p>
+    
+                    <select class="cat-drop-down">
+                        <option> Уншигч буурахаар</option>
+                        <option> Уншигч өсөхөөр</option>
+            
+                    </select>
+                    <p class="cat-sort-title">
+                        Формат
+                    </p>
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label>Hardback</label><br>
+                        </form>
+                    </div>
+        
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label >Paperback</label><br>
+                        </form>
+                    </div>
+    
+                    <p class="cat-sort-title">
+                        Үнэ
+                    </p>
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label>5000-10000₮</label><br>
+                        </form>
+                    </div>
+        
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label >10000-20000₮</label><br>
+                        </form>
+                    </div>
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label>20000-50000₮</label><br>
+                        </form>
+                    </div>
+        
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label >50000₮-с дээш</label><br>
+                        </form>
+                    </div>
+    
+                    <p class="cat-sort-title">
+                        Нас
+                    </p>
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label>3 хүртэлх</label><br>
+                        </form>
+                    </div>
+        
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label >3-5 нас</label><br>
+                        </form>
+                    </div>
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label>6-8 нас</label><br>
+                        </form>
+                    </div>
+        
+                    <div class="cat-checkbox">
+                        <form class = "checkbox-option">
+                            <input type="checkbox">
+                            <label >9-12 нас</label><br>
+                        </form>
+                    </div>
+                </div>
+               </form>
             </div>
 
         </div>

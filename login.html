@@ -7,6 +7,8 @@
     <title>Document</title>
     <link href = "stylesheets/loginForm.css" rel = "stylesheet">
     <link  rel ="stylesheet" href = "./stylesheets/fonts.css"> 
+    <link rel = "manifest" href = "manifest.json">
+    <link rel = "apple-touch-icon" href = "PNG/logo192_real.png">
 </head>
 <body>
     <div class="hero">
@@ -22,9 +24,9 @@
                 <img alt = "social media icon" src = "PNG/tweet.png">
             </div>
             <form id = "login" class ="form-input"> 
-                <input type= "text" class = "input-field" placeholder="User Id" required>  
+                <input aria-label="user's id" type= "text" class = "input-field" placeholder="User Id" required>  
                 <input type= "password" class = "input-field" placeholder="Enter Password" required>
-                <input type = "checkbox" class = "check-box"> <span>Remember password</span>
+                <input type = "checkbox" class = "check-box"> <span> <p style = "color:black; ">Remember password</p></span>
                 <button aria-label = "submit" type = "submit" class = "submit-btn">Log in</button>
             </form>
             <form id = "register" class ="form-input"> 
@@ -59,5 +61,6 @@
             }
         </script>
     </div>
+    <script src = "pwa_index.js"></script>
 </body>
 </html>

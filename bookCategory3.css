@@ -75,7 +75,6 @@ aside .cat-sort-title {
 .checkbox-option {
     margin-top:5px; 
     margin-bottom: 5px;
-    
     font-weight: 300;
     font-size: 0.9rem;
 }
@@ -100,7 +99,6 @@ aside .cat-sort-title {
 }
 
 .book-overlay-title a {
-    text-decoration:wavy;
     color:white;
 }
 
@@ -128,9 +126,9 @@ aside .cat-sort-title {
     .book-4{
         display: none;
     }
-    .book-small-photo{
+    /* .book-small-photo{
         width:25vw;
-    }
+    } */
     .category-title{
         width:60%;
     }

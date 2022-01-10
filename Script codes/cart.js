@@ -487,11 +487,11 @@ listTemp.innerHTML = `
                     border-radius: 20px;
                     width: 80vw;
                     height: 40vh;
-                    
                     margin-top: 5vh;
                     margin-left:10vw;
                     border-style: solid;
                     border-width:1px;
+                    
                 }
                 .info p{
                     margin-left: 8vw;

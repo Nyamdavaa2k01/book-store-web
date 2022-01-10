@@ -5,7 +5,7 @@ let book1 =
 {
         
         "title": "HARRY POTTER AND THE ORDER OF THE PHOENIX",
-        "photo": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+        "photo": "WEBP/book-cover-small-4.webp",
         "author": "J. K. Rowling",
         "published": "Bloomsbury Publishing PLC",
         "category": "CHILDREN’S, TEENAGE & EDUCATIONAL",

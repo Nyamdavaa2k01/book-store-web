@@ -24,7 +24,7 @@
                     margin-left:10vw;
                     border-style: solid;
                     border-width:1px;
-                    
+                    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
                 }
                 .info p{
                     margin-left: 8vw;

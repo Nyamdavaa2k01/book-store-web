@@ -10,8 +10,12 @@
         <link rel ="stylesheet" href = "./stylesheets/fonts.css"> 
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet">
         <link rel = "stylesheet" href = "mobile-modal.css">
+        <link rel = "manifest" href = "manifest.json">
+
+        <link rel = "apple-touch-icon" href = "PNG/logo192_real.png">
         <script src = "Script codes/cart.js"></script>
         <script src = "Script codes/infoList.js"></script>
+        <script src = "pwa_index.js"></script>
         <title>Internom</title>
         <style>
         .header-top i{
@@ -32,9 +36,8 @@
         <header>
 
             <div class = "header-top"> 
-                <a href = "index.html"><p>Бие даасан номын дэлгүүр</p></a>
-                
-                <button aria-label = "Open" data-modal-target = "#modal" class = "mobile-menu">
+                <a aria-label = "navigate to main page of the web site" href = "index.html"><p>Бие даасан номын дэлгүүр</p></a>
+                <button aria-label = "submit" data-modal-target = "#modal" class = "mobile-menu">
                     <i class = "material-icons">menu</i>
                 </button>
                 <div class = "modal" id="modal">
@@ -42,54 +45,50 @@
                         <div class="modal-title" style ="color:black">
                                 <h1>Номын төрлүүд</h1>
                         </div>
-                        <button aria-label = "Close" data-close-button class = "close-button">
+                        <button aria-label = "submit" data-close-button class = "close-button">
                             &times;
                         </button>
                     </div>
                     <div class="modal-body" style = "color:black;">
                     
                         <ul>
-                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Ном</a> </div></li>
-                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Хүүхдийн ном</a></div></li>
-                            <li> <div class = "modal-links"> <a href = "bookCategory.html">Гадаад ном</a></div></li>
-                            <li> <div class = "modal-links"> <a href = "bookCategory.html">Бичиг хэрэг</a></div></li>
-                            <li> <div class = "modal-links"> <a href="bookCategory.html">Бэлэг дурсгал</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number 1 from mobile devices" href ="bookCategory.html">Ном</a> </div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number 2 from mobile devices" href ="bookCategory.html">Хүүхдийн ном</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number 3 from mobile devices" href = "bookCategory.html">Гадаад ном</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number 4 from mobile devices" href = "bookCategory.html">Бичиг хэрэг</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number  from mobile devices" href="bookCategory.html">Бэлэг дурсгал</a></div></li>
                         </ul>
                     </div>
                 </div>
- 
+
                 <div id="overlay">
                     
                 </div>
-                <script src = "modal.js"></script>
- 
 
+                <script src = "modal.js"></script>
                 <div class ="header-right">
-                    <a href = "login.html"><i class ="material-icons register-icon" >account_circle</i></a>
-                    <a href ="login.html" name = "sign up via link"> <p>Бүртгүүлэх</p></a>
-                    <a href ="login.html"i class ="material-icons login-icon">login</i></a>
-            
-                    <p><a href = "login.html">Нэвтрэх</a></p>
+                    <a aria-label = "Navigate to the login and register section option 1" href = "login.html"><i class ="material-icons register-icon" >account_circle</i></a>
+                    <a aria-label = "Navigate to the login and register section option 2" href ="login.html" name = "sign up via link"> <p>Бүртгүүлэх</p></a>
+                    <a aria-label = "Navigate to the login and register section option 3" href ="login.html"i class ="material-icons login-icon">login</i></a>
+                    <p><a aria-label = "Navigate to the login and register section option 4" href = "login.html">Нэвтрэх</a></p>
                 </div>
             </div>
-            <!-- <div  class = "header-top-right">
-                <i class ="material-icons">shopping_cart</i>
-            </div> -->
             <div class ="header-bottom">
             
-                <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
+                <a aria-label = "Navigate to the main page by clicking at logo" href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
                 <div class = "search-field" >
                     <input type = "text" class ="search-input" placeholder="Хайлт хийх"> 
-                    <button aria-label = "Search" type ="search" class ="search-button">
+                    <button aria-label = "submit" aria-label = "Search" type ="search" class ="search-button">
                         <i class ="material-icons icon-search">search</i>
                     </button>
                 </div>
 
-                <a href = "cart-list.html"> <i class = "material-icons icon-cart" style = "font-size: 3.5vmax;" > shopping_cart</i></a>
+                <a aria-label = "go to items in your cart and make purchase" href = "cart-list.html"> <i class = "material-icons icon-cart" style = "font-size: 3.5vmax;" > shopping_cart</i></a>
+
             </div>
 
             <div class ="mobile-search-field">
-                <button aria-label = "Searching" type ="search" class ="mobile-search-button">
+                <button aria-label = "submit" type ="search" class ="mobile-search-button">
                     <i class ="material-icons icon-search">search</i>
                 </button>
             </div>

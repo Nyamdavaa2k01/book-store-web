@@ -18,6 +18,8 @@ self.addEventListener("install", e => {
              "stylesheets/carousel.css",
              "stylesheets/loginForm.css",
              "cart-list.css",
+             "bookCategory3.css",
+             "sort_modal.css",
              
                 // scripts 
              "Script codes/scrolling.js",
@@ -25,12 +27,9 @@ self.addEventListener("install", e => {
              "modal.js",
              "Script codes/carousel2.js",
              "./Script codes/more.js",
-             "bookCategory3.css",
-             "mobile-modal.css",
-             "sort_modal.css",
              "Script codes/bookInfo.js",
              "Script codes/cart.js",
-             
+
                 // assets 
             "WEBP/logo.webp", 
             "JPG/left.jpg ",

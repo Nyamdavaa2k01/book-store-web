@@ -8,6 +8,8 @@
     <title>Document</title>
     <link href = "stylesheets/loginForm.css" rel = "stylesheet">
     <link  rel ="stylesheet" href = "./stylesheets/fonts.css"> 
+    <link rel = "manifest" href = "manifest.json">
+    <link rel = "apple-touch-icon" href = "PNG/logo192_real.png">
 </head>
 <body>
     <div class="hero">
@@ -23,30 +25,17 @@
                 <img alt = "social media icon" src = "PNG/tweet.png">
             </div>
             <form id = "login" class ="form-input"> 
-                <label>
-                    <input type= "text" class = "input-field" placeholder="User Id" required>  
-                </label>
-                l<label>
-                    <input type= "password" class = "input-field" placeholder="Enter Password" required>
-                </label>
-                <label>
-                    <input type = "checkbox" class = "check-box"> <span>Remember password</span>
-                </label>
+                <input aria-label="user's id" type= "text" class = "input-field" placeholder="User Id" required>  
+                <input type= "password" class = "input-field" placeholder="Enter Password" required>
+                <input type = "checkbox" class = "check-box"> <span> <p style = "color:black; ">Remember password</p></span>
                 <button aria-label = "submit" type = "submit" class = "submit-btn">Log in</button>
             </form>
             <form id = "register" class ="form-input"> 
-                <label>
-                    <input type= "text" class = "input-field" placeholder="User Id" required>  
-                </label>
-                <label>
-                    <input type= "email" class = "input-field" placeholder="Enter email" required>
-                </label>
-                <label>
-                    <input type= "password" class = "input-field" placeholder="Enter Password" required>
-                </label>
-                <label>
-                    <input type = "checkbox" class = "check-box"> <span>I agree to the terms</span>
-                </label>
+                <input type= "text" class = "input-field" placeholder="User Id" required>  
+                 <input type= "email" class = "input-field" placeholder="Enter email" required>
+                <input type= "password" class = "input-field" placeholder="Enter Password" required>
+               
+                <input type = "checkbox" class = "check-box"> <span>I agree to the terms</span>
                 <button aria-label = "submit" type = "submit" class = "submit-btn">Register</button>
             </form>
         </div>
@@ -73,5 +62,6 @@
             }
         </script>
     </div>
+    <script src = "pwa_index.js"></script>
 </body>
 </html>

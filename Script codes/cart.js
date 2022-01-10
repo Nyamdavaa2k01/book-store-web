@@ -634,5 +634,4 @@ listTemp.innerHTML = `
     }
      
     window.customElements.define('info-list', InfoList);
-
     window.customElements.define('cart-list', CartList);

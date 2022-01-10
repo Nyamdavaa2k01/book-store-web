@@ -2,15 +2,53 @@ self.addEventListener("install", e => {
     e.waitUntil(
         caches.open("static").then(cache => {
              return cache.addAll([
-            "./", "PNG/logo192_real.png", "main-style-2.css", "individualBook.html", "bookCategory.html",
-            "./Script codes/scrolling.js", "./stylesheets/fonts.css", "./stylesheets/carousel.css", "./stylesheets/loginForm.css", 
-            "./stylesheets/scrolling.css", "./WEBP/book-cover-small-1.webp", "./WEBP/book-cover-small-2.webp", 
-            "./WEBP/book-cover-small-3.webp", "./WEBP/book-cover-small-4.webp", "./WEBP/book-cover-small-5.webp", 
-            "./WEBP/big-cover-5.webp", "individualBook.css", "./login.html", "./style.css", 
-            "./main.css", "./cart-list.css",  "cart-list.html", "cart-list-module.html",
-             "JPG/banner.jpg", "JPG/footerLogo.png", "JPG/logo.png", "JPG/left.jpg", "JPG/right.jpg",
-            "./WEBP/logo.webp", "./SVG/footerLogo.svg", "./Script codes/carousel2.js",
-             "category.css", "./Script codes/bookInfo.js"
+                 // essentials 
+            "./",
+             "PNG/logo192_real.png", 
+                // pages 
+             "individualBook.html", 
+             "bookCategory.html", 
+             "login.html",
+             "cart-list.html",
+                // stylesheets 
+             "main-style-2.css", 
+             "./stylesheets/fonts.css",
+             "mobile-modal.css",
+             "stylesheets/scrolling.css",
+             "stylesheets/carousel.css",
+             "stylesheets/loginForm.css",
+             "cart-list.css",
+             
+                // scripts 
+             "Script codes/scrolling.js",
+             "Script codes/main.js", 
+             "modal.js",
+             "Script codes/carousel2.js",
+             "./Script codes/more.js",
+             "bookCategory3.css",
+             "mobile-modal.css",
+             "sort_modal.css",
+             "Script codes/bookInfo.js",
+             "Script codes/cart.js",
+             
+                // assets 
+            "WEBP/logo.webp", 
+            "JPG/left.jpg ",
+            "https://images.unsplash.com/photo-1592496431122-2349e0fbc666?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=912&q=80",
+            "https://images.unsplash.com/photo-1589829085413-56de8ae18c73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=912&q=80",
+            "https://images.unsplash.com/photo-1601640365825-66327247a242?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=864&q=80",
+            "JPG/right.jpg",
+            "SVG/footerLogo.svg",
+            "PNG/fb.png",
+            "PNG/ig.png",
+            "PNG/tweet.png",
+            "WEBP/book-cover-small-1.webp",
+            "WEBP/book-cover-small-2.webp",
+            "WEBP/book-cover-small-3.webp",
+            "WEBP/book-cover-small-4.webp",
+            "WEBP/book-cover-small-5.webp",
+
+
         ] ) ; 
         })
     ) ;

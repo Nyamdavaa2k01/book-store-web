@@ -14,7 +14,7 @@
             }
         </style>
         <link rel="stylesheet" href="main-style-2.css" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href= "https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link  rel ="stylesheet" href = "./stylesheets/fonts.css"> 
         <link rel = "stylesheet" href = "bookCategory3.css">
         <link rel = "stylesheet" href = "mobile-modal.css">
@@ -76,6 +76,9 @@
                     #sort_open {
                     display: none;
                 }
+                    .book-small {
+                        width:28vw; 
+                    }
                     .book-4{
                         display: none;
                     }
@@ -86,7 +89,7 @@
         <header>
 
             <div class = "header-top"> 
-                <a href = "index.html"><p>Бие даасан номын дэлгүүр</p></a>
+                <a aria-label = "navigate to main page of the web site" href = "index.html"><p>Бие даасан номын дэлгүүр</p></a>
                 <button aria-label = "submit" data-modal-target = "#modal" class = "mobile-menu">
                     <i class = "material-icons">menu</i>
                 </button>
@@ -102,11 +105,11 @@
                     <div class="modal-body" style = "color:black;">
                     
                         <ul>
-                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Ном</a> </div></li>
-                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Хүүхдийн ном</a></div></li>
-                            <li> <div class = "modal-links"> <a href = "bookCategory.html">Гадаад ном</a></div></li>
-                            <li> <div class = "modal-links"> <a href = "bookCategory.html">Бичиг хэрэг</a></div></li>
-                            <li> <div class = "modal-links"> <a href="bookCategory.html">Бэлэг дурсгал</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number 1 from mobile devices" href ="bookCategory.html">Ном</a> </div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number 2 from mobile devices" href ="bookCategory.html">Хүүхдийн ном</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number 3 from mobile devices" href = "bookCategory.html">Гадаад ном</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number 4 from mobile devices" href = "bookCategory.html">Бичиг хэрэг</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to book category with number  from mobile devices" href="bookCategory.html">Бэлэг дурсгал</a></div></li>
                         </ul>
                     </div>
                 </div>
@@ -117,15 +120,15 @@
 
                 <script src = "modal.js"></script>
                 <div class ="header-right">
-                    <a href = "login.html"><i class ="material-icons register-icon" >account_circle</i></a>
-                    <a href ="login.html" name = "sign up via link"> <p>Бүртгүүлэх</p></a>
-                    <a href ="login.html"i class ="material-icons login-icon">login</i></a>
-                    <p><a href = "login.html">Нэвтрэх</a></p>
+                    <a aria-label = "Navigate to the login and register section option 1" href = "login.html"><i class ="material-icons register-icon" >account_circle</i></a>
+                    <a aria-label = "Navigate to the login and register section option 2" href ="login.html" name = "sign up via link"> <p>Бүртгүүлэх</p></a>
+                    <a aria-label = "Navigate to the login and register section option 3" href ="login.html"i class ="material-icons login-icon">login</i></a>
+                    <p><a aria-label = "Navigate to the login and register section option 4" href = "login.html">Нэвтрэх</a></p>
                 </div>
             </div>
             <div class ="header-bottom">
             
-                <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
+                <a aria-label = "Navigate to the main page by clicking at logo" href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
                 <div class = "search-field" >
                     <input type = "text" class ="search-input" placeholder="Хайлт хийх"> 
                     <button aria-label = "submit" aria-label = "Search" type ="search" class ="search-button">
@@ -133,7 +136,7 @@
                     </button>
                 </div>
 
-                <a href = "cart-list.html"> <i class = "material-icons icon-cart" style = "font-size: 3.5vmax;" > shopping_cart</i></a>
+                <a aria-label = "go to items in your cart and make purchase" href = "cart-list.html"> <i class = "material-icons icon-cart" style = "font-size: 3.5vmax;" > shopping_cart</i></a>
 
             </div>
 
@@ -147,11 +150,11 @@
         
                 <i class="material-icons" style ="margin-left: 5vw;">book</i>
             
-                <a href ="bookCategory.html">Ном</a>
-                <a href ="bookCategory.html">Хүүхдийн ном</a>
-                <a href = "bookCategory.html">Гадаад ном</a>
-                <a href = "bookCategory.html">Бичиг хэрэг</a>
-                <a href="bookCategory.html" style = "margin-right: 5vw;">Бэлэг дурсгал</a>
+                <a aria-label = "Go to book category with number 1 from PC and other devices" href ="bookCategory.html">Ном</a>
+                <a aria-label = "Go to book category with number 2 from PC and other devices" href ="bookCategory.html">Хүүхдийн ном</a>
+                <a aria-label = "Go to book category with number 3 from PC and other devices" href = "bookCategory.html">Гадаад ном</a>
+                <a aria-label = "Go to book category with number 4 from PC and other devices" href = "bookCategory.html">Бичиг хэрэг</a>
+                <a aria-label = "Go to book category with number 5 from PC and other devices" href="bookCategory.html" style = "margin-right: 5vw;">Бэлэг дурсгал</a>
             
             
         </nav>
@@ -453,7 +456,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label ="See the detailed information of book with id 1 from mobile devices" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -484,7 +487,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id zero" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -493,7 +496,7 @@
                         <div class="book-title">
                             12 Rules For Life
                         </div>
-                        <button aria-label = "submit" class = "add-book">
+                        <button aria-label = "add book 1 to cart list" class = "add-book">
                             Сагсанд хийх
                         </button>
                     </div>
@@ -515,7 +518,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 2" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -546,7 +549,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 3" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -579,7 +582,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 4" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -610,7 +613,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 5" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -641,7 +644,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 6" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -672,7 +675,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 6" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -705,7 +708,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 7" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -736,7 +739,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 8" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -767,7 +770,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 9" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -798,7 +801,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 10" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -831,7 +834,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 11" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -862,7 +865,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 12" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -893,7 +896,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 13" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -924,7 +927,7 @@
                                
                                 <div class="link-back">
                                     <p class = "book-overlay-title">
-                                        <a href = "individualBook.html">Дэлгэрэнгүй...</a>
+                                        <a aria-label = "See the detailed information of book with id 14" href = "individualBook.html">Дэлгэрэнгүй...</a>
                                     </p>
                                 </div>
 
@@ -942,14 +945,13 @@
                 </div>
             </div>
             
-            <script src = "Script codes/bookInfo.js"></script>
         </main>
         </div>
 
-        <footer style = "position: relative; top:10vw;">
+        <footer>
             <div class="footer-left">
                 <div class = "logo-photo-container">
-                    <img alt = "book photo" src = "SVG/footerLogo.svg" alt = "Logo">
+                    <img alt = "web site logo photo" src = "SVG/footerLogo.svg" alt = "Logo">
                 </div>
                 <p class = "email-explanation" style = "color:white">
                     Шинэ, бэстселлер ном, хямдрал, урамшууллын талаарх мэдээллийг цаг алдалгүй авахыг хүсвэл манай жагсаалтад бүртгүүлээрэй!

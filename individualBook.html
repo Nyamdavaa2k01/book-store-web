@@ -17,22 +17,15 @@
             Internom
         </title>
             <link rel = "stylesheet" href = "main-style-2.css"> 
-            <link rel  = "stylesheet" href = "">
             <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <style>
             :root{
     font-size: 16px;
     font-family: Roboto, -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --book-photo-half-border:2vw 2vw 0px 0px ; 
-    /* --main-bg-color:#F24C1A ; */ 
-    /*ulbar shar ungu ni anh tuluvlugdsun ungu ba contrastiin asuudlaas bolon tur hugatsand har bolgow*/
     --main-bg-color:black ; 
-    /* --main-special-color:#F24C1A ;  */
     --sub-bg-color:#E2E0E0 ; 
     --book-row-title-size:2.4vmax;
-    /* --book-title-size:1.4vmax; *
-        responsive media query ashiglahdaa desktopd zoriulsn bdlar oruulna
-    */
     --book-title-size:16px;
     
 }
@@ -230,7 +223,7 @@
         <header>
            
             <div class = "header-top"> 
-                 <a href = "index.html"><p style = "color:white">Бие даасан номын дэлгүүр</p></a>
+                 <a aria-label = "navigate to the main page option 1" href = "index.html"><p style = "color:white">Бие даасан номын дэлгүүр</p></a>
                  
                  <button data-modal-target = "#modal" class = "mobile-menu">
                     <i class = "material-icons">menu</i>
@@ -247,11 +240,11 @@
                     <div class="modal-body" style = "color:black;">
                     
                         <ul>
-                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Ном</a> </div></li>
-                            <li> <div class = "modal-links"> <a href ="bookCategory.html">Хүүхдийн ном</a></div></li>
-                            <li> <div class = "modal-links"> <a href = "bookCategory.html">Гадаад ном</a></div></li>
-                            <li> <div class = "modal-links"> <a href = "bookCategory.html">Бичиг хэрэг</a></div></li>
-                            <li> <div class = "modal-links"> <a href="bookCategory.html">Бэлэг дурсгал</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to the book category from mobile devices 1" href ="bookCategory.html">Ном</a> </div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to the book category from mobile devices 2" href ="bookCategory.html">Хүүхдийн ном</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to the book category from mobile devices 3" href = "bookCategory.html">Гадаад ном</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to the book category from mobile devices 4" href = "bookCategory.html">Бичиг хэрэг</a></div></li>
+                            <li> <div class = "modal-links"> <a aria-label = "navigate to the book category from mobile devices 5" href="bookCategory.html">Бэлэг дурсгал</a></div></li>
                         </ul>
                     </div>
                 </div>
@@ -263,23 +256,23 @@
 
 
                  <div class ="header-right">
-                     <a href = "login.html"><i class ="material-icons register-icon">account_circle</i></a>
-                     <a href ="login.html" name = "sign up via link"> <p style = "color:white">Бүртгүүлэх</p></a>
-                     <a href ="login.html"i class ="material-icons login-icon">login</i></a>
+                     <a aria-label = "navigate to the register and login section option 1" href = "login.html"><i class ="material-icons register-icon">account_circle</i></a>
+                     <a aria-label = "navigate to the register and login section option 2" href ="login.html" name = "sign up via link"> <p style = "color:white">Бүртгүүлэх</p></a>
+                     <a aria-label = "navigate to the register and login section option 3" href ="login.html"i class ="material-icons login-icon">login</i></a>
                 
-                     <p style = "color:white"><a href = "login.html">Нэвтрэх</a></p>
+                     <p style = "color:white"><a aria-label = "navigate to the register and login section option 4" href = "login.html">Нэвтрэх</a></p>
                  </div>
              </div>
              <div class ="header-bottom">
                 
-                 <a href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
+                 <a aria-label = "Go to the main page of the web site" href ="index.html" name ="navigate to main page"><img src = "WEBP/logo.webp" alt = "book store logo" class = "logo-photo"></a>
                  <div class = "search-field" >
                      <input type = "text" class ="search-input" placeholder="Хайлт хийх"> 
                      <button type ="search" class ="search-button">
                          <i class ="material-icons icon-search">search</i>
                      </button>
                  </div>
-                 <a href = "cart-list.html"> <i class = "material-icons icon-cart" style = "font-size: 3.5vmax;" > shopping_cart</i></a>
+                 <a aria-label = "See your items in cart and make purchase" href = "cart-list.html"> <i class = "material-icons icon-cart" style = "font-size: 3.5vmax;" > shopping_cart</i></a>
              </div>
 
              <div class ="mobile-search-field">
@@ -302,11 +295,9 @@
                 <hr/> 
             </div>
             <div class ="book-row-options">
-                <button class ="chosen">Төстэй номнууд</button>
-                <!-- <button class ="aux"></button> -->
-                <button class ="view-all">
+                <button aria-label = "navigate to similar books" class ="chosen">Төстэй номнууд</button>
+                <button aria-label = "view all similar books" class ="view-all">
                     <p>Бүгд</p> 
-                    <!-- <img class ="icon" src ="PNG/dashed-right-arwebp.png" alt ="See All"> -->
                     <i class ="material-icons">arrow_forward</i>
                 </button>
             </div>
@@ -338,11 +329,9 @@
                 <hr/> 
             </div>
             <div class ="book-row-options">
-                <button class ="chosen">Сонирхсон номнууд</button>
-                <!-- <button class ="aux"></button> -->
-                <button class ="view-all">
+                <button aria-label = "navigate to similar books option 2"  class ="chosen">Сонирхсон номнууд</button>
+                <button class ="view-all" aria-label = "view all similar books option 2">
                     <p>Бүгд</p> 
-                    <!-- <img class ="icon" src ="PNG/dashed-right-arwebp.png" alt ="See All"> -->
                     <i class ="material-icons">arrow_forward</i>
                 </button>
             </div>
